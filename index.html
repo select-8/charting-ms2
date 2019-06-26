@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testin' out some D3/DC/Crossfilter</title>
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+
+    <style>
+        div {
+            clear: left;
+            margin: 20px;
+        }
+    </style>
+
+    <script type="text/javascript" src="static/js/d3.min.js"></script>
+    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+    <script type="text/javascript" src="static/js/dc.min.js"></script>
+    <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/graph.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <h3>Select Operator</h3>
+        <div id="logical-op-selector"></div>
+    </div>
+
+    <div>
+        <h3>Logical Operator Per Discipline</h3>
+        <div id="lo-per-discipline"></div>
+    </div>
+
+    <div>
+        <h3>Trade per Op</h3>
+        <div id="dicipline-per-logical-operator"></div>
+    </div>
+
+    <!-- <script>
+        queue()
+            // .defer(d3.csv, "data/database.csv")
+            .defer(d3.csv, "data/mydata.csv")
+            .await(makeGraphs);
+
+        function makeGraphs(error, transactionsData) {
+            var ndx = crossfilter(transactionsData);
+            var lo_dim = ndx.dimension(dc.pluck('logical_op'))
+            var lo_group = lo_dim.group().reduceCount();
+            var salary_group = lo_dim.group().reduceSum(dc.pluck('salary'));
+
+            dc.barChart("#logical-op-count")
+                .width(300)
+                .height(300)
+                .margins({
+                    top: 10,
+                    right: 50,
+                    bottom: 30,
+                    left: 50
+                })
+                .dimension(lo_dim)
+                .group(lo_group)
+                .transitionDuration(500)
+                .x(d3.scale.ordinal())
+                .xUnits(dc.units.ordinal)
+                .xAxisLabel("logical operator")
+                .yAxis().ticks(6);
+
+            dc.pieChart('#dicipline-per-logical-operator')
+                .height(330)
+                .radius(90)
+                .transitionDuration(1500)
+                .dimension(lo_dim)
+                .group(salary_group);
+
+            dc.renderAll();
+        }
+    </script> -->
+
+
+</body>
+
+</html>

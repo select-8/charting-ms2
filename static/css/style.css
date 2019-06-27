@@ -1,0 +1,13 @@
+.dc-chart {
+    font-family: 'Lato', serif;
+}
+
+.dc-chart .axis text {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: .2rem;
+}
+
+#country-chart .axis text {
+    fill: blue;
+}

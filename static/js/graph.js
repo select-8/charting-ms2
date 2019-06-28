@@ -9,27 +9,19 @@ function makeGraphs(error, opData) {
         d.salary = parseInt(d.salary);
     })
 
-    show_op_selector(ndx);
+    // show_op_selector(ndx);
     show_op_pie(ndx);
-    show_average_salary_by_country(ndx);
-    show_bar_chart_countries(ndx);
+    get_and_show_country(ndx);
+    // get_and_show_average_discipline(ndx);
+    // get_and_show_average_genger(ndx);
+
 
     dc.renderAll();
     // console.log(opData);
 }
 
-
-function show_op_selector(ndx) {
-    var dim = ndx.dimension(dc.pluck('logical_op'));
-    var group = dim.group();
-
-    dc.selectMenu("#logical-op-selector")
-        .dimension(dim)
-        .group(group);
-}
-
 function show_op_pie(ndx) {
-    var dim = ndx.dimension(dc.pluck('discipline'));
+    var dim = ndx.dimension(dc.pluck('logical_op'));
     var group = dim.group();
 
     dc.pieChart('#dis-pie')
@@ -37,52 +29,25 @@ function show_op_pie(ndx) {
         .radius(360)
         .transitionDuration(1500)
         .dimension(dim)
-        .group(group);
+        .group(group)
+        .colors(d3.scale.ordinal().range(
+            [ 'RED', 'BLUE', 'GREEN']))
+        .legend(dc.legend().x(460).y(10).itemHeight(13).gap(10))
+        .on('pretransition', function (d) {
+            d.selectAll('text.pie-slice').text(function (d) {
+                return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+            })
+        });
 }
 
-function show_average_salary_by_country(ndx) {
+function get_and_show_country(ndx) {
     var dim = ndx.dimension(dc.pluck('country'));
-    // var group = dim.group().reduceSum(dc.pluck('salary'))
+    var group = dim.group();
 
     // console.log(group.all())
-
-    function add_item(p, v) {
-        p.count++;
-        p.total += v.salary;
-        p.average = p.total / p.count;
-        return p;
-    }
-
-    function remove_item(p, v) {
-        p.count--;
-        if (p.count == 0) {
-            p.total = 0;
-            p.average = 0;
-        } else {
-            p.total -= v.salary;
-            p.average = p.total / p.count;
-        }
-        return p;
-    }
-
-    function initialise() {
-        return {
-            count: 0,
-            total: 0,
-            average: 0
-        };
-    }
-
-    var averageSalaryByLocOp = dim.group().reduce(add_item, remove_item, initialise);
-
-    // var averageSalary = averageSalaryByLocOp.all()
-
-    // var newVar = averageSalary[0].value
-    // console.log(newVar);
-
-    dc.rowChart('#average-salary')
-        .height(420)
-        .width(620)
+    var rowchart = dc.rowChart('#country-chart')
+    rowchart
+        .height(520)
         .margins({
             top: 5,
             left: 10,
@@ -91,48 +56,95 @@ function show_average_salary_by_country(ndx) {
         })
         .elasticX(true)
         .dimension(dim)
-        .group(averageSalaryByLocOp)
-        .valueAccessor(function (d) {
-            // console.log(d);
-            return d.value.average;
-        })
-        .colors(d3.scale.category10())
-        // .label(function (d){
-        //     return d.key.split(".")[2];
-        //  })
-        // .elasticX(true)
-        .xAxis().ticks(5);
-}
-
-function show_bar_chart_countries(ndx) {
-    var dim = ndx.dimension(dc.pluck('discipline'));
-    var group = dim.group();
-    // var group = dim.group().reduceCount(dc.pluck('country'));
-
-    var bargraph = dc.barChart("#country-chart");
-    bargraph
-        .width(550)
-        .height(250)
-        .margins({
-            top: 10,
-            right: 50,
-            bottom: 30,
-            left: 50
-        })
-        .dimension(dim)
         .group(group)
-        .transitionDuration(500)
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .xAxisLabel("Country")
-        .yAxis().ticks(3);
-
-    bargraph.renderlet(function (chart) {
-        bargraph.selectAll("g.x text")
-            .style("text-anchor", "start")
-            .attr('dx', '5')
-            .attr('dy', '-5')
-            .attr('transform', "rotate(-90)");
-    });
-
+        .colors(d3.scale.category20())
+        .xAxis().ticks(13);
 }
+
+// function show_bar_chart_countries(ndx) {
+//     var dim = ndx.dimension(dc.pluck('discipline'));
+//     var group = dim.group();
+//     // var group = dim.group().reduceCount(dc.pluck('country'));
+
+//     var bargraph = dc.barChart("#country-chart");
+//     bargraph
+//         .width(550)
+//         .height(250)
+//         .margins({
+//             top: 10,
+//             right: 50,
+//             bottom: 30,
+//             left: 50
+//         })
+//         .dimension(dim)
+//         .group(group)
+//         .transitionDuration(500)
+//         .x(d3.scale.ordinal())
+//         .xUnits(dc.units.ordinal)
+//         .xAxisLabel("Country")
+//         .yAxis().ticks(3);
+
+//     bargraph.renderlet(function (chart) {
+//         bargraph.selectAll("g.x text")
+//             .style("text-anchor", "start")
+//             .attr('dx', '5')
+//             .attr('dy', '-5')
+//             .attr('transform', "rotate(-90)");
+//     });
+
+// }
+
+
+// var loopDimension = ndx.dimension(dc.pluck('logical_op'));
+
+
+// GENDER
+// function show_loop_pref_by_gender(ndx) {
+//     var loopDimension = ndx.dimension(dc.pluck('logical_op'));
+//     var sexDimension = ndx.dimension(function (d) {
+//         return d.sex
+//     });
+//     var sexFilterW = sexDimension.filter("female");
+//     console.log(sexFilterW.top(Infinity));
+//     // console.log(sexFilter.groupAll());
+//     // var sexOp = sexDimension.group().reduceCount(dc.pluck('logical_op'));
+//     // console.log(sexOp);
+//     var sexGroup = loopDimension.group();
+
+//     dc.barChart("#female-loop")
+//                 .width(400)
+//                 .height(400)
+//                 .margins({
+//                     top: 10,
+//                     right: 50,
+//                     bottom: 30,
+//                     left: 50
+//                 })
+//                 .dimension(sexDimension)
+//                 .group(sexGroup)
+//                 .x(d3.scale.ordinal())
+//                 .xUnits(dc.units.ordinal)
+//                 .xAxisLabel("Logical Operator Preferences with Women")
+//                 .yAxis().ticks(40);
+
+//     sexDimension.filterAll();
+//     var sexFilterM = sexDimension.filter("male");
+//     var sexGroup = loopDimension.group();
+//     console.log(sexFilterM.top(Infinity));
+
+//     dc.barChart("#male-loop")
+//                 .width(400)
+//                 .height(400)
+//                 .margins({
+//                     top: 10,
+//                     right: 50,
+//                     bottom: 30,
+//                     left: 50
+//                 })
+//                 .dimension(sexDimension)
+//                 .group(sexGroup)
+//                 .x(d3.scale.ordinal())
+//                 .xUnits(dc.units.ordinal)
+//                 .xAxisLabel("Logical Operator Preferences with Men")
+//                 .yAxis().ticks(40);
+// }

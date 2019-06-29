@@ -10,17 +10,54 @@ function makeGraphs(error, opData) {
     })
 
     // show_op_selector(ndx);
-    show_op_pie(ndx);
+    op_pie(ndx);
+    op_bar(ndx);
     get_and_show_country(ndx);
-    // get_and_show_average_discipline(ndx);
+    discipline_bar(ndx);
     // get_and_show_average_genger(ndx);
+    show_percent_that_are_professors(ndx, "AND", "#percent-of-and");
+    show_percent_that_are_professors(ndx, "OR", "#percent-of-or");
+    show_percent_that_are_professors(ndx, "NOT", "#percent-of-not");
 
 
     dc.renderAll();
     // console.log(opData);
 }
 
-function show_op_pie(ndx) {
+function show_percent_that_are_professors(ndx, logical, element) {
+    var lgop_dim = ndx.dimension(dc.pluck('logical_op'));
+    var lgop_group = ndx.groupAll().reduce(
+        function(p, v) {
+            if (v.logical_op === logical)
+            p.count++;
+            return p;
+        },
+        function(p, v) {
+            if (v.logical_op === logical)
+            p.count--;
+            return p;
+        },
+        function () {
+            return { count: 0};
+        }
+    );
+
+    dc.numberDisplay(element)
+        .formatNumber(d3.format(".2%"))
+        .valueAccessor(function (d) {
+            console.log(d);
+            if (d.count == 0) {
+                return 0;
+            } else {
+                return (d.count / 784);
+            }
+        })
+        .dimension(lgop_dim)
+        .group(lgop_group)
+}
+
+
+function op_pie(ndx) {
     var dim = ndx.dimension(dc.pluck('logical_op'));
     var group = dim.group();
 
@@ -31,7 +68,7 @@ function show_op_pie(ndx) {
         .dimension(dim)
         .group(group)
         .colors(d3.scale.ordinal().range(
-            [ 'RED', 'BLUE', 'GREEN']))
+            ['RED', 'BLUE', 'GREEN']))
         .legend(dc.legend().x(460).y(10).itemHeight(13).gap(10))
         .on('pretransition', function (d) {
             d.selectAll('text.pie-slice').text(function (d) {
@@ -61,38 +98,65 @@ function get_and_show_country(ndx) {
         .xAxis().ticks(13);
 }
 
-// function show_bar_chart_countries(ndx) {
-//     var dim = ndx.dimension(dc.pluck('discipline'));
-//     var group = dim.group();
-//     // var group = dim.group().reduceCount(dc.pluck('country'));
+function discipline_bar(ndx) {
 
-//     var bargraph = dc.barChart("#country-chart");
-//     bargraph
-//         .width(550)
-//         .height(250)
-//         .margins({
-//             top: 10,
-//             right: 50,
-//             bottom: 30,
-//             left: 50
-//         })
-//         .dimension(dim)
-//         .group(group)
-//         .transitionDuration(500)
-//         .x(d3.scale.ordinal())
-//         .xUnits(dc.units.ordinal)
-//         .xAxisLabel("Country")
-//         .yAxis().ticks(3);
+    var dis_dim = ndx.dimension(dc.pluck('discipline'));
 
-//     bargraph.renderlet(function (chart) {
-//         bargraph.selectAll("g.x text")
-//             .style("text-anchor", "start")
-//             .attr('dx', '5')
-//             .attr('dy', '-5')
-//             .attr('transform', "rotate(-90)");
-//     });
+    var dis_group = dis_dim.group();
 
-// }
+    var dis_bargraph = dc.barChart("#discipline-bar");
+    dis_bargraph
+        .width(550)
+        .height(350)
+        .margins({
+            top: 10,
+            right: 50,
+            bottom: 30,
+            left: 50
+        })
+        .dimension(dis_dim)
+        .group(dis_group)
+        // .valueAccessor
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("discipline")
+        .yAxis().ticks(14);
+
+    // bargraph.renderlet(function (d) {
+    //     bargraph.selectAll("g.x text")
+    //         .style("text-anchor", "start")
+    //         .attr('dx', '5')
+    //         .attr('dy', '-5')
+    //         .attr('transform', "rotate(-90)");
+    // });
+}
+
+function op_bar(ndx) {
+
+    var op_dim = ndx.dimension(dc.pluck('logical_op'));
+
+    var op_group = op_dim.group();
+
+    var op_bargraph = dc.barChart("#op-bar");
+    op_bargraph
+        .width(550)
+        .height(350)
+        .margins({
+            top: 10,
+            right: 50,
+            bottom: 30,
+            left: 50
+        })
+        .dimension(op_dim)
+        .group(op_group)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("logical_op")
+        .yAxis().ticks(14);
+
+}
 
 
 // var loopDimension = ndx.dimension(dc.pluck('logical_op'));

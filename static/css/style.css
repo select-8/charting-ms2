@@ -29,10 +29,24 @@
     cursor: pointer;
 }
 
-/* .country-container {
-	margin: 0;
-} */
+.country-container {
+	position: relative;
+}
 
 .discipline-container {
     float: right;
+}
+
+#discipline-bar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.lo-numbers p {
+    font-family: 'Lato', sans-serif;
+    background-color: pink;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 2rem;
 }

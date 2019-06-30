@@ -24,10 +24,12 @@
 
 <body>
 
-    <div class="col-xs-12 col-sm-6 col-lg-6">
-        <p>AND: <span class="number-box" id="percent-of-and"></span></p>
-        <p>OR: <span class="number-box" id="percent-of-or"></span></p>
-        <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
+    <div class="container-fluid">
+        <div class="col-12 lo-numbers text-center">
+            <p>AND: <span class="number-box" id="percent-of-and"></span></p>
+            <p>OR: <span class="number-box" id="percent-of-or"></span></p>
+            <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
+        </div>
     </div>
 
 
@@ -40,24 +42,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6" id="dis-pie" class="custom-chart"></div>
+                <!-- <div class="col-12 col-md-6" id="dis-pie" class="custom-chart"></div> -->
                 <div class="col-12 col-md-6" id="country-chart" class="custom-chart"></div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container discipline-container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="section-paragraph">Discipline</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6" id="op-bar" class="custom-chart"></div>
                 <div class="col-12 col-md-6" id="discipline-bar" class="custom-chart"></div>
             </div>
         </div>
     </section>
+
+    <div>
+        <div>STACKED CHART</div>
+        <div id="stacked-choice"></div>
+    </div>
 
 </body>
 

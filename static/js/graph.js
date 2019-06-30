@@ -14,7 +14,7 @@ function makeGraphs(error, opData) {
     op_bar(ndx);
     get_and_show_country(ndx);
     discipline_bar(ndx);
-    // get_and_show_average_genger(ndx);
+    // get_total(ndx);
     show_percent_that_are_professors(ndx, "AND", "#percent-of-and");
     show_percent_that_are_professors(ndx, "OR", "#percent-of-or");
     show_percent_that_are_professors(ndx, "NOT", "#percent-of-not");
@@ -23,36 +23,45 @@ function makeGraphs(error, opData) {
     dc.renderAll();
     // console.log(opData);
 }
+// function get_total(ndx) {
+// var dim = ndx.dimension(function(d) {return d.total; });
+// // console.log(id_dim.groupAll().value());
+
+// }
 
 function show_percent_that_are_professors(ndx, logical, element) {
-    var lgop_dim = ndx.dimension(dc.pluck('logical_op'));
+
+    var id_dim = ndx.dimension(function(d) {return d.total; });
+    console.log(id_dim.groupAll().value());
+
     var lgop_group = ndx.groupAll().reduce(
-        function(p, v) {
+        function (p, v) {
             if (v.logical_op === logical)
-            p.count++;
+                p.count++;
             return p;
         },
-        function(p, v) {
+        function (p, v) {
             if (v.logical_op === logical)
-            p.count--;
+                p.count--;
             return p;
         },
         function () {
-            return { count: 0};
+            return {
+                count: 0
+            };
         }
     );
-
     dc.numberDisplay(element)
         .formatNumber(d3.format(".2%"))
-        .valueAccessor(function (d) {
-            console.log(d);
-            if (d.count == 0) {
+        .valueAccessor(function (p, d) {
+            if (p.count == 0) {
                 return 0;
-            } else {
-                return (d.count / 784);
+            }
+            else {
+                return (p.count / id_dim.groupAll().value());
             }
         })
-        .dimension(lgop_dim)
+        .dimension(id_dim)
         .group(lgop_group)
 }
 
@@ -133,11 +142,8 @@ function discipline_bar(ndx) {
 }
 
 function op_bar(ndx) {
-
     var op_dim = ndx.dimension(dc.pluck('logical_op'));
-
     var op_group = op_dim.group();
-
     var op_bargraph = dc.barChart("#op-bar");
     op_bargraph
         .width(550)

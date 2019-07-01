@@ -27,9 +27,6 @@ function makeGraphs(error, opData) {
             return d.logical_op;
         });
 
-        // var dim_total = dim.groupAll().value();
-        // console.log(dim_total);
-
         var lgop_group = ndx.groupAll().reduce(
             function (p, v) {
                 if (v.logical_op === logical)
@@ -112,7 +109,6 @@ function makeGraphs(error, opData) {
         });
         var groupByDogs = logical_dim.group().reduce(
             function reduceAdd(p, v) {
-                // console.log(v.choice);
                 if (v.choice === "DOGS") {
                     p++
                 }
@@ -130,7 +126,6 @@ function makeGraphs(error, opData) {
         );
         var groupByCats = logical_dim.group().reduce(
             function reduceAdd(p, v) {
-                // console.log(v.choice);
                 if (v.choice === "CATS") {
                     p++
                 }
@@ -147,15 +142,12 @@ function makeGraphs(error, opData) {
             }
         );
 
-        // console.log(groupByDogs.top(Infinity));
-        // console.log(groupByCats.top(Infinity));
-
         var stackedChart = dc.barChart("#stacked-choice");
         stackedChart
             .dimension(logical_dim)
             .group(groupByDogs, "Dogs")
             .stack(groupByCats, "Cats")
-            .width(1000)
+            .width(350)
             .height(500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -168,57 +160,89 @@ function makeGraphs(error, opData) {
         var time_as_dim = ndx.dimension(function (d) {
             return d.time_as;
         });
-        var andGroup = time_as_dim.group().reduce(
+        var groupByAnd = time_as_dim.group().reduce(
             function reduceAdd(p, v) {
+                // console.log(v.choice);
                 if (v.logical_op === "AND") {
-                    p.count++;
-                    p.total += v.time_as;
-                    p.average = p.total / p.count;
+                    p++
                 }
                 return p;
             },
             function reduceRemove(p, v) {
                 if (v.logical_op === "AND") {
-                    p.count--;
-                    p.total += v.time_as;
-                    p.average = p.total / p.count;
+                    p--
                 }
                 return p;
             },
             function reduceInitial() {
-                return {
-                    count: 0,
-                    total: 0,
-                    average: 0
-                };
+                return 0;
+            }
+        );
+        var groupByOr = time_as_dim.group().reduce(
+            function reduceAdd(p, v) {
+                // console.log(v.choice);
+                if (v.logical_op === "OR") {
+                    p++
+                }
+                return p;
+            },
+            function reduceRemove(p, v) {
+                if (v.logical_op === "OR") {
+                    p--
+                }
+                return p;
+            },
+            function reduceInitial() {
+                return 0;
+            }
+        );
+        var groupByNot = time_as_dim.group().reduce(
+            function reduceAdd(p, v) {
+                // console.log(v.choice);
+                if (v.logical_op === "NOT") {
+                    p++
+                }
+                return p;
+            },
+            function reduceRemove(p, v) {
+                if (v.logical_op === "NOT") {
+                    p--
+                }
+                return p;
+            },
+            function reduceInitial() {
+                return 0;
             }
         );
 
-        console.log(andGroup.top(Infinity));
+
+        // console.log(groupByAnd.top(Infinity));
 
         var minTime = time_as_dim.bottom(1)[0].time_as;
         var maxTime = time_as_dim.top(1)[0].time_as;
 
-
-        var timeChart = dc.lineChart("#time_as_graph");
-        timeChart
-            .width(1000)
-            .height(300)
-            .margins({
-                top: 10,
-                right: 50,
-                bottom: 30,
-                left: 50
-            })
-            .dimension(time_as_dim)
-            .group(andGroup)
-            .valueAccessor(function (p) {
-                return p.value.average
-            })
-            .transitionDuration(500)
-            .x(d3.scale.linear().domain([minTime, maxTime]))
-            .xAxisLabel("Time As")
-            .yAxis().ticks(10);
+            var compositeChart = dc.compositeChart('#composite-chart');
+            compositeChart
+                .width(750)
+                .height(500)
+                .dimension(time_as_dim)
+                .x(d3.scale.linear().domain([minTime, maxTime]))
+                .yAxisLabel("Count Logical Operator")
+                .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+                .renderHorizontalGridLines(true)
+                .compose([
+                    dc.lineChart(compositeChart)
+                    .colors('green')
+                    .group(groupByAnd, 'AND'),
+                    dc.lineChart(compositeChart)
+                    .colors('red')
+                    .group(groupByOr, 'OR')
+                    .dashStyle([2,2]),
+                    dc.lineChart(compositeChart)
+                    .colors('blue')
+                    .group(groupByNot, 'NOT')
+                ])
+                .brushOn(false);
 
         // .elasticY(true);
     }

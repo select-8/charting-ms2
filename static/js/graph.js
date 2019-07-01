@@ -24,8 +24,11 @@ function makeGraphs(error, opData) {
     function show_percentage_logical(ndx, logical, element) {
 
         var dim = ndx.dimension(function (d) {
-            return d.total;
+            return d.logical_op;
         });
+
+        // var dim_total = dim.groupAll().value();
+        // console.log(dim_total);
 
         var lgop_group = ndx.groupAll().reduce(
             function (p, v) {
@@ -51,6 +54,7 @@ function makeGraphs(error, opData) {
                     return 0;
                 } else {
                     return (p.count / dim.groupAll().value());
+                    // return (p.count / dim_total);
                 }
             })
             .dimension(dim)
@@ -168,7 +172,7 @@ function makeGraphs(error, opData) {
             function reduceAdd(p, v) {
                 if (v.logical_op === "AND") {
                     p.count++;
-                    p.total += p.count;
+                    p.total += v.time_as;
                     p.average = p.total / p.count;
                 }
                 return p;
@@ -176,13 +180,17 @@ function makeGraphs(error, opData) {
             function reduceRemove(p, v) {
                 if (v.logical_op === "AND") {
                     p.count--;
-                    p.total += v.count;
-                    p.average = p.total / v.count;
+                    p.total += v.time_as;
+                    p.average = p.total / p.count;
                 }
                 return p;
             },
             function reduceInitial() {
-                return {count:0, total:0, average:0};
+                return {
+                    count: 0,
+                    total: 0,
+                    average: 0
+                };
             }
         );
 
@@ -205,12 +213,13 @@ function makeGraphs(error, opData) {
             .dimension(time_as_dim)
             .group(andGroup)
             .valueAccessor(function (p) {
-                return p.value.count
+                return p.value.average
             })
             .transitionDuration(500)
-            .x(d3.time.scale().domain([minTime, maxTime]))
+            .x(d3.scale.linear().domain([minTime, maxTime]))
             .xAxisLabel("Time As")
-            .yAxis().ticks(4);
+            .yAxis().ticks(10);
+
         // .elasticY(true);
     }
 

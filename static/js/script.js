@@ -1,0 +1,1 @@
+document.getElementById("percent-of-and").outerText; // returns dynamic crossfilter

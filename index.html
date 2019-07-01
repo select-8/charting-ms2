@@ -20,12 +20,14 @@
     <script type="text/javascript" src="static/js/queue.min.js"></script>
     <script type="text/javascript" src="static/js/graph.js"></script>
     <script type="text/css" src="static/css/style.css"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div class="container-fluid">
-        <div class="col-12 lo-numbers text-center">
+    <div class="container">
+        <div class="col-10 offset-md-1 lo-numbers text-center">
             <p>AND: <span class="number-box" id="percent-of-and"></span></p>
             <p>OR: <span class="number-box" id="percent-of-or"></span></p>
             <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
@@ -42,9 +44,12 @@
                 </div>
             </div>
             <div class="row">
-                <!-- <div class="col-12 col-md-6" id="dis-pie" class="custom-chart"></div> -->
-                <div class="col-12 col-md-6" id="country-chart" class="custom-chart"></div>
-                <div class="col-12 col-md-6" id="discipline-bar" class="custom-chart"></div>
+                <div class="col-sm-12 col-lg-6" id="country-chart" class="custom-chart"></div>
+                <!-- <div class="col-sm-12 col-md-6" id="discipline-bar" class="custom-chart"></div> -->
+            </div>
+            <div class="row">
+                <!-- <div class="col-sm-12 col-md-6" id="country-chart" class="custom-chart"></div> -->
+                <div class="col-sm-12 col-lg-6" id="discipline-bar" class="custom-chart"></div>
             </div>
         </div>
     </section>
@@ -52,16 +57,16 @@
     <div>
         <div class="container">
             <div class="row">
-                    <div class="col-4 text-center">
-                        <p class="section-paragraph">Stacked Bar</p>
-                    </div>
-                    <div class="col-8 text-center">
-                        <p class="section-paragraph">Composite</p>
-                    </div>
+                <div class="col-sm-12 col-md-4 text-center">
+                    <p class="section-paragraph">Stacked Bar</p>
+                </div>
+                <div class="col-sm-12 col-md-8 text-center">
+                    <p class="section-paragraph">Composite</p>
+                </div>
             </div>
             <div class="row">
-                <div class="col-4" id="stacked-choice"></div>
-                <div class="col-8" id="composite-chart"></div>
+                <div class="col-sm-12 col-md-4" id="stacked-choice"></div>
+                <div class="col-sm-12 col-md-8" id="composite-chart"></div>
             </div>
         </div>
     </div>

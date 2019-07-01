@@ -44,7 +44,8 @@ function makeGraphs(error, opData) {
                 };
             }
         );
-        dc.numberDisplay(element)
+        var numDis = dc.numberDisplay(element);
+        numDis
             .formatNumber(d3.format(".2%"))
             .valueAccessor(function (p, d) {
                 if (p.count == 0) {
@@ -242,9 +243,8 @@ function makeGraphs(error, opData) {
                     .colors('blue')
                     .group(groupByNot, 'NOT')
                 ])
-                .brushOn(false);
-
-        // .elasticY(true);
+                .brushOn(true)
+                .elasticY(true);
     }
 
 

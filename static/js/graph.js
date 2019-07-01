@@ -6,6 +6,7 @@ function makeGraphs(error, opData) {
     var ndx = crossfilter(opData);
     opData.forEach(function (d) {
         d.salary = parseInt(d.salary);
+        d.time_as = parseInt(d.time_as);
     })
     // console.log(opData);
 
@@ -15,8 +16,8 @@ function makeGraphs(error, opData) {
     show_percentage_logical(ndx, "NOT", "#percent-of-not");
     country_rowchart(ndx);
     discipline_bargraph(ndx);
-    show_count_of_choices_by_logical_op(ndx);
-
+    show_count_of_choices_by_logical_op(ndx); //maybe should be other way around
+    show_count_of_operator_over_time(ndx);
 
     dc.renderAll();
 
@@ -98,14 +99,6 @@ function makeGraphs(error, opData) {
             .xUnits(dc.units.ordinal)
             .elasticY(true)
             .yAxis().ticks(14);
-
-        // bargraph.renderlet(function (d) {
-        //     bargraph.selectAll("g.x text")
-        //         .style("text-anchor", "start")
-        //         .attr('dx', '5')
-        //         .attr('dy', '-5')
-        //         .attr('transform', "rotate(-90)");
-        // });
     }
 
 
@@ -150,89 +143,75 @@ function makeGraphs(error, opData) {
             }
         );
 
-        console.log(groupByDogs.top(Infinity));
-        console.log(groupByCats.top(Infinity));
+        // console.log(groupByDogs.top(Infinity));
+        // console.log(groupByCats.top(Infinity));
 
         var stackedChart = dc.barChart("#stacked-choice");
         stackedChart
             .dimension(logical_dim)
             .group(groupByDogs, "Dogs")
             .stack(groupByCats, "Cats")
-            .width(500)
+            .width(1000)
             .height(500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .elasticY(true)
             .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
 
+    }
+
+    function show_count_of_operator_over_time(ndx) {
+        var time_as_dim = ndx.dimension(function (d) {
+            return d.time_as;
+        });
+        var andGroup = time_as_dim.group().reduce(
+            function reduceAdd(p, v) {
+                if (v.logical_op === "AND") {
+                    p.count++;
+                    p.total += p.count;
+                    p.average = p.total / p.count;
+                }
+                return p;
+            },
+            function reduceRemove(p, v) {
+                if (v.logical_op === "AND") {
+                    p.count--;
+                    p.total += v.count;
+                    p.average = p.total / v.count;
+                }
+                return p;
+            },
+            function reduceInitial() {
+                return {count:0, total:0, average:0};
+            }
+        );
+
+        console.log(andGroup.top(Infinity));
+
+        var minTime = time_as_dim.bottom(1)[0].time_as;
+        var maxTime = time_as_dim.top(1)[0].time_as;
 
 
-
-
-        // var logical_group = logical_dim.group();
-
-        // var choices_dim = ndx.dimension(function (d) {
-        //     return d.choice;
-        // });
-
-        // var countOfDogsPerLop = choices_dim.group().reduce(
-        //     function (d) {
-        //         if (d.choice === "DOGS") {
-        //             d.choice++;
-        //             return d;
-        //         } 
-        //         else {
-        //             return 0;
-        //         }
-        //     },
-        //     function (d) {
-        //         if (d.choice === "DOGS") {
-        //             d.choice--;
-        //             return p;
-        //         } else {
-        //             return 0;
-        //         }
-        //     },
-        //     function () {
-        //         return {
-        //             choice: 0
-        //         };
-        //     });
-        // console.log(countOfDogsPerLop.top(Infinity));
-
-        // var countOfCatsPerLop = choices_dim.group().reduce(
-        //     function (p, d) {
-        //         if (d.choice === "CATS") {
-        //             p.choice++;
-        //             return p;
-        //         } else {
-        //             return 0;
-        //         }
-        //     },
-        //     function (p, d) {
-        //         if (d.choice === "CATS")
-        //             p.choice--;
-        //         return p;
-        //     },
-        //     function () {
-        //         return {
-        //             choice: 0
-        //         };
-        //     });
-        // console.log(countOfCatsPerLop.top(Infinity));
-
-        // var stackedChart = dc.barChart("#stacked-choice");
-        // stackedChart
-        //     .width(500)
-        //     .height(500)
-        //     .dimension(logical_dim)
-        //     .group(logical_group)
-        //     // .stack(countOfDogsPerLop)
-        //     .stack(countOfCatsPerLop)
-        //     .x(d3.scale.ordinal())
-        //     .xUnits(dc.units.ordinal)
-        //     .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
-
+        var timeChart = dc.lineChart("#time_as_graph");
+        timeChart
+            .width(1000)
+            .height(300)
+            .margins({
+                top: 10,
+                right: 50,
+                bottom: 30,
+                left: 50
+            })
+            .dimension(time_as_dim)
+            .group(andGroup)
+            .valueAccessor(function (p) {
+                return p.value.count
+            })
+            .transitionDuration(500)
+            .x(d3.time.scale().domain([minTime, maxTime]))
+            .xAxisLabel("Time As")
+            .yAxis().ticks(4);
+        // .elasticY(true);
     }
 
 

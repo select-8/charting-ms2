@@ -75,7 +75,7 @@ function makeGraphs(error, opData) {
         var rowchart = dc.rowChart('#country-chart')
         rowchart
             .height(520)
-            .width(width)
+            .width(520)
             .margins({
                 top: 5,
                 left: 10,
@@ -97,7 +97,7 @@ function makeGraphs(error, opData) {
         var dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
             .width(520)
-            .height(width)
+            .height(520)
             .margins({
                 top: 0,
                 right: 50,
@@ -158,7 +158,7 @@ function makeGraphs(error, opData) {
             .dimension(logical_dim)
             .group(groupByDogs, "Dogs")
             .stack(groupByCats, "Cats")
-            .width(width)
+            .width(390)
             .height(500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -234,7 +234,7 @@ function makeGraphs(error, opData) {
 
         var compositeChart = dc.compositeChart('#composite-chart');
         compositeChart
-            .width(width)
+            .width(680)
             .height(500)
             .dimension(time_as_dim)
             .x(d3.scale.linear().domain([minTime, maxTime]))

@@ -56,6 +56,14 @@ div .sticky {
     width: 400px;
 }
 
+#composite-chart {
+    left: 150px;
+}
+
+#stacked-choice {
+    left: 50px;
+}
+
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp */
 /* The side navigation menu */
 .sidenav {

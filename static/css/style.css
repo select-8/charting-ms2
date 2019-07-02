@@ -2,19 +2,6 @@
     font-family: 'Lato', serif;
 }
 
-/* .dc-chart .axis text {
-    font-weight: 700;
-    letter-spacing: .2rem;
-} */
-
-#country-chart .axis text {
-    fill: blue;
-    font-family: 'Lato', sans-serif;
-}
-
-.country-op {
-    display: inline;
-}
 
 .section-paragraph {
     padding-bottom: 50px;
@@ -27,20 +14,6 @@
     fill: #000;
     font-size: 12px;
     cursor: pointer;
-}
-
-.country-container {
-	position: relative;
-}
-
-.discipline-container {
-    float: right;
-}
-
-#discipline-bar {
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 .lo-numbers p {

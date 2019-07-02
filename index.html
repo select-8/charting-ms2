@@ -27,39 +27,42 @@
 
 <body>
     <!-- This should be selected if TEXT is selected on intro -->
-    <div class="container" id="text-rep">
-        <div class="col-10 offset-md-1 lo-numbers text-center">
-            <p>AND: <span class="number-box" id="percent-of-and"></span></p>
-            <p>OR: <span class="number-box" id="percent-of-or"></span></p>
-            <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
-        </div>
-    </div>
-    <!-- This should be selected if SYMBOL is selected on intro -->
-    <div class="container" id="symbol-rep">
-        <div class="col-10 offset-md-1 lo-numbers text-center">
-            <p>&: <span class="number-box" id="percent-of-and"></span></p>
-            <p>||: <span class="number-box" id="percent-of-or"></span></p>
-            <p>!: <span class="number-box" id="percent-of-not"></span></p>
-        </div>
-    </div>
-
     <section>
-        <div class="container country-container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="section-paragraph">Logical Operator Preferences in the EU 28</p>
-                </div>
+        <div class="container" id="text-rep">
+            <div class="col-10 offset-md-1 lo-numbers text-center">
+                <p>AND: <span class="number-box" id="percent-of-and"></span></p>
+                <p>OR: <span class="number-box" id="percent-of-or"></span></p>
+                <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
             </div>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6" id="country-chart" class="custom-chart"></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6" id="discipline-bar" class="custom-chart"></div>
+        </div>
+        <!-- This should be selected if SYMBOL is selected on intro -->
+        <div class="container" id="symbol-rep">
+            <div class="col-10 offset-md-1 lo-numbers text-center">
+                <p>&: <span class="number-box" id="percent-of-and"></span></p>
+                <p>||: <span class="number-box" id="percent-of-or"></span></p>
+                <p>!: <span class="number-box" id="percent-of-not"></span></p>
             </div>
         </div>
     </section>
 
-    <div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 text-center">
+                    <p class="section-paragraph">Discipline Bar</p>
+                </div>
+                <div class="col-sm-12 col-md-8 text-center">
+                    <p class="section-paragraph">Country Chart</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4" id="discipline-bar"></div>
+                <div class="col-sm-12 col-md-6 offset-md-2" id="country-chart"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-4 text-center">
@@ -74,7 +77,7 @@
                 <div class="col-sm-12 col-md-8" id="composite-chart"></div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
 </body>
 <!-- <script type="text/javascript" src="static/js/script.js"></script> -->

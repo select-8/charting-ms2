@@ -2,6 +2,13 @@ queue()
     .defer(d3.csv, "data/mydata.csv")
     .await(makeGraphs);
 
+
+var width;
+$(window).on('load', function () {
+    width = $(window).width();
+    console.log(width);
+})
+
 function makeGraphs(error, opData) {
     var ndx = crossfilter(opData);
     opData.forEach(function (d) {
@@ -59,7 +66,7 @@ function makeGraphs(error, opData) {
             .group(lgop_group)
     }
 
-    dc.filterAll();
+    // dc.filterAll();
 
     function country_rowchart(ndx) {
         var dim = ndx.dimension(dc.pluck('country'));
@@ -68,6 +75,7 @@ function makeGraphs(error, opData) {
         var rowchart = dc.rowChart('#country-chart')
         rowchart
             .height(520)
+            .width(width)
             .margins({
                 top: 5,
                 left: 10,
@@ -89,7 +97,7 @@ function makeGraphs(error, opData) {
         var dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
             .width(520)
-            .height(520)
+            .height(width)
             .margins({
                 top: 0,
                 right: 50,
@@ -150,7 +158,7 @@ function makeGraphs(error, opData) {
             .dimension(logical_dim)
             .group(groupByDogs, "Dogs")
             .stack(groupByCats, "Cats")
-            .width(350)
+            .width(width)
             .height(500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -224,29 +232,29 @@ function makeGraphs(error, opData) {
         var minTime = time_as_dim.bottom(1)[0].time_as;
         var maxTime = time_as_dim.top(1)[0].time_as;
 
-            var compositeChart = dc.compositeChart('#composite-chart');
-            compositeChart
-                .width(750)
-                .height(500)
-                .dimension(time_as_dim)
-                .x(d3.scale.linear().domain([minTime, maxTime]))
-                .yAxisLabel("Count Logical Operator")
-                .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-                .renderHorizontalGridLines(true)
-                .compose([
-                    dc.lineChart(compositeChart)
-                    .colors('green')
-                    .group(groupByAnd, 'AND'),
-                    dc.lineChart(compositeChart)
-                    .colors('red')
-                    .group(groupByOr, 'OR')
-                    .dashStyle([2,2]),
-                    dc.lineChart(compositeChart)
-                    .colors('blue')
-                    .group(groupByNot, 'NOT')
-                ])
-                .brushOn(false)
-                .elasticY(true);
+        var compositeChart = dc.compositeChart('#composite-chart');
+        compositeChart
+            .width(width)
+            .height(500)
+            .dimension(time_as_dim)
+            .x(d3.scale.linear().domain([minTime, maxTime]))
+            .yAxisLabel("Count Logical Operator")
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .renderHorizontalGridLines(true)
+            .compose([
+                dc.lineChart(compositeChart)
+                .colors('green')
+                .group(groupByAnd, 'AND'),
+                dc.lineChart(compositeChart)
+                .colors('red')
+                .group(groupByOr, 'OR')
+                .dashStyle([2, 2]),
+                dc.lineChart(compositeChart)
+                .colors('blue')
+                .group(groupByNot, 'NOT')
+            ])
+            .brushOn(false)
+            .elasticY(true);
     }
     // dc.filterAll();
 }

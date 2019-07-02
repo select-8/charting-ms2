@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <style>
+        .myButt {
+            /* background-color: #4CAF50; */
+            /* Green */
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: 'Lato'sans-serif;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <button class="myButt">
+        <div style="cursor: pointer" class="removeMe" id="changeText"></div>
+    </button>
+    <button class="myButt">
+        <div style="cursor: pointer" class="removeMe" id="changeSymbol"></div>
+    </button>
+    <div class="para">
+        <p>THIS IS GOING TO BE MY PAGE</p>
+    </div>
+
+    <!-- <script>
+        $("button").click(function () {
+            $(".myButt").remove();
+        });
+    </script> -->
+
+    <script>
+        $(".para").hide();
+        $("button").click(function () {
+            $(".myButt").remove();
+            $(".para").show();
+        });
+
+        var text = ["AND", "&#8239;OR&nbsp;&#8239;", "NOT"];
+        var symbol = ["&nbsp;&&nbsp;", "&nbsp;||&nbsp;", "&#8239;&#8239;!&#8239;&#8239;&#8239;"];
+        var counter = 0;
+        var elemT = document.getElementById("changeText");
+        var elemS = document.getElementById("changeSymbol");
+        var instT = setInterval(changeT, 700);
+        var instS = setInterval(changeS, 700);
+
+
+        function changeS() {
+            elemS.innerHTML = symbol[counter];
+            counter++;
+            if (counter >= symbol.length) {
+                counter = 0;
+            }
+        };
+
+        function changeT() {
+            elemT.innerHTML = text[counter];
+            counter++;
+            if (counter >= text.length) {
+                counter = 0;
+            }
+        };
+    </script>
+
+
+</body>
+
+</html>

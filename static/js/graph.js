@@ -51,13 +51,15 @@ function makeGraphs(error, opData) {
                 if (p.count == 0) {
                     return 0;
                 } else {
-                    return (p.count / dim.groupAll().value());
-                    // return (p.count / dim_total);
+                    var totalCount = dim.groupAll().value();
+                    return (p.count / totalCount);
                 }
             })
             .dimension(dim)
             .group(lgop_group)
     }
+
+    dc.filterAll();
 
     function country_rowchart(ndx) {
         var dim = ndx.dimension(dc.pluck('country'));
@@ -243,87 +245,8 @@ function makeGraphs(error, opData) {
                     .colors('blue')
                     .group(groupByNot, 'NOT')
                 ])
-                .brushOn(true)
+                .brushOn(false)
                 .elasticY(true);
     }
-
-
-
-    // function op_bar(ndx) {
-    //     var op_dim = ndx.dimension(dc.pluck('logical_op'));
-    //     var op_group = op_dim.group();
-    //     var op_bargraph = dc.barChart("#op-bar");
-    //     op_bargraph
-    //         .width(550)
-    //         .height(350)
-    //         .margins({
-    //             top: 10,
-    //             right: 50,
-    //             bottom: 30,
-    //             left: 50
-    //         })
-    //         .dimension(op_dim)
-    //         .group(op_group)
-    //         .transitionDuration(500)
-    //         .x(d3.scale.ordinal())
-    //         .xUnits(dc.units.ordinal)
-    //         .xAxisLabel("logical_op")
-    //         .yAxis().ticks(14);
-
-    // }
-
-
-    // var loopDimension = ndx.dimension(dc.pluck('logical_op'));
-
-
-    // GENDER
-    // function show_loop_pref_by_gender(ndx) {
-    //     var loopDimension = ndx.dimension(dc.pluck('logical_op'));
-    //     var sexDimension = ndx.dimension(function (d) {
-    //         return d.sex
-    //     });
-    //     var sexFilterW = sexDimension.filter("female");
-    //     console.log(sexFilterW.top(Infinity));
-    //     // console.log(sexFilter.groupAll());
-    //     // var sexOp = sexDimension.group().reduceCount(dc.pluck('logical_op'));
-    //     // console.log(sexOp);
-    //     var sexGroup = loopDimension.group();
-
-    //     dc.barChart("#female-loop")
-    //                 .width(400)
-    //                 .height(400)
-    //                 .margins({
-    //                     top: 10,
-    //                     right: 50,
-    //                     bottom: 30,
-    //                     left: 50
-    //                 })
-    //                 .dimension(sexDimension)
-    //                 .group(sexGroup)
-    //                 .x(d3.scale.ordinal())
-    //                 .xUnits(dc.units.ordinal)
-    //                 .xAxisLabel("Logical Operator Preferences with Women")
-    //                 .yAxis().ticks(40);
-
-    //     sexDimension.filterAll();
-    //     var sexFilterM = sexDimension.filter("male");
-    //     var sexGroup = loopDimension.group();
-    //     console.log(sexFilterM.top(Infinity));
-
-    //     dc.barChart("#male-loop")
-    //                 .width(400)
-    //                 .height(400)
-    //                 .margins({
-    //                     top: 10,
-    //                     right: 50,
-    //                     bottom: 30,
-    //                     left: 50
-    //                 })
-    //                 .dimension(sexDimension)
-    //                 .group(sexGroup)
-    //                 .x(d3.scale.ordinal())
-    //                 .xUnits(dc.units.ordinal)
-    //                 .xAxisLabel("Logical Operator Preferences with Men")
-    //                 .yAxis().ticks(40);
-    // 
+    // dc.filterAll();
 }

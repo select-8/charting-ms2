@@ -16,6 +16,12 @@
     cursor: pointer;
 }
 
+div .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 .lo-numbers p {
     font-family: 'Lato', sans-serif;
     background-color: pink;
@@ -49,3 +55,47 @@
     font-family: 'Lato'sans-serif;
     width: 400px;
 }
+
+/* https://www.w3schools.com/howto/howto_js_sidenav.asp */
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #000;
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }

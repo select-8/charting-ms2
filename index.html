@@ -22,63 +22,111 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="static/js/graph.js"></script>
-    <script type="text/javascript" src="static/js/script.js"></script>
+    <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
+
 </head>
 
 <body>
-    <!-- This should be selected if TEXT is selected on intro -->
-    <section>
-        <div class="container" id="text-rep">
-            <div class="col-10 offset-md-1 lo-numbers text-center">
-                <p>AND: <span class="number-box" id="percent-of-and"></span></p>
-                <p>OR: <span class="number-box" id="percent-of-or"></span></p>
-                <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
-            </div>
-        </div>
-        <!-- This should be selected if SYMBOL is selected on intro -->
-        <div class="container" id="symbol-rep">
-            <div class="col-10 offset-md-1 lo-numbers text-center">
-                <p>&: <span class="number-box" id="percent-of-Sand"></span></p>
-                <p>||: <span class="number-box" id="percent-of-Sor"></span></p>
-                <p>!: <span class="number-box" id="percent-of-Snot"></span></p>
-            </div>
-        </div>
-    </section>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4 text-center">
-                    <p class="section-paragraph">Discipline Bar</p>
-                </div>
-                <div class="col-sm-12 col-md-8 text-center">
-                    <p class="section-paragraph">Country Chart</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-4" id="discipline-bar"></div>
-                <div class="col-sm-12 col-md-6 offset-md-2" id="country-chart"></div>
-            </div>
-        </div>
-    </section>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4 text-center">
-                    <p class="section-paragraph">Stacked Bar</p>
-                </div>
-                <div class="col-sm-12 col-md-8 text-center">
-                    <p class="section-paragraph">Composite</p>
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h4>Graphs</h4>
+        <h4>Graphs</h4>
+        <h4>Graphs</h4>
+        <h4>Graphs</h4>
+    </div>
+    <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()">&nbsp;&nbsp;INFO</span>
+
+    <div class="container-fluid change-text">
+        <div class="row">
+            <div class="col-12 col-md-6 text-center" id="intro-text">
+                <div class="intro">
+                    <div style="cursor: pointer" id="changeText"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-4" id="stacked-choice"></div>
-                <div class="col-sm-12 col-md-8" id="composite-chart"></div>
+            <div class="col-12 col-md-6 text-center" id="intro-symbol">
+                <div class="intro">
+                    <div style="cursor: pointer" id="changeSymbol"></div>
+                </div>
             </div>
         </div>
-    </section>
-    <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
+    </div>
+
+    <div class="container" id="allGraphs">
+        <!-- This should be selected if TEXT is selected on intro -->
+        <section>
+            <div class="container" id="text-rep">
+                <div class="col-10 offset-md-1 lo-numbers text-center">
+                    <p>
+                        <span class="text-span">AND:&nbsp;&nbsp;&nbsp;</span>
+                        <span class="symbol-span">&:&nbsp;&nbsp;&nbsp;</span>
+                        <span class="number-box" id="percent-of-and"></span>
+                    </p>
+                    <p>
+                        <span class="text-span">OR:&nbsp;&nbsp;&nbsp;</span>
+                        <span class="symbol-span">||:&nbsp;&nbsp;&nbsp;</span>
+                        <span class="number-box" id="percent-of-or"></span>
+                    </p>
+                    <p>
+                        <span class="text-span">NOT:&nbsp;&nbsp;&nbsp;</span>
+                        <span class="symbol-span">!:&nbsp;&nbsp;&nbsp;</span>
+                        <span class="number-box" id="percent-of-not"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 text-center">
+                        <p class="section-paragraph">Discipline Bar</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8 text-center">
+                        <p class="section-paragraph">Country Chart</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4" id="discipline-bar"></div>
+                    <div class="col-sm-12 col-md-6 offset-md-2" id="country-chart"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 text-center">
+                        <p class="section-paragraph">Stacked Bar</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8 text-center">
+                        <p class="section-paragraph">Composite</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4" id="stacked-choice"></div>
+                    <div class="col-sm-12 col-md-8" id="composite-chart"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="static/js/script.js"></script>
 </body>
 
 

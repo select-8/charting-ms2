@@ -18,17 +18,17 @@ function makeGraphs(error, opData) {
     // console.log(opData);
 
 
-    show_percentage_logical(ndx, "AND", "#percent-of-and");
-    show_percentage_logical(ndx, "OR", "#percent-of-or");
-    show_percentage_logical(ndx, "NOT", "#percent-of-not");
+    show_percentage_logical_t(ndx, "AND", "#percent-of-and");
+    show_percentage_logical_t(ndx, "OR", "#percent-of-or");
+    show_percentage_logical_t(ndx, "NOT", "#percent-of-not");
     country_rowchart(ndx);
     discipline_bargraph(ndx);
-    show_count_of_choices_by_logical_op(ndx); //maybe should be other way around
+    show_count_of_choices_by_logical_op(ndx);
     show_count_of_operator_over_time(ndx);
 
     dc.renderAll();
 
-    function show_percentage_logical(ndx, logical, element) {
+    function show_percentage_logical_t(ndx, logical, element) {
 
         var dim = ndx.dimension(function (d) {
             return d.logical_op;

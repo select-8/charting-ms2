@@ -1,18 +1,19 @@
 $(document).ready(function () {
-    var percentAnd = document.getElementById("percent-of-and").innerText;
+
+
+    $(".intro-text").click(function () {
+        $("#symbol-rep").hide();
+        window.location.href = "index.html";
+        $(".change-text").remove();
+    });
+
+    var percentAnd = document.getElementById("percent-of-and").outerText;
     console.log(percentAnd);
     var percentOr = document.getElementById("percent-of-or").outerText;
     console.log(percentOr);
-    var percentNot = document.getElementById("percent-of-not").outerText; // returns dynamic crossfilter
+    var percentNot = document.getElementById("percent-of-not").outerText;
     console.log(percentNot);
+
 });
-
-
-// $(document).ready(function(){
-//     var presentAnd = $("#percent-of-and").bind('change', function(event) {
-//        alert( $("#percent-of-and").attr("value") );
-//     });
-//     console.log(presentAnd);
-//  });
 
 

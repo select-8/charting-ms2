@@ -9,37 +9,8 @@
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-
-    <style>
-    
-        .change-text {
-            position: absolute;
-            margin: auto;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: #ccc;
-        }
-
-
-        .intro {
-            background-color: white;
-            position: relative;
-            top: 150%;
-            border: none;
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 6em;
-            font-family: 'Lato'sans-serif;
-            width: 400px;
-            /* border-radius: 50%; */
-        }
-    </style>
-
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    <link href="index.html">
 
 </head>
 
@@ -47,37 +18,26 @@
     <div class="container-fluid change-text">
         <div class="row">
             <div class="col-12 col-md-6 text-center">
-                <div class="intro">
-                    <div style="cursor: pointer" class="removeMe" id="changeText"></div>
+                <div class="intro intro-text">
+                    <div style="cursor: pointer" id="changeText"></div>
                 </div>
             </div>
             <div class="col-12 col-md-6 text-center">
-                <div class="intro">
-                    <div style="cursor: pointer" class="removeMe" id="changeSymbol"></div>
+                <div class="intro intro-symbol">
+                    <div style="cursor: pointer" id="changeSymbol"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="para">
-        <p>THIS IS GOING TO BE MY PAGE</p>
-    </div>
-
     <script>
-        $(".para").hide();
-        $(".intro").click(function () {
-            $(".change-text").remove();
-            // window.location.replace("index.html");
-            window.location.href = "index.html" ;
-        });
-
         var text = ["AND", "&#8239;OR&nbsp;&#8239;", "NOT"];
         var symbol = ["&nbsp;&&nbsp;", "&nbsp;||&nbsp;", "&#8239;&#8239;!&#8239;&#8239;&#8239;"];
         var counter = 0;
         var elemT = document.getElementById("changeText");
         var elemS = document.getElementById("changeSymbol");
-        var instT = setInterval(changeT, 700);
-        var instS = setInterval(changeS, 700);
+        var instT = setInterval(changeT, 100);
+        var instS = setInterval(changeS, 100);
 
 
         function changeS() {
@@ -96,10 +56,10 @@
             }
             // console.log(counter);
         };
-
-
     </script>
 
+
+    <script type="text/javascript" src="static/js/script.js"></script>
 
 </body>
 

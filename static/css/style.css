@@ -23,3 +23,29 @@
     font-weight: 700;
     font-size: 2rem;
 }
+
+.change-text {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+}
+
+
+.intro {
+    background-color: white;
+    position: relative;
+    top: 150%;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 6em;
+    font-family: 'Lato'sans-serif;
+    width: 400px;
+}

@@ -5,22 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>INTRO</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
     <style>
+    
+        .change-text {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #ccc;
+        }
+
+
         .myButt {
-            /* background-color: #4CAF50; */
-            /* Green */
+            position: relative;
+            top: 150%;
             border: none;
             color: black;
-            padding: 15px 32px;
+            /* padding: 15px 32px; */
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 6em;
             font-family: 'Lato'sans-serif;
+            width: 600px;
+            /* border-radius: 50%; */
         }
     </style>
 
@@ -28,27 +43,30 @@
 </head>
 
 <body>
+    <div class="container-fluid change-text">
+        <div class="row">
+            <div class="col-12 col-md-6 text-center">
+                <button class="myButt">
+                    <div style="cursor: pointer" class="removeMe" id="changeText"></div>
+                </button>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <button class="myButt">
+                    <div style="cursor: pointer" class="removeMe" id="changeSymbol"></div>
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <button class="myButt">
-        <div style="cursor: pointer" class="removeMe" id="changeText"></div>
-    </button>
-    <button class="myButt">
-        <div style="cursor: pointer" class="removeMe" id="changeSymbol"></div>
-    </button>
     <div class="para">
         <p>THIS IS GOING TO BE MY PAGE</p>
     </div>
 
-    <!-- <script>
-        $("button").click(function () {
-            $(".myButt").remove();
-        });
-    </script> -->
-
     <script>
         $(".para").hide();
         $("button").click(function () {
-            $(".myButt").remove();
+            // $(".myButt").remove();
+            $(".change-text").remove();
             $(".para").show();
         });
 

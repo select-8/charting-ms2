@@ -26,14 +26,23 @@
 </head>
 
 <body>
-
-    <div class="container">
+    <!-- This should be selected if TEXT is selected on intro -->
+    <div class="container" id="text-rep">
         <div class="col-10 offset-md-1 lo-numbers text-center">
             <p>AND: <span class="number-box" id="percent-of-and"></span></p>
             <p>OR: <span class="number-box" id="percent-of-or"></span></p>
             <p>NOT: <span class="number-box" id="percent-of-not"></span></p>
         </div>
     </div>
+    <!-- This should be selected if SYMBOL is selected on intro -->
+    <div class="container" id="symbol-rep">
+        <div class="col-10 offset-md-1 lo-numbers text-center">
+            <p>&: <span class="number-box" id="percent-of-and"></span></p>
+            <p>||: <span class="number-box" id="percent-of-or"></span></p>
+            <p>!: <span class="number-box" id="percent-of-not"></span></p>
+        </div>
+    </div>
+
     <section>
         <div class="container country-container">
             <div class="row">

@@ -53,11 +53,8 @@ $(document).ready(function () {
         clearInterval(instS)
     }, 2000);
 
-
-    // $(function () {
+    // something needs to happen for initial load
     $('svg').on("click", function () {
-        // var clicked_svg = $(this).val();
-
         function getValues() {
             let precentOfVals = [];
             let cleanVals = [];
@@ -78,51 +75,30 @@ $(document).ready(function () {
             cleanVals.push(cleanPos3);
             return cleanVals;
         }
-        console.log(getValues()[0]);
-        console.log(getValues()[1]);
-        console.log(getValues()[2]);
+        // console.log(getValues()[0]);
+        // console.log(getValues()[1]);
+        // console.log(getValues()[2]);
 
         const arr = getValues();
         console.log('this is const arr = getValues(): ' + arr);
         console.log('this is typeOf arr: ' + typeof arr);
-        let order = [];
-        let minmax = [];
         let max = Math.max(...arr);
-        let max_i = arr.indexOf(Math.max(...arr)) + 1;
         let min = Math.min(...arr);
-        let min_i = arr.indexOf(Math.min(...arr)) + 1;
-        minmax.push(max);
-        minmax.push(min);
-        const middle = $(arr).not(minmax).get();
-        let middle_i = arr.indexOf(middle);
-        order.push(max_i);
-        order.push(middle_i);
-        order.push(min_i);
-
-        //https://stackoverflow.com/questions/1187518/how-to-get-the-difference-between-two-arrays-in-javascript
-
-        console.log('this is var middle: ' + middle);
-        console.log('this is indexOf middle: ' + middle_i);
-        console.log('this is arr.indexOf(33.29): ' + arr.indexOf(33.29));
-        console.log('this is typeOf middle_i: ' + typeof middle_i);
-        console.log('Im getting middle this way: let middle = $(arr).not(minmax).get(); Resulting in: ' + $(arr).not(minmax).get());
-        console.log('this is order[]: ' + order);
-
-
+        let max_i = arr.indexOf(max);
+        let min_i = arr.indexOf(min);
+        console.log(max_i, min_i);
+        let mid_i = (max_i + min_i === 3) ? 0 : (max_i + min_i === 2) ? 1 : 2; // thanks johnL3_alumni
+        // something needs to happen two values are the same!!!
+        let order = [max_i, mid_i, min_i];
+        console.log(order);
+        // let middle = arr.indexOf(mid_i);
+        // console.log(middle);
+        // https://stackoverflow.com/questions/929519/dynamically-arranging-divs-using-jquery
         var container = $("#percentage-boxes");
         var children = container.children();
         container.empty();
         for (var i = 0; i < order.length; i++) {
-            container.append(children[order[i] - 1])
+            container.append(children[order[i]])
         }
     });
-    // https://stackoverflow.com/questions/929519/dynamically-arranging-divs-using-jquery
-    // var order_div = [3, 2, 1];
-    // var container = $("#percentage-boxes");
-    // var children = container.children();
-    // container.empty();
-    // for (var i = 0; i < order_div.length; i++) {
-    //     container.append(children[order_div[i] - 1])
-    // }
-
 });

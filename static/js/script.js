@@ -5,6 +5,7 @@ $(document).ready(function () {
 
     // $("#allGraphs").hide();
 
+
     $("#intro-text").click(function () {
         $(".change-text").remove();
         $(".symbol-span").fadeOut(1000).hide();
@@ -53,17 +54,58 @@ $(document).ready(function () {
     }, 2000);
 
 
+    $(function () {
+        $('svg').click(function () {
 
 
-    var percentAnd = document.getElementById("percent-of-and").outerText;
-    console.log(percentAnd);
-    var percentOr = document.getElementById("percent-of-or").outerText;
-    console.log(percentOr);
-    var percentNot = document.getElementById("percent-of-not").outerText;
-    console.log(percentNot);
+            function getValues() {
+                var precentOfVals = [];
+                var cleanVals = [];
+                var pos1 = document.getElementById("pos-1").innerText.slice(0);
+                var pos2 = document.getElementById("pos-2").innerText.slice(0);
+                var pos3 = document.getElementById("pos-3").innerText.slice(0);
+                precentOfVals.push(pos1);
+                precentOfVals.push(pos2);
+                precentOfVals.push(pos3);
+                var newPos1 = precentOfVals.slice(0)[0];
+                var newPos2 = precentOfVals.slice(0)[1];
+                var newPos3 = precentOfVals.slice(0)[2];
+                var cleanPos1 = Number(newPos1.split(":").pop().split('%')[0].trim());
+                var cleanPos2 = Number(newPos2.split(":").pop().split('%')[0].trim());
+                var cleanPos3 = Number(newPos3.split(":").pop().split('%')[0].trim());
+                cleanVals.push(cleanPos1);
+                cleanVals.push(cleanPos2);
+                cleanVals.push(cleanPos3);
+                return cleanVals;
+            }
+            // if (getValues[1] > getValues[2]) {
+            //     console.log("you go top");
+            // } else {
+            //     return console.log("stay put");
+            // }
+            console.log(getValues());
+        })
 
-    var precentOfVals = [];
-
-    $("#percentage-boxes").children().children().change(function() { console.log($(this).innerText()) });
+    })
 
 });
+
+
+// $(document).ready(function() {  
+
+//     function resizeChanges(){
+//        if(isMenuVisible() == true){
+//           $('#my-nav').removeClass('navbar-fixed-bottom');
+//           $('#my-nav').addClass('navbar-fixed-top');
+//           $('body').css('padding-top', '50px');
+//         }else{
+//           $('#my-nav').removeClass('navbar-fixed-top');
+//           $('#my-nav').addClass('navbar-fixed-bottom');
+//           $('body').css('padding-top', '0');  
+//         }   
+//     }
+
+//     $(window).resize(resizeChanges);
+
+//     resizeChanges();
+//    });

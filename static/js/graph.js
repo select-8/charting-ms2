@@ -6,7 +6,7 @@ queue()
 var width;
 $(window).on('load', function () {
     width = $(window).width();
-    console.log(width);
+    // console.log(width);
 })
 
 function makeGraphs(error, opData) {
@@ -118,15 +118,15 @@ function makeGraphs(error, opData) {
         var logical_dim = ndx.dimension(function (d) {
             return d.logical_op;
         });
-        var groupByDogs = logical_dim.group().reduce(
+        var groupByFalse = logical_dim.group().reduce(
             function reduceAdd(p, v) {
-                if (v.choice === "DOGS") {
+                if (v.choice === "FALSE") {
                     p++
                 }
                 return p;
             },
             function reduceRemove(p, v) {
-                if (v.choice === "DOGS") {
+                if (v.choice === "FALSE") {
                     p--
                 }
                 return p;
@@ -135,15 +135,15 @@ function makeGraphs(error, opData) {
                 return 0;
             }
         );
-        var groupByCats = logical_dim.group().reduce(
+        var groupByTrue = logical_dim.group().reduce(
             function reduceAdd(p, v) {
-                if (v.choice === "CATS") {
+                if (v.choice === "TRUE") {
                     p++
                 }
                 return p;
             },
             function reduceRemove(p, v) {
-                if (v.choice === "CATS") {
+                if (v.choice === "TRUE") {
                     p--
                 }
                 return p;
@@ -156,14 +156,14 @@ function makeGraphs(error, opData) {
         var stackedChart = dc.barChart("#stacked-choice");
         stackedChart
             .dimension(logical_dim)
-            .group(groupByDogs, "Dogs")
-            .stack(groupByCats, "Cats")
+            .group(groupByFalse, "False")
+            .stack(groupByTrue, "True")
             .width(390)
             .height(500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .elasticY(true)
-            .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
+            .legend(dc.legend().x(350).y(0).itemHeight(13).gap(5))
 
     }
 

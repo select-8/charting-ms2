@@ -2,6 +2,10 @@
     font-family: 'Lato', serif;
 }
 
+.reset_all {
+    float: right;
+    top: 0;
+}
 
 .section-paragraph {
     padding-bottom: 50px;
@@ -33,18 +37,16 @@ div .sticky {
 .change-text {
     position: absolute;
     margin: auto;
-    top: 0;
+    top: 25%;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #ccc;
 }
 
 
 .intro {
     background-color: white;
     position: relative;
-    top: 150%;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -63,6 +65,15 @@ div .sticky {
 #stacked-choice {
     left: 50px;
 }
+
+
+/* * {
+    background: #000 !important;
+
+    color: #0f0 !important;
+
+    outline: solid #f00 1px !important;
+} */
 
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp */
 /* The side navigation menu */

@@ -240,6 +240,7 @@ function makeGraphs(error, opData) {
             .height(500)
             .dimension(time_as_dim)
             .x(d3.scale.linear().domain([minTime, maxTime]))
+            .xAxisLabel("Years As Developer")
             .yAxisLabel("Count Logical Operator")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)

@@ -1,14 +1,22 @@
+/* body {
+    overflow-x: hidden;
+} */
+
 .dc-chart {
     font-family: 'Lato', serif;
 }
 
-.reset_all {
-    float: right;
-    top: 0;
+#allGraphs {
+    padding: 0;
+    margin: 0;
+}
+
+.rightpane button {
+    color: blue;
 }
 
 .section-paragraph {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     margin: 20px;
     font-size: 2em;
     letter-spacing: 0.2em;
@@ -20,18 +28,14 @@
     cursor: pointer;
 }
 
-div .sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
 .lo-numbers p {
     font-family: 'Lato', sans-serif;
-    background-color: pink;
+    /* background-color: pink; */
+    color: darkblue;
     margin-top: 20px;
+    padding-right: 0;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .change-text {
@@ -66,6 +70,24 @@ div .sticky {
     left: 50px;
 }
 
+/* .infoButt {
+    right: 50px; */
+    /* padding: 10px 45px 20px;
+} */
+.infoButt button {
+     margin-right: 50px; 
+}
+
+.infoButt p {
+    /* padding-left: 40px; */
+    display: inline;
+    text-decoration-line: underline;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1em;
+    font-size: 2em;
+}
+
+
 
 /* * {
     background: #000 !important;
@@ -76,11 +98,12 @@ div .sticky {
 } */
 
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp */
-/* The side navigation menu */
-.sidenav {
+
+
+.rightpane {
     height: 100%;
     /* 100% Full-height */
-    width: 0;
+    width: 300px;
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
@@ -88,33 +111,17 @@ div .sticky {
     /* Stay on top */
     top: 0;
     /* Stay at the top */
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    background-color: #fafafa;
     /* Black*/
-    overflow-x: hidden;
+    overflow: hidden;
     /* Disable horizontal scroll */
-    padding-top: 60px;
+    /* padding-top: 60px; */
     /* Place content 60px from the top */
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    color: #000;
-
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
-        }
-
-        .sidenav a {
-            font-size: 18px;
-        }
-    }
+.rightpane h4 {
+    color: #da0f0f;
+}

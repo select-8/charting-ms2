@@ -28,101 +28,41 @@
 
 <body>
 
-
-    <!-- <div class="container-fluid change-text">
+    <div class="container col-12 text-center lo-numbers">
         <div class="row">
-            <div class="col-12 col-md-6 text-center" id="intro-text">
-                <div class="intro">
-                    <div style="cursor: pointer" id="changeText"></div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 text-center" id="intro-symbol">
-                <div class="intro">
-                    <div style="cursor: pointer" id="changeSymbol"></div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-3 lo-numbers infoButt">
-                <button><a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a></button>
-            </div>
-            <div class="col-3 lo-numbers number-para" id="para-pos-and">
+            <div class="col-3 number-para" id="para-pos-and">
                 <span class="text-span">AND:</span>
                 <span class="number-box" id="percent-of-and"></span>
             </div>
-            <div class="col-3 lo-numbers number-para" id="para-pos-or">
+            <div class="col-3 number-para" id="para-pos-or">
                 <span class="text-span">OR:</span>
                 <span class="number-box" id="percent-of-or"></span>
             </div>
-            <div class="col-3 lo-numbers number-para" id="para-pos-not">
+            <div class="col-3 number-para" id="para-pos-not">
                 <span class="text-span">NOT:</span>
                 <span class="number-box" id="percent-of-not"></span>
+            </div>
+            <div class="col-3 infoButt">
+                <button><a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a></button>
             </div>
         </div>
     </div>
 
-
-    <!-- <div class="container-fluid" id="allGraphs"> -->
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="col-4" id="country-chart"></div>
-                    <div class="col-4" id="discipline-bar"></div>
-                    <div class="col-4" id="stacked-choice"></div>
-                </div>
-                <div class="row">
-                    <div class="col-12" id="composite-chart"></div>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-2" id="country-chart"></div>
+                <div class="col-5" id="discipline-bar"></div>
+                <div class="col-5" id="stacked-choice"></div>
             </div>
         </div>
-
-
-
-        <!-- <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-4 text-center">
-                        <p class="section-paragraph">Country Chart</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12" id="country-chart"></div>
-                </div>
+        <div class="container-fluid time_series">
+            <div class="row">
+                <div class="col-12" id="composite-chart"></div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-4 text-center">
-                        <p class="section-paragraph">Discipline Bar</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-4" id="discipline-bar"></div>
-                    <div class="col-sm-12 col-md-4" id="stacked-choice"></div>
-                </div>
-            </div>
-        </section> -->
+        </div>
+    </div>
 
-        <!-- <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-4 text-center">
-                        <p class="section-paragraph">Stacked Bar</p>
-                    </div>
-                    <div class="col-sm-12 col-md-8 text-center">
-                        <p class="section-paragraph">Composite</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-8" id="composite-chart"></div>
-                </div>
-            </div>
-        </section> -->
-    <!-- </div> -->
-    <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
 </body>
 
 

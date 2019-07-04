@@ -51,7 +51,7 @@ function makeGraphs(error, opData) {
                 };
             }
         );
-    
+
         var numDis = dc.numberDisplay(element);
         numDis
             .formatNumber(d3.format(".2%"))
@@ -93,21 +93,51 @@ function makeGraphs(error, opData) {
 
     function discipline_bargraph(ndx) {
 
-        var dim = ndx.dimension(dc.pluck('discipline'));
-        var group = dim.group();
+        var dis_dim = ndx.dimension(dc.pluck('discipline'));
+
+        var salary_group = dis_dim.group().reduce(
+
+            function (p, v) {
+                p.count++;
+                p.total += v.salary;
+                p.average = p.total / p.count;
+                return p;
+            },
+            function (p, v) {
+                p.count--;
+                if (p.count == 0) {
+                    p.total = 0;
+                    p.average = 0;
+                } else {
+                    p.total -= v.salary;
+                    p.average = p.total / p.count;
+                }
+                return p;
+            },
+            function () {
+                return {
+                    count: 0,
+                    total: 0,
+                    average: 0
+                };
+            }
+        );
 
         var dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
             .width(500)
             .height(520)
-            // .margins({
-            //     top: 0,
-            //     right: 50,
-            //     bottom: 20,
-            //     left: 80
-            // })
-            .dimension(dim)
-            .group(group)
+            .margins({
+                top: 0,
+                right: 50,
+                bottom: 20,
+                left: 80
+            })
+            .dimension(dis_dim)
+            .group(salary_group)
+            .valueAccessor(function (d) {
+                return d.value.average;
+            })
             .transitionDuration(500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -115,11 +145,11 @@ function makeGraphs(error, opData) {
             .yAxis().ticks(14);
     }
 
-
     function show_count_of_choices_by_logical_op(ndx) {
         var logical_dim = ndx.dimension(function (d) {
-            return d.logical_op;
+            return d.level;
         });
+
         var groupByFalse = logical_dim.group().reduce(
             function reduceAdd(p, v) {
                 if (v.choice === "FALSE") {
@@ -158,15 +188,14 @@ function makeGraphs(error, opData) {
         var stackedChart = dc.barChart("#stacked-choice");
         stackedChart
             .dimension(logical_dim)
-            .group(groupByFalse, "False")
-            .stack(groupByTrue, "True")
+            .group(groupByFalse, "Female")
+            .stack(groupByTrue, "Male")
             .width(350)
             .height(520)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .elasticY(true)
-            .legend(dc.legend().x(350).y(0).itemHeight(13).gap(5))
-
+            .legend(dc.legend().x(250).y(10).itemHeight(13).gap(5))
     }
 
     function show_count_of_operator_over_time(ndx) {
@@ -193,7 +222,6 @@ function makeGraphs(error, opData) {
         );
         var groupByOr = time_as_dim.group().reduce(
             function reduceAdd(p, v) {
-                // console.log(v.choice);
                 if (v.logical_op === "OR") {
                     p++
                 }
@@ -211,7 +239,6 @@ function makeGraphs(error, opData) {
         );
         var groupByNot = time_as_dim.group().reduce(
             function reduceAdd(p, v) {
-                // console.log(v.choice);
                 if (v.logical_op === "NOT") {
                     p++
                 }
@@ -236,8 +263,14 @@ function makeGraphs(error, opData) {
 
         var compositeChart = dc.compositeChart('#composite-chart');
         compositeChart
-            .width(width)
+            .width(1000)
             .height(500)
+            .margins({
+                top: 50,
+                right: 0,
+                bottom: 50,
+                left: 50
+            })
             .dimension(time_as_dim)
             .x(d3.scale.linear().domain([minTime, maxTime]))
             .xAxisLabel("Years As Developer")

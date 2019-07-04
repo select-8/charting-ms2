@@ -14,6 +14,7 @@ function makeGraphs(error, opData) {
     opData.forEach(function (d) {
         d.salary = parseInt(d.salary);
         d.time_as = parseInt(d.time_as);
+        d.hours_per_week = parseInt(d.hours_per_week);
     })
     // console.log(opData);
 
@@ -25,8 +26,21 @@ function makeGraphs(error, opData) {
     discipline_bargraph(ndx);
     show_count_of_choices_by_logical_op(ndx);
     show_count_of_operator_over_time(ndx);
+    remove_empty_bins();
 
     dc.renderAll();
+
+    //https://github.com/dc-js/dc.js/wiki/FAQ#remove-empty-bins
+
+    function remove_empty_bins(source_group) {
+        return {
+            all: function () {
+                return source_group.all().filter(function (d) {
+                    return d.value != 0;
+                });
+            }
+        };
+    };
 
     function show_percentage_logical_t(ndx, logical, element) {
 
@@ -68,11 +82,10 @@ function makeGraphs(error, opData) {
             .group(lgop_group);
     }
 
-    // dc.filterAll();
-
     function country_rowchart(ndx) {
         var dim = ndx.dimension(dc.pluck('country'));
-        var group = dim.group();
+        var country_group = dim.group();
+        var filtered_group = remove_empty_bins(country_group);
 
         var rowchart = dc.rowChart('#country-chart')
         rowchart
@@ -86,7 +99,7 @@ function makeGraphs(error, opData) {
             })
             .elasticX(true)
             .dimension(dim)
-            .group(group)
+            .group(filtered_group)
             .colors(d3.scale.category20())
             .xAxis().ticks(13);
     }
@@ -128,10 +141,10 @@ function makeGraphs(error, opData) {
             .width(500)
             .height(520)
             .margins({
-                top: 0,
-                right: 50,
-                bottom: 20,
-                left: 80
+                top: 50,
+                right: 0,
+                bottom: 50,
+                left: 50
             })
             .dimension(dis_dim)
             .group(salary_group)
@@ -140,6 +153,8 @@ function makeGraphs(error, opData) {
             })
             .transitionDuration(500)
             .x(d3.scale.ordinal())
+            .xAxisLabel("Main Language Practised")
+            .yAxisLabel("Average Salary")
             .xUnits(dc.units.ordinal)
             .elasticY(true)
             .yAxis().ticks(14);
@@ -198,99 +213,89 @@ function makeGraphs(error, opData) {
             .legend(dc.legend().x(250).y(10).itemHeight(13).gap(5))
     }
 
+    // function show_count_of_operator_over_time(ndx) {
+    //     var time_as_dim = ndx.dimension(dc.pluck('time_as'));
+
+    //     var jsHoursPerWeek = time_as_dim.group().reduceSum(function (d) {
+    //         if (d.discipline === 'JavaScript') {
+    //             return +d.hours_per_week
+    //         } else {
+    //             return 0;
+    //         }
+    //     });
+
+    //     var jHoursPerWeek = time_as_dim.group().reduceSum(function (d) {
+    //         if (d.discipline === 'Java') {
+    //             return +d.hours_per_week
+    //         } else {
+    //             return 0;
+    //         }
+    //     });
+
+    //     var pyHoursPerWeek = time_as_dim.group().reduceSum(function (d) {
+    //         if (d.discipline === 'Python') {
+    //             return +d.hours_per_week
+    //         } else {
+    //             return 0;
+    //         }
+    //     });
+
+    //     var minTimeAs = time_as_dim.bottom(1)[0].time_as;
+    //     var maxTimeAs = time_as_dim.top(1)[0].time_as;
+    //     console.log(minTimeAs);
+    //     console.log(maxTimeAs);
+
+    //     var compositeChart = dc.compositeChart('#composite-chart');
+    //     compositeChart
+    //         .width(width)
+    //         .height(500)
+    //         .margins({
+    //             top: 50,
+    //             right: 50,
+    //             bottom: 50,
+    //             left: 50
+    //         })
+    //         .dimension(time_as_dim)
+    //         .x(d3.scale.linear().domain([minTimeAs, maxTimeAs]))
+    //         .xAxisLabel("Hours worked per week")
+    //         .yAxisLabel("Career Length so-far")
+    //         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+    //         .renderHorizontalGridLines(true)
+    //         .compose([
+    //             dc.lineChart(compositeChart)
+    //             .colors('green')
+    //             .group(jsHoursPerWeek, 'Javascript'),
+    //             dc.lineChart(compositeChart)
+    //             .colors('red')
+    //             .group(jHoursPerWeek, 'Java')
+    //             .dashStyle([2, 2]),
+    //             dc.lineChart(compositeChart)
+    //             .colors('blue')
+    //             .group(pyHoursPerWeek, 'Python')
+    //         ])
+    //         .brushOn(false)
+    //         .elasticY(true);
+    // }
+
     function show_count_of_operator_over_time(ndx) {
-        var time_as_dim = ndx.dimension(function (d) {
-            return d.time_as;
-        });
-        var groupByAnd = time_as_dim.group().reduce(
-            function reduceAdd(p, v) {
-                // console.log(v.choice);
-                if (v.logical_op === "AND") {
-                    p++
-                }
-                return p;
-            },
-            function reduceRemove(p, v) {
-                if (v.logical_op === "AND") {
-                    p--
-                }
-                return p;
-            },
-            function reduceInitial() {
-                return 0;
-            }
-        );
-        var groupByOr = time_as_dim.group().reduce(
-            function reduceAdd(p, v) {
-                if (v.logical_op === "OR") {
-                    p++
-                }
-                return p;
-            },
-            function reduceRemove(p, v) {
-                if (v.logical_op === "OR") {
-                    p--
-                }
-                return p;
-            },
-            function reduceInitial() {
-                return 0;
-            }
-        );
-        var groupByNot = time_as_dim.group().reduce(
-            function reduceAdd(p, v) {
-                if (v.logical_op === "NOT") {
-                    p++
-                }
-                return p;
-            },
-            function reduceRemove(p, v) {
-                if (v.logical_op === "NOT") {
-                    p--
-                }
-                return p;
-            },
-            function reduceInitial() {
-                return 0;
-            }
-        );
+    var hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
+    var total_spend_per_date = hours_per_dim.group().reduceCount(dc.pluck('time_as'));
 
+    var minDate = hours_per_dim.bottom(1)[0].hours_per_week;
+    var maxDate = hours_per_dim.top(1)[0].hours_per_week;
 
-        // console.log(groupByAnd.top(Infinity));
-
-        var minTime = time_as_dim.bottom(1)[0].time_as;
-        var maxTime = time_as_dim.top(1)[0].time_as;
-
-        var compositeChart = dc.compositeChart('#composite-chart');
-        compositeChart
-            .width(1000)
-            .height(500)
-            .margins({
-                top: 50,
-                right: 0,
-                bottom: 50,
-                left: 50
-            })
-            .dimension(time_as_dim)
-            .x(d3.scale.linear().domain([minTime, maxTime]))
-            .xAxisLabel("Years As Developer")
-            .yAxisLabel("Count Logical Operator")
-            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-            .renderHorizontalGridLines(true)
-            .compose([
-                dc.lineChart(compositeChart)
-                .colors('green')
-                .group(groupByAnd, 'AND'),
-                dc.lineChart(compositeChart)
-                .colors('red')
-                .group(groupByOr, 'OR')
-                .dashStyle([2, 2]),
-                dc.lineChart(compositeChart)
-                .colors('blue')
-                .group(groupByNot, 'NOT')
-            ])
-            .brushOn(false)
-            .elasticY(true);
+    dc.lineChart("#composite-chart")
+        .width(1000)
+        .height(300)
+        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .dimension(hours_per_dim)
+        .group(total_spend_per_date)
+        .transitionDuration(500)
+        .x(d3.scale.linear().domain([minDate, maxDate]))
+        .xAxisLabel("Hours Worked Per Week")
+        .yAxisLabel("Years as a Developer")
+        .elasticY(true)
+        .yAxis().ticks(10);
     }
-    // dc.filterAll();
+
 }

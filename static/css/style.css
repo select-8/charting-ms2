@@ -2,6 +2,12 @@
     font-family: 'Lato', serif;
 }
 
+#country-chart {
+    margin: 10px 60px 10px 10px;
+}
+
+#country-chart svg g g.axis { display: none; }
+
 .rightpane button {
     color: blue;
 }
@@ -22,7 +28,7 @@
 .lo-numbers {
     font-family: 'Lato', sans-serif;
     color: darkblue;
-    margin: 20px 30px 20px 30px;
+    margin: 20px 0px 20px 0px;
     padding: 10px;
     font-weight: 700;
     font-size: 1.5rem;
@@ -30,10 +36,9 @@
     /* bottom: 50px; */
 }
 
-.time_series {
-    padding: 50px;
-
-}
+/* .time_series {
+    float: left;
+} */
 
 .change-text {
     position: absolute;

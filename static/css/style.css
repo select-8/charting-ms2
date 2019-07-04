@@ -6,11 +6,6 @@
     font-family: 'Lato', serif;
 }
 
-#allGraphs {
-    padding: 0;
-    margin: 0;
-}
-
 .rightpane button {
     color: blue;
 }
@@ -28,14 +23,14 @@
     cursor: pointer;
 }
 
-.lo-numbers p {
+.lo-numbers {
     font-family: 'Lato', sans-serif;
-    /* background-color: pink; */
     color: darkblue;
     margin-top: 20px;
-    padding-right: 0;
+    padding: 10px;
     font-weight: 700;
     font-size: 1.5rem;
+    transform: translateX(15%);
 }
 
 .change-text {

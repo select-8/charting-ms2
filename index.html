@@ -29,7 +29,7 @@
 <body>
 
 
-    <div class="container-fluid change-text">
+    <!-- <div class="container-fluid change-text">
         <div class="row">
             <div class="col-12 col-md-6 text-center" id="intro-text">
                 <div class="intro">
@@ -42,51 +42,47 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 lo-numbers infoButt">
+                <button><a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a></button>
+            </div>
+            <div class="col-3 lo-numbers number-para" id="para-pos-and">
+                <span class="text-span">AND:</span>
+                <span class="number-box" id="percent-of-and"></span>
+            </div>
+            <div class="col-3 lo-numbers number-para" id="para-pos-or">
+                <span class="text-span">OR:</span>
+                <span class="number-box" id="percent-of-or"></span>
+            </div>
+            <div class="col-3 lo-numbers number-para" id="para-pos-not">
+                <span class="text-span">NOT:</span>
+                <span class="number-box" id="percent-of-not"></span>
+            </div>
+        </div>
     </div>
 
 
-    <div class="container" id="allGraphs">
+    <!-- <div class="container-fluid" id="allGraphs"> -->
 
-        <div class="infoButt">
-            <button>
-                <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
-            </button>
-            <p>The Logical Operator</p>
-        </div>
-
-
-        <div id="rightSide">
-            <div id="rightnav" class="rightpane">
-                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-                <div class="container sticky-div">
-                    <div class="lo-numbers" id="percentage-boxes">
-                        <div class="div" id="div-pos-or">
-                            <p class="number-para" id="para-pos-or">
-                                <span class="text-span">OR:&nbsp;&nbsp;&nbsp;</span>
-                                <span class="symbol-span">||:&nbsp;&nbsp;&nbsp;</span>
-                                <span class="number-box" id="percent-of-or"></span>
-                            </p>
-                        </div>
-                        <div class="div" id="div-pos-and">
-                            <p class="number-para" id="para-pos-and">
-                                <span class="text-span">AND:&nbsp;&nbsp;&nbsp;</span>
-                                <span class="symbol-span">&:&nbsp;&nbsp;&nbsp;</span>
-                                <span class="number-box" id="percent-of-and"></span>
-                            </p>
-                        </div>
-                        <div class="div" id="div-pos-not">
-                            <p class="number-para" id="para-pos-not">
-                                <span class="text-span">NOT:&nbsp;&nbsp;&nbsp;</span>
-                                <span class="symbol-span">!:&nbsp;&nbsp;&nbsp;</span>
-                                <span class="number-box" id="percent-of-not"></span>
-                            </p>
-                        </div>
-                    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-4" id="country-chart"></div>
+                    <div class="col-4" id="discipline-bar"></div>
+                    <div class="col-4" id="stacked-choice"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="composite-chart"></div>
                 </div>
             </div>
         </div>
 
-        <section>
+
+
+        <!-- <section>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 text-center">
@@ -94,7 +90,6 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- <div class="col-sm-12 col-md-4" id="discipline-bar"></div> -->
                     <div class="col-12" id="country-chart"></div>
                 </div>
             </div>
@@ -109,9 +104,9 @@
                     <div class="col-sm-12 col-md-4" id="stacked-choice"></div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section>
+        <!-- <section>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 text-center">
@@ -122,13 +117,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- <div class="col-sm-12 col-md-4" id="stacked-choice"></div> -->
                     <div class="col-sm-12 col-md-8" id="composite-chart"></div>
                 </div>
             </div>
-        </section>
-    </div>
-    <script type="text/javascript" src="static/js/script.js"></script>
+        </section> -->
+    <!-- </div> -->
+    <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
 </body>
 
 

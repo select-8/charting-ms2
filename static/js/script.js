@@ -58,9 +58,9 @@ $(document).ready(function () {
         function getValues() {
             let precentOfVals = [];
             let cleanVals = [];
-            let pos1 = document.getElementById("para-pos-1").innerText.slice(0);
-            let pos2 = document.getElementById("para-pos-2").innerText.slice(0);
-            let pos3 = document.getElementById("para-pos-3").innerText.slice(0);
+            var pos1 = $('#percentage-boxes').children().eq(0).children()[0].innerText;
+            var pos2 = $('#percentage-boxes').children().eq(1).children()[0].innerText;
+            var pos3 = $('#percentage-boxes').children().eq(2).children()[0].innerText;
             precentOfVals.push(pos1);
             precentOfVals.push(pos2);
             precentOfVals.push(pos3);
@@ -75,24 +75,15 @@ $(document).ready(function () {
             cleanVals.push(cleanPos3);
             return cleanVals;
         }
-        // console.log(getValues()[0]);
-        // console.log(getValues()[1]);
-        // console.log(getValues()[2]);
-
         const arr = getValues();
         console.log('this is const arr = getValues(): ' + arr);
-        console.log('this is typeOf arr: ' + typeof arr);
         let max = Math.max(...arr);
         let min = Math.min(...arr);
         let max_i = arr.indexOf(max);
         let min_i = arr.indexOf(min);
-        console.log(max_i, min_i);
         let mid_i = (max_i + min_i === 3) ? 0 : (max_i + min_i === 2) ? 1 : 2; // thanks johnL3_alumni
-        // something needs to happen two values are the same!!!
         let order = [max_i, mid_i, min_i];
         console.log(order);
-        // let middle = arr.indexOf(mid_i);
-        // console.log(middle);
         // https://stackoverflow.com/questions/929519/dynamically-arranging-divs-using-jquery
         var container = $("#percentage-boxes");
         var children = container.children();

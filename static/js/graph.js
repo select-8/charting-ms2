@@ -51,6 +51,7 @@ function makeGraphs(error, opData) {
                 };
             }
         );
+    
         var numDis = dc.numberDisplay(element);
         numDis
             .formatNumber(d3.format(".2%"))
@@ -59,11 +60,12 @@ function makeGraphs(error, opData) {
                     return 0;
                 } else {
                     var totalCount = dim.groupAll().value();
+                    console.log((p.count / totalCount) * 100);
                     return (p.count / totalCount);
                 }
             })
             .dimension(dim)
-            .group(lgop_group)
+            .group(lgop_group);
     }
 
     // dc.filterAll();

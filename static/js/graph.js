@@ -7,7 +7,7 @@ var width;
 $(window).on('load', function () {
     width = $(window).width();
     // console.log(width);
-})
+});
 
 function makeGraphs(error, opData) {
     var ndx = crossfilter(opData);
@@ -139,7 +139,7 @@ function makeGraphs(error, opData) {
         
         var dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
-            .width(430)
+            .width(width)
             .height(520)
             .margins({
                 top: 50,
@@ -206,7 +206,7 @@ function makeGraphs(error, opData) {
             .dimension(logical_dim)
             .group(groupByFalse, "Male")
             .stack(groupByTrue, "Female")
-            .width(350)
+            .width(width)
             .height(520)
             .margins({
                 top: 50,
@@ -219,7 +219,7 @@ function makeGraphs(error, opData) {
             .yAxisLabel('Total Respondants')
             .xAxisLabel('Employment Grade')
             .elasticY(true)
-            .legend(dc.legend().x(300).y(55).itemHeight(13).gap(5))
+            .legend(dc.legend().x(270).y(55).itemHeight(13).gap(5))
     }
 
     function show_count_of_operator_over_time(ndx) {
@@ -233,10 +233,10 @@ function makeGraphs(error, opData) {
             .width(width)
             .height(400)
             .margins({
-                top: 50,
-                right: 0,
+                top: 30,
+                right: 50,
                 bottom: 50,
-                left: 50
+                left: 30
             })
             .dimension(hours_per_dim)
             .group(total_spend_per_date)

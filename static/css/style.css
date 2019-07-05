@@ -6,13 +6,19 @@ body {
     font-family: 'Lato', serif;
 }
 
-#country-chart {
-    /* margin: 10px 60px 10px 10px; */
-    /* position: fixed; */
+#composite-chart {
+    width: 100%;
+    padding-bottom: 100px;
 }
 
 #country-chart svg g g.axis {
     display: none;
+}
+
+#discipline-bar .x.axis text {
+    text-anchor: start !important;
+    transform: rotate(-90deg) translate(20px, -15px);
+    letter-spacing: 0.5em;
 }
 
 
@@ -59,7 +65,7 @@ body {
 }
 
 .lo-numbers span {
-    color: darkorange
+    color: darkorange;
 }
 
 .lo-numbers p {
@@ -90,6 +96,10 @@ body {
     font-size: 6em;
     font-family: 'Lato'sans-serif;
     width: 400px;
+}
+
+.allgraphs p {
+    padding-top: 20px;
 }
 
 #composite-chart {

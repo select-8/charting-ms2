@@ -87,10 +87,10 @@ function makeGraphs(error, opData) {
 
         let rowchart = dc.rowChart('#country-chart')
         rowchart
-            .height(490)
+            .height(520)
             .width(300)
             .margins({
-                top: 5,
+                top: 20,
                 left: 5,
                 right: 10,
                 bottom: 20
@@ -216,7 +216,7 @@ function makeGraphs(error, opData) {
             .yAxisLabel('Total Respondants')
             .xAxisLabel('Employment Grade')
             .elasticY(true)
-            .legend(dc.legend().x(270).y(55).itemHeight(13).gap(5))
+            .legend(dc.legend().x(0).y(10).itemHeight(10).gap(5))
     }
 
     function show_count_of_operator_over_time(ndx) {

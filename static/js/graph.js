@@ -2,12 +2,12 @@ queue()
     .defer(d3.csv, "data/mydata.csv")
     .await(makeGraphs);
 
-
 var width;
 $(window).on('load', function () {
     width = $(window).width();
-    // console.log(width);
+    console.log(width);
 });
+
 
 function makeGraphs(error, opData) {
     var ndx = crossfilter(opData);
@@ -16,15 +16,14 @@ function makeGraphs(error, opData) {
         d.time_as = parseInt(d.time_as);
         d.hours_per_week = parseInt(d.hours_per_week);
     })
-    // console.log(opData);
 
-
-    show_percentage_logical_t(ndx, "AND", "#percent-of-and");
-    show_percentage_logical_t(ndx, "OR", "#percent-of-or");
-    show_percentage_logical_t(ndx, "NOT", "#percent-of-not");
+    //Functions are declared 
+    show_percentage_logical(ndx, "AND", "#percent-of-and");
+    show_percentage_logical(ndx, "OR", "#percent-of-or");
+    show_percentage_logical(ndx, "NOT", "#percent-of-not");
     country_rowchart(ndx);
     discipline_bargraph(ndx);
-    show_count_of_choices_by_logical_op(ndx);
+    show_count_of_choices_by_level(ndx);
     show_count_of_operator_over_time(ndx);
     remove_empty_bins();
 
@@ -42,13 +41,13 @@ function makeGraphs(error, opData) {
         };
     };
 
-    function show_percentage_logical_t(ndx, logical, element) {
+    function show_percentage_logical(ndx, logical, element) {
 
-        var dim = ndx.dimension(function (d) {
+        let dim = ndx.dimension(function (d) {
             return d.logical_op;
         });
 
-        var lgop_group = ndx.groupAll().reduce(
+        let lgop_group = ndx.groupAll().reduce(
             function (p, v) {
                 if (v.logical_op === logical)
                     p.count++;
@@ -66,15 +65,14 @@ function makeGraphs(error, opData) {
             }
         );
 
-        var numDis = dc.numberDisplay(element);
+        let numDis = dc.numberDisplay(element);
         numDis
             .formatNumber(d3.format(".2%"))
             .valueAccessor(function (p, d) {
                 if (p.count == 0) {
                     return 0;
                 } else {
-                    var totalCount = dim.groupAll().value();
-                    console.log((p.count / totalCount) * 100);
+                    let totalCount = dim.groupAll().value();
                     return (p.count / totalCount);
                 }
             })
@@ -83,17 +81,17 @@ function makeGraphs(error, opData) {
     }
 
     function country_rowchart(ndx) {
-        var dim = ndx.dimension(dc.pluck('country'));
-        var country_group = dim.group();
-        var filtered_group = remove_empty_bins(country_group);
+        let dim = ndx.dimension(dc.pluck('country'));
+        let country_group = dim.group();
+        let filtered_group = remove_empty_bins(country_group);
 
-        var rowchart = dc.rowChart('#country-chart')
+        let rowchart = dc.rowChart('#country-chart')
         rowchart
-            .height(520)
-            .width(320)
+            .height(490)
+            .width(300)
             .margins({
                 top: 5,
-                left: 0,
+                left: 5,
                 right: 10,
                 bottom: 20
             })
@@ -106,9 +104,9 @@ function makeGraphs(error, opData) {
 
     function discipline_bargraph(ndx) {
 
-        var dis_dim = ndx.dimension(dc.pluck('discipline'));
+        let dis_dim = ndx.dimension(dc.pluck('discipline'));
 
-        var salary_group = dis_dim.group().reduce(
+        let salary_group = dis_dim.group().reduce(
 
             function (p, v) {
                 p.count++;
@@ -136,10 +134,9 @@ function makeGraphs(error, opData) {
             }
         );
 
-
-        var dis_bargraph = dc.barChart("#discipline-bar");
+        let dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
-            .width(width)
+            .width(310)
             .height(520)
             .margins({
                 top: 50,
@@ -161,12 +158,12 @@ function makeGraphs(error, opData) {
             .yAxis().ticks(10);
     }
 
-    function show_count_of_choices_by_logical_op(ndx) {
-        var logical_dim = ndx.dimension(function (d) {
+    function show_count_of_choices_by_level(ndx) {
+        let level_dim = ndx.dimension(function (d) {
             return d.level;
         });
 
-        var groupByFalse = logical_dim.group().reduce(
+        let groupByFalse = level_dim.group().reduce(
             function reduceAdd(p, v) {
                 if (v.choice === "FALSE") {
                     p++
@@ -183,7 +180,7 @@ function makeGraphs(error, opData) {
                 return 0;
             }
         );
-        var groupByTrue = logical_dim.group().reduce(
+        let groupByTrue = level_dim.group().reduce(
             function reduceAdd(p, v) {
                 if (v.choice === "TRUE") {
                     p++
@@ -201,12 +198,12 @@ function makeGraphs(error, opData) {
             }
         );
 
-        var stackedChart = dc.barChart("#stacked-choice");
+        let stackedChart = dc.barChart("#stacked-choice");
         stackedChart
-            .dimension(logical_dim)
+            .dimension(level_dim)
             .group(groupByFalse, "Male")
             .stack(groupByTrue, "Female")
-            .width(width)
+            .width(200)
             .height(520)
             .margins({
                 top: 50,
@@ -223,13 +220,11 @@ function makeGraphs(error, opData) {
     }
 
     function show_count_of_operator_over_time(ndx) {
-        var hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
-        // var count_salary_per_year = hours_per_dim.group().reduceCount(dc.pluck('salary'));
+        let hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
+        let minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
+        let maxHrs = hours_per_dim.top(1)[0].hours_per_week;
 
-        var minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
-        var maxHrs = hours_per_dim.top(1)[0].hours_per_week;
-
-        var salaryJs = hours_per_dim.group().reduceSum(function (d) {
+        let salaryJs = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'JavaScript') {
                 return +d.salary;
             } else {
@@ -237,7 +232,7 @@ function makeGraphs(error, opData) {
             }
         });
 
-        var salaryJ = hours_per_dim.group().reduceSum(function (d) {
+        let salaryJ = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'Java') {
                 return +d.salary;
             } else {
@@ -245,7 +240,7 @@ function makeGraphs(error, opData) {
             }
         });
 
-        var salaryPy = hours_per_dim.group().reduceSum(function (d) {
+        let salaryPy = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'Python') {
                 return +d.salary;
             } else {
@@ -253,7 +248,7 @@ function makeGraphs(error, opData) {
             }
         });
 
-        var compositeChart = dc.compositeChart('#composite-chart');
+        let compositeChart = dc.compositeChart('#composite-chart');
         compositeChart
             .width(width)
             .height(400)
@@ -265,20 +260,20 @@ function makeGraphs(error, opData) {
             })
             .dimension(hours_per_dim)
             .x(d3.scale.linear().domain([minHrs, maxHrs]))
-            .yAxisLabel("Sum of Yearly Salary")
+            .yAxisLabel("Sum of Yearly Salary Per Work Week")
             .xAxisLabel("Average Hours Worked Per Week")
             .legend(dc.legend().x(130).y(30).itemHeight(13).gap(5))
             .compose([
                 dc.lineChart(compositeChart)
                 .colors('green')
-                .group(salaryJs, 'JavaScript'),
+                .group(salaryJs, 'JavaScript (178)'),
                 dc.lineChart(compositeChart)
                 .colors('red')
-                .group(salaryJ, 'Java')
-                .dashStyle([2,2]),
+                .group(salaryJ, 'Java (124)')
+                .dashStyle([2, 2]),
                 dc.lineChart(compositeChart)
                 .colors('blue')
-                .group(salaryPy, 'Python')
+                .group(salaryPy, 'Python (126)')
             ])
             .transitionDuration(500)
             .elasticY(true)

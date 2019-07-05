@@ -2,17 +2,9 @@ body {
     font-family: 'Lato', serif;
 }
 
-.dc-chart {
-    font-family: 'Lato', serif;
-}
-
 #composite-chart {
     width: 100%;
     padding-bottom: 100px;
-}
-
-#country-chart svg g g.axis {
-    display: none;
 }
 
 #discipline-bar .x.axis text {
@@ -21,28 +13,19 @@ body {
     letter-spacing: 0.5em;
 }
 
-
-.section-paragraph {
-    padding-bottom: 20px;
-    margin: 20px;
-    font-size: 2em;
-    letter-spacing: 0.2em;
-}
-
 .dc-chart g.row text {
     fill: #000;
     font-size: 12px;
     cursor: pointer;
 }
 
-.lo-numbers {
+.lo_numbers {
     font-family: 'Lato', sans-serif;
     margin: 20px 0px 0px 0px;
     padding: 10px;
     font-weight: 700;
     font-size: 1.5rem;
     background-color: #e1e1e1
-    /* bottom: 50px; */
 }
 
 .info_para {
@@ -59,71 +42,29 @@ body {
     margin: 0;
 }
 
-.lo-numbers a {
+.lo_numbers a {
     color: darkblue;
     font-size: 1rem;
 }
 
-.lo-numbers span {
+.lo_numbers span {
     color: darkorange;
 }
 
-.lo-numbers p {
+.lo_numbers p {
     color: darkblue;
     font-size: 1rem;
     background-color: none;
     border: none;
 }
 
-.change-text {
-    position: absolute;
-    margin: auto;
-    top: 25%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.intro {
-    background-color: white;
-    position: relative;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 6em;
-    font-family: 'Lato'sans-serif;
-    width: 400px;
-}
-
 .allgraphs p {
     padding-top: 20px;
-}
-
-#composite-chart {
-    left: 150px;
 }
 
 #stacked-choice {
     left: 50px;
 }
-
-
-
-/* .info button {
-     margin-right: 50px; 
-}
-
-.infoButt p {
-    display: inline;
-    text-decoration-line: underline;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1em;
-    font-size: 2em;
-} */
-
 
 
 /* * {
@@ -135,5 +76,3 @@ body {
 } */
 
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp */
-
-

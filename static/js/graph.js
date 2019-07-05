@@ -214,7 +214,7 @@ function makeGraphs(error, opData) {
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .yAxisLabel('Total Respondants')
-            .xAxisLabel('Employment Grade')
+            .xAxisLabel('Employment Level')
             .elasticY(true)
             .legend(dc.legend().x(0).y(10).itemHeight(10).gap(5))
     }
@@ -223,14 +223,6 @@ function makeGraphs(error, opData) {
         let hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
         let minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
         let maxHrs = hours_per_dim.top(1)[0].hours_per_week;
-
-        let salaryJs = hours_per_dim.group().reduceSum(function (d) {
-            if (d.discipline === 'JavaScript') {
-                return +d.salary;
-            } else {
-                return 0;
-            }
-        });
 
         let salaryJ = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'Java') {
@@ -265,14 +257,11 @@ function makeGraphs(error, opData) {
             .legend(dc.legend().x(130).y(30).itemHeight(13).gap(5))
             .compose([
                 dc.lineChart(compositeChart)
-                .colors('green')
-                .group(salaryJs, 'JavaScript (178)'),
-                dc.lineChart(compositeChart)
-                .colors('red')
-                .group(salaryJ, 'Java (124)')
-                .dashStyle([2, 2]),
-                dc.lineChart(compositeChart)
                 .colors('blue')
+                .group(salaryJ, 'Java (124)'),
+
+                dc.lineChart(compositeChart)
+                .colors('orange')
                 .group(salaryPy, 'Python (126)')
             ])
             .transitionDuration(500)

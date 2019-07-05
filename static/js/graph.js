@@ -136,7 +136,7 @@ function makeGraphs(error, opData) {
             }
         );
 
-        
+
         var dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
             .width(width)
@@ -224,28 +224,65 @@ function makeGraphs(error, opData) {
 
     function show_count_of_operator_over_time(ndx) {
         var hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
-        var total_spend_per_date = hours_per_dim.group().reduceCount(dc.pluck('time_as'));
+        // var count_salary_per_year = hours_per_dim.group().reduceCount(dc.pluck('salary'));
 
-        var minDate = hours_per_dim.bottom(1)[0].hours_per_week;
-        var maxDate = hours_per_dim.top(1)[0].hours_per_week;
+        var minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
+        var maxHrs = hours_per_dim.top(1)[0].hours_per_week;
 
-        dc.lineChart("#composite-chart")
+        var salaryJs = hours_per_dim.group().reduceSum(function (d) {
+            if (d.discipline === 'JavaScript') {
+                return +d.salary;
+            } else {
+                return 0;
+            }
+        });
+
+        var salaryJ = hours_per_dim.group().reduceSum(function (d) {
+            if (d.discipline === 'Java') {
+                return +d.salary;
+            } else {
+                return 0;
+            }
+        });
+
+        var salaryPy = hours_per_dim.group().reduceSum(function (d) {
+            if (d.discipline === 'Python') {
+                return +d.salary;
+            } else {
+                return 0;
+            }
+        });
+
+        var compositeChart = dc.compositeChart('#composite-chart');
+        compositeChart
             .width(width)
             .height(400)
             .margins({
                 top: 30,
                 right: 50,
                 bottom: 50,
-                left: 30
+                left: 60
             })
             .dimension(hours_per_dim)
-            .group(total_spend_per_date)
+            .x(d3.scale.linear().domain([minHrs, maxHrs]))
+            .yAxisLabel("Sum of Yearly Salary")
+            .xAxisLabel("Average Hours Worked Per Week")
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .compose([
+                dc.lineChart(compositeChart)
+                .colors('green')
+                .group(salaryJs, 'JavaScript'),
+                dc.lineChart(compositeChart)
+                .colors('red')
+                .group(salaryJ, 'Java')
+                .dashStyle([2,2]),
+                dc.lineChart(compositeChart)
+                .colors('blue')
+                .group(salaryPy, 'Python')
+            ])
             .transitionDuration(500)
-            .x(d3.scale.linear().domain([minDate, maxDate]))
-            .xAxisLabel("Hours Worked Per Week")
-            .yAxisLabel("Years as a Developer")
             .elasticY(true)
-            .yAxis().ticks(10);
     }
+
 
 }

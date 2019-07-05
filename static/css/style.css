@@ -11,6 +11,24 @@ body {
     padding-bottom: 100px;
 }
 
+.table {
+    display: table;
+}
+
+ul#horizontal-list {
+    list-style: none;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+ul#horizontal-list li {
+    display: block;
+}
+
+.allgraphs {
+    padding-top: 32px;
+}
+
 #discipline-bar .x.axis text {
     text-anchor: start !important;
     transform: rotate(-90deg) translate(20px, -15px);
@@ -25,17 +43,15 @@ body {
 
 .lo_numbers {
     font-family: 'Lato', sans-serif;
-    margin: 20px 0px 0px 0px;
-    padding: 10px;
-    font-weight: 700;
     font-size: 1.5rem;
-    background-color: #e1e1e1
+    border-bottom: #000 solid 1px;
 }
 
 .info_para {
     font-size: 1em;
-    padding: 20px;
-    background-color: #e1e1e1;
+    border: rgba(0,0,0,0.15) .5px solid;
+    padding: 5px;
+    text-align: justify;
 }
 
 .info_dd {
@@ -62,13 +78,16 @@ body {
     border: none;
 }
 
-.allgraphs p {
-    padding-top: 20px;
-}
-
-#stacked-choice {
+/* #stacked-choice {
     left: 50px;
-}
+} */
+
+
+@media(min-width: 900px) {
+    ul#horizontal-list li {
+      display: inline;
+    }
+  }
 
 
 /* * {

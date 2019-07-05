@@ -28,44 +28,50 @@
 
 <body>
 
-    <div class="container nav-justified">
-        <div class="row lo_numbers text-center">
-            <div class="col-12 col-md-2 info">
-                <a href="#" id='button1' class="info_button">Information</a>
-            </div>
-            <div class="col-12 col-lg-2 number-para" id="para-pos-and">
-                <span class="text-span">AND:</span>
-                <span class="number-box" id="percent-of-and"></span>
-            </div>
-            <div class="col-12 col-lg-2 number-para" id="para-pos-or">
-                <span class="text-span">OR:</span>
-                <span class="number-box" id="percent-of-or"></span>
-            </div>
-            <div class="col-12 col-lg-2 number-para" id="para-pos-not">
-                <span class="text-span">NOT:</span>
-                <span class="number-box" id="percent-of-not"></span>
-            </div>
-            <div class="col-12 col-lg-2 offset-md-1 reset">
-                <a href="javascript:dc.filterAll(); dc.renderAll();">Reset Charts</a>
-            </div>
-        </div>
-        <div class="container info_dd">
-            <div class="row">
-                <div class="col-12">
-                    <p class="info_para text-left" id='para1'>
-                        In order to build a picture of the state of employment in web and software development across
-                        the EU 28, we have surveyed 784 developers, 28 from each country. <br>
-                        In the charts presented here, for each country, you can look at the average salaries for
-                        engineers across the 10 most
-                        popular programming languages, gender at different empolyment levels and salaries in relation to
-                        full time working hours
-                        (sometimess it pays more to work less).<br>
-                        Also, for a bit of fun, we decided to ask developers what their favourute Logical Operator is
-                        (its !!).
-                    </p>
+    <div class="container">
+        <div class="row lo_numbers">
+            <!-- <div class="col-2">
+                <div class="info">
+                    <a href="#" id='button1' class="info_button">Information</a>
                 </div>
             </div>
+            <div class="col-2">
+                <div class="reset">
+                    <a href="javascript:dc.filterAll(); dc.renderAll();">Reset Charts</a>
+                </div>
+            </div> -->
+
+            <div class="table number-para text-center">
+                <ul id="horizontal-list">
+                    <li class="col-12 col-md-2 info"><a href="#" id='button1' class="info_button">Information</a></li>
+                    <li class="col-12 col-md-2"><span class="text-span">AND:&nbsp;</span><span class="number-box" id="percent-of-and"></span>
+                    </li>
+                    <li class="col-12 col-md-2"><span class="text-span">OR:&nbsp;</span><span class="number-box" id="percent-of-or"></span>
+                    </li>
+                    <li class="col-12 col-md-2"><span class="text-span">NOT:&nbsp;</span><span class="number-box" id="percent-of-not"></span>
+                    </li>
+                    <li class="col-12 col-md-2 reset"><a href="javascript:dc.filterAll(); dc.renderAll();">Reset Charts</a></li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <div class="container info_dd">
+        <div class="row">
+            <div class="col-12">
+                <p class="info_para text-justify" id='para1'>
+                    In order to build a picture of the state of employment in web and software development across
+                    the EU 28, we have surveyed 784 developers, 28 from each country.
+                    In the charts presented here, for each country, you can look at the average salaries for
+                    engineers across the 10 most
+                    popular programming languages, gender at different empolyment levels and salaries in relation to
+                    full time working hours
+                    (sometimess it pays more to work less).
+                    Also, for a bit of fun, we decided to ask developers what their favourute Logical Operator is
+                    (its !!).
+                </p>
+            </div>
+        </div>
+    </div>
     </div>
 
     <div class="container allgraphs">

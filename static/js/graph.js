@@ -90,10 +90,10 @@ function makeGraphs(error, opData) {
         var rowchart = dc.rowChart('#country-chart')
         rowchart
             .height(520)
-            .width(220)
+            .width(320)
             .margins({
                 top: 5,
-                left: 10,
+                left: 0,
                 right: 10,
                 bottom: 20
             })
@@ -136,15 +136,16 @@ function makeGraphs(error, opData) {
             }
         );
 
+        
         var dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
-            .width(500)
+            .width(430)
             .height(520)
             .margins({
                 top: 50,
-                right: 0,
+                right: 10,
                 bottom: 50,
-                left: 50
+                left: 60
             })
             .dimension(dis_dim)
             .group(salary_group)
@@ -157,7 +158,7 @@ function makeGraphs(error, opData) {
             .yAxisLabel("Average Salary")
             .xUnits(dc.units.ordinal)
             .elasticY(true)
-            .yAxis().ticks(14);
+            .yAxis().ticks(10);
     }
 
     function show_count_of_choices_by_logical_op(ndx) {
@@ -203,99 +204,48 @@ function makeGraphs(error, opData) {
         var stackedChart = dc.barChart("#stacked-choice");
         stackedChart
             .dimension(logical_dim)
-            .group(groupByFalse, "Female")
-            .stack(groupByTrue, "Male")
+            .group(groupByFalse, "Male")
+            .stack(groupByTrue, "Female")
             .width(350)
             .height(520)
+            .margins({
+                top: 50,
+                right: 0,
+                bottom: 50,
+                left: 40
+            })
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
+            .yAxisLabel('Total Respondants')
+            .xAxisLabel('Employment Grade')
             .elasticY(true)
-            .legend(dc.legend().x(250).y(10).itemHeight(13).gap(5))
+            .legend(dc.legend().x(300).y(55).itemHeight(13).gap(5))
     }
 
-    // function show_count_of_operator_over_time(ndx) {
-    //     var time_as_dim = ndx.dimension(dc.pluck('time_as'));
-
-    //     var jsHoursPerWeek = time_as_dim.group().reduceSum(function (d) {
-    //         if (d.discipline === 'JavaScript') {
-    //             return +d.hours_per_week
-    //         } else {
-    //             return 0;
-    //         }
-    //     });
-
-    //     var jHoursPerWeek = time_as_dim.group().reduceSum(function (d) {
-    //         if (d.discipline === 'Java') {
-    //             return +d.hours_per_week
-    //         } else {
-    //             return 0;
-    //         }
-    //     });
-
-    //     var pyHoursPerWeek = time_as_dim.group().reduceSum(function (d) {
-    //         if (d.discipline === 'Python') {
-    //             return +d.hours_per_week
-    //         } else {
-    //             return 0;
-    //         }
-    //     });
-
-    //     var minTimeAs = time_as_dim.bottom(1)[0].time_as;
-    //     var maxTimeAs = time_as_dim.top(1)[0].time_as;
-    //     console.log(minTimeAs);
-    //     console.log(maxTimeAs);
-
-    //     var compositeChart = dc.compositeChart('#composite-chart');
-    //     compositeChart
-    //         .width(width)
-    //         .height(500)
-    //         .margins({
-    //             top: 50,
-    //             right: 50,
-    //             bottom: 50,
-    //             left: 50
-    //         })
-    //         .dimension(time_as_dim)
-    //         .x(d3.scale.linear().domain([minTimeAs, maxTimeAs]))
-    //         .xAxisLabel("Hours worked per week")
-    //         .yAxisLabel("Career Length so-far")
-    //         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-    //         .renderHorizontalGridLines(true)
-    //         .compose([
-    //             dc.lineChart(compositeChart)
-    //             .colors('green')
-    //             .group(jsHoursPerWeek, 'Javascript'),
-    //             dc.lineChart(compositeChart)
-    //             .colors('red')
-    //             .group(jHoursPerWeek, 'Java')
-    //             .dashStyle([2, 2]),
-    //             dc.lineChart(compositeChart)
-    //             .colors('blue')
-    //             .group(pyHoursPerWeek, 'Python')
-    //         ])
-    //         .brushOn(false)
-    //         .elasticY(true);
-    // }
-
     function show_count_of_operator_over_time(ndx) {
-    var hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
-    var total_spend_per_date = hours_per_dim.group().reduceCount(dc.pluck('time_as'));
+        var hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
+        var total_spend_per_date = hours_per_dim.group().reduceCount(dc.pluck('time_as'));
 
-    var minDate = hours_per_dim.bottom(1)[0].hours_per_week;
-    var maxDate = hours_per_dim.top(1)[0].hours_per_week;
+        var minDate = hours_per_dim.bottom(1)[0].hours_per_week;
+        var maxDate = hours_per_dim.top(1)[0].hours_per_week;
 
-    dc.lineChart("#composite-chart")
-        .width(1000)
-        .height(300)
-        .margins({top: 10, right: 50, bottom: 30, left: 50})
-        .dimension(hours_per_dim)
-        .group(total_spend_per_date)
-        .transitionDuration(500)
-        .x(d3.scale.linear().domain([minDate, maxDate]))
-        .xAxisLabel("Hours Worked Per Week")
-        .yAxisLabel("Years as a Developer")
-        .elasticY(true)
-        .yAxis().ticks(10);
+        dc.lineChart("#composite-chart")
+            .width(width)
+            .height(400)
+            .margins({
+                top: 50,
+                right: 0,
+                bottom: 50,
+                left: 50
+            })
+            .dimension(hours_per_dim)
+            .group(total_spend_per_date)
+            .transitionDuration(500)
+            .x(d3.scale.linear().domain([minDate, maxDate]))
+            .xAxisLabel("Hours Worked Per Week")
+            .yAxisLabel("Years as a Developer")
+            .elasticY(true)
+            .yAxis().ticks(10);
     }
 
 }

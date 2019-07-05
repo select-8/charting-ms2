@@ -1,16 +1,20 @@
+body {
+    font-family: 'Lato', serif;
+}
+
 .dc-chart {
     font-family: 'Lato', serif;
 }
 
 #country-chart {
-    margin: 10px 60px 10px 10px;
+    /* margin: 10px 60px 10px 10px; */
+    /* position: fixed; */
 }
 
-#country-chart svg g g.axis { display: none; }
-
-.rightpane button {
-    color: blue;
+#country-chart svg g g.axis {
+    display: none;
 }
+
 
 .section-paragraph {
     padding-bottom: 20px;
@@ -27,18 +31,43 @@
 
 .lo-numbers {
     font-family: 'Lato', sans-serif;
-    color: darkblue;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
     padding: 10px;
     font-weight: 700;
     font-size: 1.5rem;
-    background-color: #fafafa;
+    background-color: #e1e1e1
     /* bottom: 50px; */
 }
 
-/* .time_series {
-    float: left;
-} */
+.info_para {
+    font-size: 1em;
+    padding: 20px;
+    background-color: #e1e1e1;
+}
+
+.info_dd {
+    padding: 0;
+}
+
+.info_button {
+    margin: 0;
+}
+
+.lo-numbers a {
+    color: darkblue;
+    font-size: 1rem;
+}
+
+.lo-numbers span {
+    color: darkorange
+}
+
+.lo-numbers p {
+    color: darkblue;
+    font-size: 1rem;
+    background-color: none;
+    border: none;
+}
 
 .change-text {
     position: absolute;
@@ -48,7 +77,6 @@
     bottom: 0;
     left: 0;
 }
-
 
 .intro {
     background-color: white;
@@ -72,18 +100,19 @@
     left: 50px;
 }
 
-.infoButt button {
+
+
+/* .info button {
      margin-right: 50px; 
 }
 
 .infoButt p {
-    /* padding-left: 40px; */
     display: inline;
     text-decoration-line: underline;
     font-family: 'Lato', sans-serif;
     letter-spacing: 1em;
     font-size: 2em;
-}
+} */
 
 
 
@@ -96,4 +125,5 @@
 } */
 
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
 

@@ -267,7 +267,7 @@ function makeGraphs(error, opData) {
             .x(d3.scale.linear().domain([minHrs, maxHrs]))
             .yAxisLabel("Sum of Yearly Salary")
             .xAxisLabel("Average Hours Worked Per Week")
-            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .legend(dc.legend().x(130).y(30).itemHeight(13).gap(5))
             .compose([
                 dc.lineChart(compositeChart)
                 .colors('green')
@@ -282,6 +282,7 @@ function makeGraphs(error, opData) {
             ])
             .transitionDuration(500)
             .elasticY(true)
+            .brushOn(false);
     }
 
 

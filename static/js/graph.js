@@ -11,11 +11,23 @@ $(window).on('load', function () {
 
 function makeGraphs(error, opData) {
     var ndx = crossfilter(opData);
+
     opData.forEach(function (d) {
         d.salary = parseInt(d.salary);
         d.time_as = parseInt(d.time_as);
         d.hours_per_week = parseInt(d.hours_per_week);
     })
+
+    // ndx.add(opData.map(function (d) {
+    //     return {
+    //         age: d.hours_per_week,
+    //         male: d.choice === 'FALSE',
+    //         female: d.choice === 'TRUE' 
+    //     }}))
+
+
+
+
 
     //Functions are declared 
     show_percentage_logical(ndx, "AND", "#percent-of-and");
@@ -24,7 +36,7 @@ function makeGraphs(error, opData) {
     country_rowchart(ndx);
     discipline_bargraph(ndx);
     show_count_of_choices_by_level(ndx);
-    show_count_of_operator_over_time(ndx);
+    show_languages_over_time(ndx);
     remove_empty_bins();
 
     dc.renderAll();
@@ -219,22 +231,38 @@ function makeGraphs(error, opData) {
             .legend(dc.legend().x(0).y(10).itemHeight(10).gap(5))
     }
 
-    function show_count_of_operator_over_time(ndx) {
+    function show_languages_over_time(ndx) {
         let hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
         let minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
         let maxHrs = hours_per_dim.top(1)[0].hours_per_week;
 
-        let salaryJ = hours_per_dim.group().reduceSum(function (d) {
-            if (d.discipline === 'Java') {
-                return +d.salary;
+        let salaryHs = hours_per_dim.group().reduceSum(function (d) {
+            if (d.discipline === 'HTML/CSS' && d.play_games === 'yes') {
+                return 1
+            } else {
+                return 0;
+            }
+        });
+
+        let salaryJs = hours_per_dim.group().reduceSum(function (d) {
+            if (d.discipline === 'JavaScript' && d.play_games === 'yes') {
+                return 1
             } else {
                 return 0;
             }
         });
 
         let salaryPy = hours_per_dim.group().reduceSum(function (d) {
-            if (d.discipline === 'Python') {
-                return +d.salary;
+            if (d.discipline === 'Python' && d.play_games === 'yes') {
+                return 1
+            } else {
+                return 0;
+            }
+        });
+
+        let salarySq = hours_per_dim.group().reduceSum(function (d) {
+            if (d.discipline === 'SQL' && d.play_games === 'yes') {
+                return 1
             } else {
                 return 0;
             }
@@ -252,22 +280,36 @@ function makeGraphs(error, opData) {
             })
             .dimension(hours_per_dim)
             .x(d3.scale.linear().domain([minHrs, maxHrs]))
-            .yAxisLabel("Sum of Yearly Salary Per Work Week")
+            .yAxisLabel("Hours Per Week Spent Playing Computer Games")
             .xAxisLabel("Average Hours Worked Per Week")
             .legend(dc.legend().x(130).y(30).itemHeight(13).gap(5))
             .compose([
                 dc.lineChart(compositeChart)
                 .colors('blue')
-                .group(salaryJ, 'Java (124)'),
+                .dashStyle([2,2])
+                .group(salaryHs, 'HTML/CSS'),
+
+                dc.lineChart(compositeChart)
+                .colors('green')
+                .dashStyle([2,2])
+                .group(salaryJs, 'JavaScript'),
+
+                dc.lineChart(compositeChart)
+                .colors('red')
+                .dashStyle([2,2])
+                .group(salaryPy, 'Python'),
 
                 dc.lineChart(compositeChart)
                 .colors('orange')
-                .group(salaryPy, 'Python (126)')
+                .dashStyle([2,2])
+                .group(salarySq, 'SQL')
             ])
             .transitionDuration(500)
             .elasticY(true)
             .brushOn(false);
-    }
+
+
+        }        
 
 
 }

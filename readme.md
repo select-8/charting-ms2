@@ -15,9 +15,11 @@ The goals of this project are to:
 - to begin to use some common JavaScript libraries such as jQuery.
 - to begin to understand the nomenclature of JavaScript.
 
-### User Stories
-
 ### The Data
+
+After testing out charting various datasets from the webire kaggle.com 
+
+### User Stories
 
 ### UX
 
@@ -33,7 +35,7 @@ The goals of this project are to:
 #### Left to Implement
 
 ## Testing
-
+∏
 ### Validation
 
 ### Results

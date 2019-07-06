@@ -13,6 +13,10 @@ body {
     padding-top: 32px;
 }
 
+.allgraphs svg {
+    text-align: center;
+}
+
 .table {
     display: table;
 }
@@ -58,7 +62,7 @@ body {
 ul#horizontal-list {
     list-style: none;
     margin-bottom: 0px;
-    margin-left: 5px;
+    padding-inline-start: 0px;
 }
 
 ul#horizontal-list li {

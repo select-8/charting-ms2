@@ -236,7 +236,7 @@ function makeGraphs(error, opData) {
         let minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
         let maxHrs = hours_per_dim.top(1)[0].hours_per_week;
 
-        let salaryHs = hours_per_dim.group().reduceSum(function (d) {
+        let gameHs = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'HTML/CSS' && d.play_games === 'yes') {
                 return 1
             } else {
@@ -244,7 +244,7 @@ function makeGraphs(error, opData) {
             }
         });
 
-        let salaryJs = hours_per_dim.group().reduceSum(function (d) {
+        let gameJs = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'JavaScript' && d.play_games === 'yes') {
                 return 1
             } else {
@@ -252,7 +252,7 @@ function makeGraphs(error, opData) {
             }
         });
 
-        let salaryPy = hours_per_dim.group().reduceSum(function (d) {
+        let gamePy = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'Python' && d.play_games === 'yes') {
                 return 1
             } else {
@@ -260,7 +260,7 @@ function makeGraphs(error, opData) {
             }
         });
 
-        let salarySq = hours_per_dim.group().reduceSum(function (d) {
+        let gameSq = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'SQL' && d.play_games === 'yes') {
                 return 1
             } else {
@@ -280,29 +280,29 @@ function makeGraphs(error, opData) {
             })
             .dimension(hours_per_dim)
             .x(d3.scale.linear().domain([minHrs, maxHrs]))
-            .yAxisLabel("Hours Per Week Spent Playing Computer Games")
+            .yAxisLabel("Plays Computer Games")
             .xAxisLabel("Average Hours Worked Per Week")
             .legend(dc.legend().x(130).y(30).itemHeight(13).gap(5))
             .compose([
                 dc.lineChart(compositeChart)
                 .colors('blue')
                 .dashStyle([2,2])
-                .group(salaryHs, 'HTML/CSS'),
+                .group(gameHs, 'HTML/CSS'),
 
                 dc.lineChart(compositeChart)
                 .colors('green')
                 .dashStyle([2,2])
-                .group(salaryJs, 'JavaScript'),
+                .group(gameJs, 'JavaScript'),
 
                 dc.lineChart(compositeChart)
                 .colors('red')
                 .dashStyle([2,2])
-                .group(salaryPy, 'Python'),
+                .group(gamePy, 'Python'),
 
                 dc.lineChart(compositeChart)
                 .colors('orange')
                 .dashStyle([2,2])
-                .group(salarySq, 'SQL')
+                .group(gameSq, 'SQL')
             ])
             .transitionDuration(500)
             .elasticY(true)

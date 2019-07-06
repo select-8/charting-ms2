@@ -17,7 +17,8 @@ The goals of this project are to:
 
 ### The Data
 
-After testing out charting various datasets from the webire kaggle.com 
+For this project, my first charting data in this way, I decided to construct my own dataset. My reasoning for this stemmed from spending a few days testing with data from sources such as kaggle.com and realising that whatever data I would choose would invariably have some element blocking me from moving forward with the JavaScript. So I made the decision it would be more useful if I had control over the data. In hindsight I'm very gald I did this, as in building the data I learned a lot about what makes data chartable. If now I was presented with a real world dataset I feel I am much better placed in approaching visualasiing it in charts and graphs.
+I constructed the dataset using SQL and building a table in a postgreSQL database. This allowed me to easily add new fields and to created weigthed random data which reflects real world data such as the Stack Overflow developers survey 2018.
 
 ### User Stories
 

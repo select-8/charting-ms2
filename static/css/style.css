@@ -2,6 +2,8 @@ body {
     font-family: 'Cutive Mono', monospace;
 }
 
+
+
 .heading-text {
     padding-top: 15px;
     margin-top: 10px;
@@ -110,10 +112,13 @@ ul#horizontal-list li {
 #composite-chart {
     width: 100%;
     padding-bottom: 100px;
+    padding-top: 50px;
+    padding-right: 10px;
 }
 
-#composite-chart p {
-    padding-top: 30px;
+#database-pie {
+    padding-top: 80px;
+    width: 100%;
 }
 
 .time_series p {

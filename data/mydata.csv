@@ -1,785 +1,801 @@
-id,choice,logical_op,discipline,level,time_as,hours_per_week,salary,play_games,country,country_code
-23,FALSE,NOT,C,junior,1,42,31080,no,Belgium,BE
-120,FALSE,OR,JavaScript,junior,2,40,29080,yes,Belgium,BE
-227,TRUE,OR,JavaScript,junior,3,38,29770,no,Cyprus,CY
-228,TRUE,OR,JavaScript,junior,0,38,34270,yes,Hungary,HU
-230,TRUE,OR,Python,junior,2,37,29020,no,Luxembourg,LU
-233,FALSE,NOT,SQL,junior,0,43,28910,no,Germany,DE
-236,FALSE,OR,C++,junior,3,38,35000,no,Denmark,DK
-237,TRUE,OR,HTML/CSS,junior,1,35,35660,no,Hungary,HU
-243,TRUE,OR,Java,junior,1,42,34590,no,Malta,MT
-247,TRUE,AND,Java,junior,1,44,30140,no,Lithuania,LT
-248,FALSE,OR,JavaScript,junior,2,44,34800,yes,Slovakia,SK
-250,TRUE,OR,SQL,junior,2,44,34540,yes,Sweden,SE
-251,FALSE,NOT,SQL,junior,4,43,34900,yes,France,FR
-252,FALSE,OR,SQL,junior,0,43,33490,yes,Greece,EL
-253,TRUE,NOT,Java,junior,2,45,29720,yes,Poland,PL
-255,TRUE,OR,C#,junior,4,35,35910,yes,Cyprus,CY
-256,FALSE,NOT,Python,junior,4,43,30550,no,Slovakia,SK
-257,TRUE,OR,SQL,junior,3,45,33290,yes,Germany,DE
-258,FALSE,NOT,HTML/CSS,junior,4,38,30570,yes,Lithuania,LT
-259,TRUE,NOT,HTML/CSS,junior,4,35,35620,yes,Croatia,HR
-260,TRUE,OR,C,junior,3,38,35150,no,Bulgaria,BG
-262,TRUE,NOT,Python,junior,2,36,28830,yes,Denmark,DK
-266,TRUE,NOT,JavaScript,junior,4,44,35460,no,Italy,IT
-268,TRUE,OR,C++,junior,2,41,30950,no,Bulgaria,BG
-270,TRUE,NOT,JavaScript,junior,0,40,30890,no,Romania,RO
-271,FALSE,OR,HTML/CSS,junior,4,45,28490,yes,Lithuania,LT
-272,TRUE,AND,HTML/CSS,junior,3,37,31490,yes,Croatia,HR
-273,FALSE,NOT,SQL,junior,3,44,33590,no,Spain,ES
-274,TRUE,OR,Java,junior,1,42,28880,yes,Netherlands,NL
-276,FALSE,NOT,C++,junior,4,35,34320,yes,Poland,PL
-277,FALSE,OR,Python,junior,0,44,33800,no,Estonia,EE
-278,FALSE,NOT,Java,junior,4,45,33700,no,Sweden,SE
-281,TRUE,OR,C++,junior,2,43,28860,yes,Slovenia,SI
-282,FALSE,NOT,HTML/CSS,junior,0,43,35310,yes,Portugal,PT
-283,TRUE,NOT,C#,junior,1,42,31690,yes,Estonia,EE
-284,TRUE,NOT,PHP,junior,2,43,29620,no,France,FR
-285,FALSE,AND,C#,junior,3,42,35960,no,Spain,ES
-287,TRUE,AND,HTML/CSS,junior,0,40,30410,no,Slovenia,SI
-289,TRUE,AND,HTML/CSS,junior,1,35,29000,yes,Germany,DE
-294,FALSE,AND,PHP,junior,1,40,34270,no,Lithuania,LT
-301,FALSE,AND,JavaScript,junior,0,35,32300,yes,Poland,PL
-305,TRUE,OR,C++,junior,3,39,35550,no,France,FR
-306,FALSE,NOT,C#,junior,0,35,32540,yes,Slovenia,SI
-310,TRUE,OR,JavaScript,junior,3,35,30920,yes,Greece,EL
-311,FALSE,NOT,C#,junior,4,36,32770,no,Greece,EL
-312,TRUE,AND,HTML/CSS,junior,0,44,34000,no,Greece,EL
-313,TRUE,OR,HTML/CSS,junior,4,43,30550,yes,Denmark,DK
-317,TRUE,NOT,Python,junior,3,40,35050,yes,Slovakia,SK
-320,TRUE,OR,PHP,junior,3,41,31010,yes,Sweden,SE
-321,TRUE,OR,JavaScript,junior,4,43,32860,no,Slovenia,SI
-326,FALSE,AND,HTML/CSS,junior,1,36,34400,yes,Slovenia,SI
-329,FALSE,NOT,PHP,junior,1,42,29890,no,Finland,FI
-332,FALSE,AND,JavaScript,junior,4,43,33430,yes,Italy,IT
-335,FALSE,NOT,Java,junior,0,43,33580,no,Slovenia,SI
-338,FALSE,NOT,JavaScript,junior,2,43,32580,no,Netherlands,NL
-340,FALSE,AND,SQL,junior,1,38,36070,yes,UK,UK
-341,FALSE,NOT,C++,junior,3,44,33820,yes,Luxembourg,LU
-344,FALSE,NOT,Java,junior,1,41,35810,no,Croatia,HR
-345,TRUE,OR,C,junior,1,36,33380,yes,Denmark,DK
-349,TRUE,OR,Python,junior,1,45,34440,yes,Greece,EL
-350,FALSE,NOT,Java,junior,2,36,33860,yes,Estonia,EE
-351,TRUE,OR,JavaScript,junior,2,37,30900,yes,Slovakia,SK
-354,FALSE,NOT,Shell,junior,3,39,31860,no,Romania,RO
-356,FALSE,NOT,SQL,junior,2,40,34460,no,Malta,MT
-359,FALSE,OR,SQL,junior,1,38,29940,no,Austria,AT
-364,TRUE,AND,C#,junior,2,35,35290,no,Finland,FI
-365,TRUE,AND,SQL,junior,0,35,35810,no,Greece,EL
-369,FALSE,AND,C,junior,1,40,29620,yes,Slovakia,SK
-372,TRUE,AND,JavaScript,junior,3,38,29430,yes,Estonia,EE
-373,FALSE,OR,PHP,junior,0,38,28540,yes,UK,UK
-374,TRUE,AND,SQL,junior,0,45,35640,yes,France,FR
-375,FALSE,AND,Java,junior,3,45,33470,yes,Italy,IT
-376,FALSE,NOT,Python,junior,1,39,35830,no,Hungary,HU
-380,TRUE,NOT,Shell,junior,3,43,31900,no,Malta,MT
-381,FALSE,OR,HTML/CSS,junior,1,36,36130,no,Sweden,SE
-383,TRUE,OR,Python,junior,0,39,32320,yes,Portugal,PT
-384,FALSE,NOT,Python,junior,0,37,29630,yes,Estonia,EE
-387,FALSE,NOT,PHP,junior,3,43,30410,yes,Portugal,PT
-390,FALSE,NOT,JavaScript,junior,4,35,31100,no,Luxembourg,LU
-393,FALSE,AND,JavaScript,junior,2,43,32380,no,France,FR
-397,FALSE,NOT,Java,junior,2,45,35010,no,Malta,MT
-398,TRUE,NOT,C,junior,2,37,29220,no,Italy,IT
-400,TRUE,AND,JavaScript,junior,3,40,34010,no,UK,UK
-49,FALSE,AND,Java,mid,9,38,37570,no,Belgium,BE
-64,FALSE,OR,Java,senior,16,36,67630,no,Belgium,BE
-168,TRUE,AND,JavaScript,junior,2,44,32820,yes,Bulgaria,BG
-403,TRUE,OR,PHP,junior,4,43,32170,no,Croatia,HR
-404,TRUE,OR,JavaScript,junior,3,41,34550,no,Latvia,LV
-406,TRUE,OR,C#,junior,3,43,30310,no,Portugal,PT
-408,TRUE,OR,C++,junior,1,42,31960,yes,Austria,AT
-409,FALSE,OR,SQL,junior,2,43,32090,no,Luxembourg,LU
-413,FALSE,NOT,JavaScript,junior,2,38,29840,yes,Austria,AT
-414,FALSE,AND,SQL,junior,4,44,29070,no,Latvia,LV
-416,FALSE,OR,Java,junior,3,45,30250,yes,Lithuania,LT
-417,FALSE,OR,Shell,junior,4,41,35440,no,Slovakia,SK
-418,TRUE,AND,JavaScript,junior,2,45,31710,yes,Austria,AT
-420,FALSE,OR,JavaScript,junior,3,37,33850,yes,Netherlands,NL
-421,FALSE,OR,SQL,junior,3,35,33620,yes,Bulgaria,BG
-423,TRUE,NOT,C++,junior,3,40,33390,yes,Hungary,HU
-427,TRUE,OR,C#,junior,1,41,32860,no,France,FR
-430,TRUE,NOT,SQL,junior,3,44,33160,no,Slovenia,SI
-431,FALSE,AND,HTML/CSS,junior,0,36,34750,no,Greece,EL
-432,TRUE,OR,Python,junior,3,38,34030,no,UK,UK
-434,TRUE,AND,C#,junior,3,45,33440,yes,Hungary,HU
-435,TRUE,AND,SQL,junior,2,44,34120,yes,UK,UK
-439,FALSE,NOT,C,junior,2,40,31230,yes,Portugal,PT
-440,FALSE,AND,Python,junior,3,40,33000,yes,Malta,MT
-442,FALSE,AND,JavaScript,junior,3,45,29740,yes,Hungary,HU
-445,TRUE,AND,Java,junior,1,44,31080,yes,Finland,FI
-451,TRUE,OR,Python,junior,1,41,29050,no,Lithuania,LT
-453,TRUE,NOT,Java,junior,2,42,31110,no,Luxembourg,LU
-454,TRUE,NOT,JavaScript,junior,0,36,33230,yes,Estonia,EE
-456,FALSE,OR,HTML/CSS,junior,3,39,31890,no,Netherlands,NL
-457,TRUE,AND,Python,junior,0,45,35230,yes,Slovakia,SK
-459,TRUE,NOT,Python,junior,2,35,31960,no,Sweden,SE
-461,TRUE,AND,JavaScript,junior,0,44,32850,yes,Bulgaria,BG
-462,FALSE,AND,Java,junior,4,37,32960,yes,Portugal,PT
-463,TRUE,OR,C,junior,4,37,35870,no,Finland,FI
-465,TRUE,NOT,Java,junior,2,36,31120,yes,Lithuania,LT
-466,FALSE,OR,HTML/CSS,junior,0,36,35010,yes,Netherlands,NL
-470,FALSE,NOT,Shell,junior,1,45,31560,yes,Malta,MT
-471,TRUE,AND,JavaScript,junior,2,39,34950,yes,Austria,AT
-474,TRUE,OR,Java,junior,1,44,28580,yes,Finland,FI
-475,FALSE,NOT,HTML/CSS,junior,4,37,32360,yes,Czech Republic,CZ
-478,TRUE,OR,C,junior,3,39,28920,no,Denmark,DK
-481,TRUE,OR,C#,junior,2,41,35760,no,Czech Republic,CZ
-483,FALSE,NOT,JavaScript,junior,4,42,35820,yes,Lithuania,LT
-484,FALSE,OR,SQL,junior,0,37,34510,yes,Estonia,EE
-485,FALSE,AND,C#,junior,0,43,33110,yes,Italy,IT
-486,TRUE,NOT,JavaScript,junior,2,36,32930,no,Bulgaria,BG
-488,FALSE,AND,C++,junior,0,42,31090,no,Malta,MT
-489,FALSE,NOT,C++,junior,4,36,29990,yes,Portugal,PT
-490,TRUE,NOT,JavaScript,junior,0,42,31410,no,Cyprus,CY
-492,TRUE,NOT,PHP,junior,4,45,28850,no,Estonia,EE
-494,TRUE,AND,Shell,junior,3,44,35180,yes,Spain,ES
-495,FALSE,NOT,JavaScript,junior,1,42,29250,no,Finland,FI
-496,FALSE,OR,SQL,junior,0,35,31820,no,Denmark,DK
-497,TRUE,AND,HTML/CSS,junior,0,35,31900,yes,Netherlands,NL
-498,FALSE,AND,JavaScript,junior,1,36,30730,no,Austria,AT
-499,TRUE,OR,Java,junior,0,45,34640,no,Slovakia,SK
-500,TRUE,OR,C#,junior,3,36,32690,no,Germany,DE
-501,TRUE,NOT,Java,junior,0,35,33590,no,Hungary,HU
-502,FALSE,OR,C#,junior,0,38,31590,no,Italy,IT
-504,FALSE,NOT,Java,junior,3,44,28300,yes,France,FR
-511,TRUE,AND,C++,junior,4,43,32540,yes,Spain,ES
-514,FALSE,OR,SQL,junior,4,39,35300,no,Latvia,LV
-520,TRUE,AND,JavaScript,junior,4,42,32890,no,Luxembourg,LU
-521,TRUE,OR,JavaScript,junior,3,44,29220,no,Czech Republic,CZ
-523,TRUE,OR,HTML/CSS,junior,3,41,34890,no,Malta,MT
-524,FALSE,NOT,SQL,junior,3,43,35740,yes,Austria,AT
-525,TRUE,NOT,SQL,junior,3,37,35970,no,Estonia,EE
-527,FALSE,OR,JavaScript,junior,1,44,30180,yes,Netherlands,NL
-528,TRUE,NOT,Python,junior,2,38,34410,no,Latvia,LV
-532,FALSE,AND,C++,junior,3,39,28270,yes,Czech Republic,CZ
-534,FALSE,OR,Python,junior,1,40,34280,no,Germany,DE
-540,TRUE,OR,HTML/CSS,junior,2,40,35080,no,Italy,IT
-541,FALSE,OR,HTML/CSS,junior,2,40,35770,no,Sweden,SE
-542,FALSE,OR,C#,junior,2,43,33820,no,Spain,ES
-545,TRUE,NOT,C,junior,2,37,33310,no,Spain,ES
-546,FALSE,NOT,JavaScript,junior,3,38,32610,yes,Poland,PL
-552,FALSE,OR,SQL,junior,3,38,30470,yes,UK,UK
-554,TRUE,AND,SQL,junior,3,35,36140,yes,Estonia,EE
-556,FALSE,NOT,JavaScript,junior,3,36,34340,no,Spain,ES
-564,TRUE,AND,C#,junior,1,45,34610,yes,Czech Republic,CZ
-565,TRUE,OR,C#,junior,0,39,32270,yes,Portugal,PT
-566,FALSE,NOT,C#,junior,1,38,28860,no,Estonia,EE
-567,FALSE,OR,C,junior,3,38,29070,no,Portugal,PT
-143,FALSE,OR,Java,mid,7,37,51140,yes,Bulgaria,BG
-161,FALSE,AND,C,mid,7,37,46270,yes,Belgium,BE
-293,TRUE,NOT,C++,junior,0,43,29410,yes,Belgium,BE
-300,TRUE,NOT,SQL,junior,0,42,33990,yes,Belgium,BE
-324,FALSE,NOT,Java,junior,1,40,34550,yes,Belgium,BE
-569,FALSE,NOT,C++,junior,3,36,30630,no,Netherlands,NL
-570,FALSE,OR,C,junior,0,38,33290,no,Luxembourg,LU
-575,FALSE,AND,SQL,junior,2,39,34400,no,Belgium,BE
-579,TRUE,OR,HTML/CSS,junior,3,35,33970,yes,Denmark,DK
-584,FALSE,OR,C,junior,1,41,33330,yes,Estonia,EE
-585,TRUE,AND,PHP,junior,1,40,30660,no,Cyprus,CY
-592,FALSE,OR,HTML/CSS,junior,2,42,32980,yes,Estonia,EE
-594,FALSE,OR,Shell,junior,1,39,29940,yes,Croatia,HR
-595,TRUE,OR,SQL,junior,1,42,31630,yes,Malta,MT
-597,FALSE,OR,PHP,junior,2,43,31600,yes,Cyprus,CY
-598,FALSE,AND,C++,junior,1,45,29410,yes,Austria,AT
-600,TRUE,NOT,Java,junior,3,44,31320,yes,France,FR
-601,FALSE,OR,Java,junior,3,38,33520,yes,Romania,RO
-602,TRUE,AND,C#,junior,2,41,35560,no,Hungary,HU
-604,FALSE,AND,Java,junior,1,39,31330,no,Malta,MT
-607,FALSE,OR,JavaScript,junior,1,42,31530,no,Latvia,LV
-608,FALSE,NOT,Python,junior,4,36,34360,yes,France,FR
-610,TRUE,OR,JavaScript,junior,4,43,30830,yes,Lithuania,LT
-611,TRUE,OR,HTML/CSS,junior,4,40,29070,yes,Sweden,SE
-616,TRUE,OR,JavaScript,junior,0,42,31390,no,Poland,PL
-618,TRUE,NOT,JavaScript,junior,3,36,35180,yes,Cyprus,CY
-619,TRUE,OR,SQL,junior,2,40,31290,yes,Germany,DE
-622,TRUE,AND,C,junior,1,45,31260,no,UK,UK
-625,FALSE,OR,HTML/CSS,junior,0,39,33240,yes,Netherlands,NL
-626,FALSE,AND,JavaScript,junior,3,40,28630,no,Spain,ES
-627,TRUE,OR,PHP,junior,0,43,31710,no,Romania,RO
-630,TRUE,AND,JavaScript,junior,2,40,30200,yes,Malta,MT
-633,TRUE,OR,SQL,junior,3,35,34990,yes,Portugal,PT
-634,TRUE,OR,JavaScript,junior,1,41,35730,no,Czech Republic,CZ
-636,TRUE,NOT,HTML/CSS,junior,0,37,30810,no,Sweden,SE
-639,TRUE,NOT,JavaScript,junior,0,38,35800,no,Romania,RO
-640,FALSE,AND,C,junior,1,41,30090,yes,Greece,EL
-641,FALSE,AND,Python,junior,3,40,35840,yes,Sweden,SE
-643,FALSE,NOT,SQL,junior,2,38,33930,yes,Italy,IT
-645,FALSE,NOT,PHP,junior,1,37,35790,no,Slovakia,SK
-648,FALSE,NOT,Shell,junior,1,40,32890,yes,Italy,IT
-651,TRUE,OR,HTML/CSS,junior,3,42,28310,yes,Belgium,BE
-654,FALSE,AND,C#,junior,2,40,32500,yes,Germany,DE
-655,TRUE,AND,Python,junior,1,39,34570,yes,Slovenia,SI
-656,FALSE,OR,SQL,junior,1,37,31680,no,Slovakia,SK
-657,TRUE,NOT,Shell,junior,3,45,35850,yes,Malta,MT
-661,FALSE,OR,JavaScript,junior,3,42,35720,no,Netherlands,NL
-662,FALSE,NOT,Python,junior,3,39,34740,no,Greece,EL
-663,FALSE,AND,HTML/CSS,junior,4,36,33090,no,Poland,PL
-664,FALSE,NOT,HTML/CSS,junior,4,42,35000,yes,UK,UK
-667,FALSE,OR,SQL,junior,2,45,29800,no,Latvia,LV
-668,FALSE,NOT,SQL,junior,3,39,28340,no,Slovenia,SI
-669,FALSE,OR,C#,junior,0,35,33090,yes,Finland,FI
-670,TRUE,NOT,C++,junior,1,38,32370,no,Romania,RO
-674,TRUE,OR,JavaScript,junior,0,38,29150,yes,Spain,ES
-675,TRUE,NOT,PHP,junior,0,37,36220,yes,Latvia,LV
-676,TRUE,OR,Python,junior,3,39,31270,no,Latvia,LV
-679,TRUE,NOT,HTML/CSS,junior,3,45,32180,no,Czech Republic,CZ
-683,FALSE,OR,Python,junior,2,45,31200,yes,Finland,FI
-684,FALSE,OR,Java,junior,2,40,36260,yes,Greece,EL
-685,FALSE,AND,Python,junior,2,35,32550,yes,Romania,RO
-686,TRUE,NOT,JavaScript,junior,1,38,34660,no,Belgium,BE
-688,TRUE,OR,Shell,junior,0,35,30180,no,Czech Republic,CZ
-689,TRUE,OR,C#,junior,2,40,31270,yes,Denmark,DK
-691,FALSE,OR,C#,junior,1,40,34110,no,Austria,AT
-692,TRUE,AND,Python,junior,0,36,32730,yes,Slovakia,SK
-693,TRUE,OR,PHP,junior,3,40,30800,yes,Malta,MT
-694,FALSE,OR,JavaScript,junior,1,41,35940,yes,Hungary,HU
-695,FALSE,OR,JavaScript,junior,2,44,32300,no,Italy,IT
-697,TRUE,AND,C#,junior,2,44,28450,yes,Italy,IT
-701,TRUE,OR,HTML/CSS,junior,1,36,35460,yes,Romania,RO
-705,FALSE,AND,SQL,junior,2,36,28910,yes,Croatia,HR
-706,TRUE,OR,Python,junior,0,42,28500,no,Italy,IT
-708,TRUE,OR,PHP,junior,1,37,31690,no,Romania,RO
-710,TRUE,OR,C,junior,0,42,35220,yes,Belgium,BE
-712,TRUE,NOT,HTML/CSS,junior,4,44,31920,yes,Italy,IT
-714,TRUE,OR,Java,junior,0,35,31260,no,Croatia,HR
-716,FALSE,OR,C#,junior,0,38,34670,yes,Croatia,HR
-720,FALSE,OR,Java,junior,4,44,30390,no,Latvia,LV
-722,TRUE,OR,C#,junior,0,44,36090,no,Belgium,BE
-723,FALSE,OR,HTML/CSS,junior,1,35,33390,no,Bulgaria,BG
-724,FALSE,AND,HTML/CSS,junior,2,41,31930,yes,Sweden,SE
-280,FALSE,AND,JavaScript,mid,6,44,53180,yes,Bulgaria,BG
-327,FALSE,OR,Java,mid,4,43,38150,no,Cyprus,CY
-330,FALSE,NOT,JavaScript,senior,14,41,62680,no,Bulgaria,BG
-443,TRUE,OR,HTML/CSS,junior,0,39,31910,no,Belgium,BE
-482,TRUE,OR,Python,junior,1,42,35400,yes,Belgium,BE
-728,TRUE,OR,Java,junior,0,39,36170,yes,Netherlands,NL
-730,FALSE,NOT,C,junior,2,44,30200,no,Poland,PL
-731,TRUE,AND,C++,junior,0,37,36040,yes,Spain,ES
-734,TRUE,NOT,C#,junior,3,42,29040,no,Finland,FI
-735,FALSE,NOT,HTML/CSS,junior,1,36,30150,no,Estonia,EE
-738,FALSE,OR,HTML/CSS,junior,3,45,31040,yes,Austria,AT
-741,FALSE,OR,Python,junior,3,42,32960,no,Belgium,BE
-204,TRUE,NOT,C,mid,6,45,56230,yes,Belgium,BE
-348,FALSE,NOT,JavaScript,mid,6,41,52500,no,Cyprus,CY
-458,TRUE,NOT,HTML/CSS,mid,7,35,52890,no,Belgium,BE
-473,FALSE,AND,Shell,mid,6,44,54820,no,Belgium,BE
-493,TRUE,NOT,JavaScript,senior,22,45,61950,no,Belgium,BE
-549,TRUE,NOT,Java,junior,2,40,32880,yes,Belgium,BE
-555,FALSE,NOT,C#,junior,3,36,35990,no,Cyprus,CY
-623,TRUE,NOT,Java,junior,1,44,31040,yes,Bulgaria,BG
-551,TRUE,AND,JavaScript,mid,7,39,49470,yes,Bulgaria,BG
-581,FALSE,NOT,PHP,mid,6,42,39480,no,Bulgaria,BG
-605,FALSE,OR,Python,mid,10,36,45550,no,Bulgaria,BG
-612,TRUE,NOT,HTML/CSS,mid,6,43,56910,yes,Bulgaria,BG
-6,FALSE,NOT,Python,junior,1,39,28310,yes,Austria,AT
-42,TRUE,OR,C,junior,0,41,35230,no,Austria,AT
-46,TRUE,OR,PHP,junior,3,44,36180,no,Austria,AT
-31,TRUE,OR,JavaScript,mid,7,44,57570,yes,Austria,AT
-4,FALSE,OR,Shell,junior,3,36,35180,no,Germany,DE
-17,FALSE,NOT,Python,junior,2,40,35950,no,Germany,DE
-30,FALSE,OR,Python,junior,1,38,29290,no,Cyprus,CY
-34,TRUE,NOT,JavaScript,junior,1,36,30310,no,Denmark,DK
-39,FALSE,NOT,Java,junior,0,40,31030,yes,Croatia,HR
-45,FALSE,AND,SQL,junior,2,45,30210,yes,Czech Republic,CZ
-56,TRUE,NOT,SQL,junior,0,35,28950,yes,France,FR
-59,FALSE,NOT,C,junior,2,44,31170,no,France,FR
-3,TRUE,NOT,JavaScript,mid,10,37,54600,yes,Czech Republic,CZ
-18,FALSE,NOT,JavaScript,mid,6,39,47520,yes,Croatia,HR
-24,FALSE,OR,HTML/CSS,mid,5,40,52190,no,Croatia,HR
-37,FALSE,NOT,HTML/CSS,mid,5,40,55410,no,Croatia,HR
-43,TRUE,AND,JavaScript,mid,7,45,48610,no,Czech Republic,CZ
-44,FALSE,OR,C#,mid,4,37,46500,yes,Estonia,EE
-48,FALSE,NOT,Java,mid,9,39,38850,no,Finland,FI
-51,FALSE,NOT,C#,mid,7,43,49040,yes,Estonia,EE
-60,TRUE,NOT,JavaScript,mid,4,44,43050,no,Finland,FI
-62,FALSE,NOT,JavaScript,mid,10,42,50620,no,Denmark,DK
-67,TRUE,NOT,SQL,mid,6,45,57410,no,Denmark,DK
-75,FALSE,OR,JavaScript,mid,4,39,53040,no,Finland,FI
-101,FALSE,OR,Java,mid,7,35,53280,yes,Bulgaria,BG
-205,FALSE,OR,SQL,mid,5,40,50750,yes,Ireland,IE
-137,TRUE,NOT,HTML/CSS,mid,4,39,42920,no,Estonia,EE
-142,TRUE,OR,HTML/CSS,mid,9,37,42220,no,Luxembourg,LU
-145,TRUE,NOT,Shell,mid,10,38,57490,yes,Lithuania,LT
-146,FALSE,OR,SQL,mid,5,37,44210,no,Portugal,PT
-147,FALSE,OR,C,mid,8,39,57080,yes,Luxembourg,LU
-149,FALSE,OR,JavaScript,mid,4,42,44560,yes,Netherlands,NL
-150,TRUE,OR,Python,mid,7,37,41240,yes,Greece,EL
-151,FALSE,AND,HTML/CSS,mid,4,39,51060,yes,Greece,EL
-152,FALSE,AND,Java,mid,7,41,46440,yes,Portugal,PT
-164,FALSE,NOT,Java,mid,8,40,57470,no,France,FR
-165,FALSE,OR,Python,mid,7,39,44760,yes,Latvia,LV
-166,FALSE,NOT,SQL,mid,6,44,42060,no,Italy,IT
-167,FALSE,AND,Java,mid,10,39,47750,no,Greece,EL
-171,FALSE,AND,HTML/CSS,mid,8,42,47970,no,Malta,MT
-175,TRUE,NOT,C++,mid,5,38,51330,yes,Cyprus,CY
-177,TRUE,OR,HTML/CSS,mid,7,36,45460,yes,Denmark,DK
-183,FALSE,AND,JavaScript,mid,4,39,46340,yes,Finland,FI
-187,FALSE,NOT,HTML/CSS,mid,4,39,46740,yes,Czech Republic,CZ
-188,FALSE,AND,HTML/CSS,mid,6,45,56700,no,Poland,PL
-189,FALSE,NOT,JavaScript,mid,7,36,39330,no,Hungary,HU
-191,FALSE,OR,HTML/CSS,mid,4,37,42940,no,France,FR
-194,FALSE,AND,C#,mid,6,42,46120,no,Luxembourg,LU
-199,FALSE,AND,SQL,mid,6,45,49550,yes,Romania,RO
-202,FALSE,NOT,JavaScript,mid,6,41,45520,no,Poland,PL
-207,FALSE,NOT,HTML/CSS,mid,5,37,58880,yes,Latvia,LV
-211,FALSE,OR,Java,mid,4,40,56320,yes,Cyprus,CY
-215,FALSE,OR,Python,mid,4,40,36940,no,Greece,EL
-223,FALSE,NOT,SQL,mid,5,36,57090,no,Portugal,PT
-229,FALSE,AND,JavaScript,mid,4,38,50170,yes,Latvia,LV
-238,TRUE,AND,JavaScript,mid,7,40,53950,yes,Lithuania,LT
-333,TRUE,OR,C#,mid,7,39,48650,yes,Ireland,IE
-385,TRUE,OR,PHP,mid,4,42,56810,no,Ireland,IE
-286,FALSE,OR,Shell,mid,5,42,36970,no,Malta,MT
-288,FALSE,OR,Python,mid,6,41,46940,no,Portugal,PT
-291,FALSE,NOT,Java,mid,5,44,41830,yes,Greece,EL
-295,TRUE,AND,HTML/CSS,mid,9,45,57770,yes,Latvia,LV
-296,FALSE,AND,JavaScript,mid,10,38,55220,no,Greece,EL
-299,FALSE,OR,JavaScript,mid,8,44,46800,yes,Sweden,SE
-303,FALSE,OR,PHP,mid,7,44,49640,yes,Sweden,SE
-304,TRUE,AND,SQL,mid,9,45,42460,yes,Latvia,LV
-307,FALSE,OR,C++,mid,8,35,45070,yes,Romania,RO
-308,TRUE,AND,HTML/CSS,mid,7,37,58130,no,Italy,IT
-315,FALSE,OR,Python,mid,8,41,48240,no,Sweden,SE
-322,TRUE,OR,JavaScript,mid,6,45,56540,yes,France,FR
-331,FALSE,OR,Python,mid,9,39,46900,no,France,FR
-343,FALSE,OR,SQL,mid,4,37,40380,no,Germany,DE
-353,FALSE,NOT,HTML/CSS,mid,5,35,42800,no,Poland,PL
-357,TRUE,NOT,JavaScript,mid,5,40,56960,no,Portugal,PT
-362,FALSE,AND,SQL,mid,7,42,50840,no,Luxembourg,LU
-363,FALSE,NOT,Java,mid,8,45,40310,yes,Malta,MT
-371,FALSE,NOT,SQL,mid,4,43,37100,yes,Italy,IT
-378,FALSE,OR,JavaScript,mid,7,35,57510,no,Finland,FI
-382,TRUE,NOT,JavaScript,mid,10,37,50150,yes,Hungary,HU
-386,TRUE,AND,JavaScript,mid,7,42,50370,no,Germany,DE
-389,FALSE,OR,SQL,mid,6,42,43830,no,Germany,DE
-395,FALSE,NOT,Shell,mid,7,38,49840,no,Lithuania,LT
-399,TRUE,OR,SQL,mid,4,37,47490,no,Romania,RO
-405,TRUE,AND,JavaScript,mid,7,45,44490,yes,Netherlands,NL
-407,TRUE,OR,C#,mid,4,45,47730,no,UK,UK
-438,FALSE,OR,HTML/CSS,mid,6,44,38460,yes,Ireland,IE
-472,FALSE,OR,Java,mid,4,45,39240,no,Ireland,IE
-508,FALSE,OR,HTML/CSS,mid,9,42,37180,yes,Ireland,IE
-516,FALSE,OR,C,mid,6,35,59000,no,Ireland,IE
-410,TRUE,NOT,Java,mid,10,35,39940,no,Greece,EL
-412,FALSE,AND,Shell,mid,7,45,47840,no,Italy,IT
-419,FALSE,OR,C#,mid,4,35,41630,yes,Italy,IT
-426,FALSE,OR,Shell,mid,5,44,38510,yes,Portugal,PT
-428,TRUE,OR,C#,mid,5,42,43870,no,Romania,RO
-433,TRUE,OR,Python,mid,7,44,52150,no,Sweden,SE
-437,TRUE,NOT,C#,mid,6,42,51880,no,Lithuania,LT
-452,FALSE,AND,Java,mid,4,41,50060,no,Latvia,LV
-455,FALSE,AND,SQL,mid,4,39,38030,no,Romania,RO
-477,FALSE,NOT,Python,mid,6,40,50810,yes,Italy,IT
-491,FALSE,OR,C#,mid,5,41,39100,yes,Portugal,PT
-505,FALSE,NOT,PHP,mid,4,37,58290,no,Sweden,SE
-506,FALSE,NOT,HTML/CSS,mid,7,38,38510,no,Spain,ES
-512,FALSE,OR,JavaScript,mid,7,38,43210,no,Sweden,SE
-526,FALSE,NOT,JavaScript,mid,10,37,41900,yes,Sweden,SE
-531,FALSE,OR,SQL,mid,5,39,36280,yes,Luxembourg,LU
-535,FALSE,OR,HTML/CSS,mid,4,38,57770,yes,Latvia,LV
-539,FALSE,NOT,PHP,mid,7,35,45940,yes,Romania,RO
-543,FALSE,AND,JavaScript,mid,6,43,37100,no,Slovenia,SI
-547,FALSE,OR,Java,mid,8,43,56080,no,Croatia,HR
-559,FALSE,OR,Python,mid,7,39,36890,yes,Luxembourg,LU
-571,FALSE,AND,Java,mid,5,43,51190,no,Luxembourg,LU
-577,FALSE,AND,HTML/CSS,mid,4,45,40700,yes,Greece,EL
-578,FALSE,OR,SQL,mid,7,37,50450,no,Denmark,DK
-582,FALSE,OR,JavaScript,mid,4,40,39490,no,Latvia,LV
-587,FALSE,AND,JavaScript,mid,6,42,48920,yes,Czech Republic,CZ
-589,FALSE,OR,Java,mid,4,44,38990,yes,Croatia,HR
-603,FALSE,OR,HTML/CSS,mid,4,40,41680,yes,Greece,EL
-613,FALSE,OR,C#,mid,9,37,51890,no,Germany,DE
-415,FALSE,OR,SQL,senior,21,37,67960,no,Poland,PL
-422,FALSE,NOT,Python,senior,17,39,61500,no,Netherlands,NL
-425,TRUE,NOT,PHP,senior,11,42,88640,no,Slovakia,SK
-441,FALSE,AND,HTML/CSS,senior,27,45,77500,yes,Netherlands,NL
-449,FALSE,OR,JavaScript,senior,15,41,82470,no,Lithuania,LT
-460,FALSE,OR,Shell,senior,21,45,67680,no,Slovenia,SI
-464,TRUE,AND,SQL,senior,23,42,67380,yes,Hungary,HU
-468,FALSE,OR,C++,senior,9,44,87070,yes,Greece,EL
-479,TRUE,OR,Java,senior,21,35,75060,yes,Spain,ES
-510,FALSE,AND,JavaScript,senior,13,41,61430,no,Spain,ES
-550,FALSE,NOT,Java,senior,13,40,74470,no,Czech Republic,CZ
-596,TRUE,OR,SQL,senior,26,40,80810,no,Greece,EL
-100,TRUE,OR,Python,mid,7,37,39890,no,Austria,AT
-198,FALSE,NOT,HTML/CSS,mid,4,37,41480,no,Austria,AT
-261,FALSE,OR,C#,mid,9,41,55550,yes,Austria,AT
-339,FALSE,AND,SQL,mid,7,36,51460,no,Austria,AT
-347,TRUE,OR,SQL,mid,7,35,46840,yes,Austria,AT
-352,FALSE,OR,HTML/CSS,mid,6,42,57780,yes,Austria,AT
-480,TRUE,AND,Java,mid,8,35,59050,yes,Austria,AT
-522,FALSE,OR,SQL,mid,5,38,39790,yes,Austria,AT
-544,FALSE,NOT,HTML/CSS,mid,7,43,50460,no,Belgium,BE
-548,FALSE,OR,SQL,mid,9,43,49910,yes,UK,UK
-562,FALSE,OR,JavaScript,mid,10,44,41550,no,Malta,MT
-568,TRUE,NOT,C++,mid,5,38,42070,yes,Poland,PL
-572,FALSE,NOT,JavaScript,mid,8,41,52740,yes,Belgium,BE
-574,FALSE,NOT,HTML/CSS,mid,9,41,40640,no,Netherlands,NL
-576,FALSE,NOT,JavaScript,mid,6,38,44310,no,Sweden,SE
-580,FALSE,AND,JavaScript,mid,7,39,36750,no,UK,UK
-583,TRUE,OR,HTML/CSS,mid,6,43,46270,no,Netherlands,NL
-591,FALSE,AND,PHP,mid,5,39,44310,yes,Poland,PL
-593,TRUE,NOT,Python,mid,6,35,58240,no,UK,UK
-599,FALSE,NOT,Python,mid,5,43,55930,yes,Sweden,SE
-606,FALSE,AND,HTML/CSS,mid,4,44,45130,yes,Netherlands,NL
-617,FALSE,NOT,SQL,mid,7,37,55120,no,Luxembourg,LU
-620,FALSE,OR,SQL,mid,8,36,56550,yes,Austria,AT
-638,FALSE,OR,C,mid,7,43,37130,no,Netherlands,NL
-653,TRUE,NOT,JavaScript,mid,5,44,36630,yes,Spain,ES
-671,FALSE,NOT,C++,mid,7,45,47800,no,Portugal,PT
-681,FALSE,AND,HTML/CSS,mid,8,41,40350,yes,Czech Republic,CZ
-687,FALSE,AND,SQL,mid,10,42,49270,no,Germany,DE
-114,TRUE,OR,SQL,mid,4,35,50510,yes,Cyprus,CY
-186,FALSE,AND,JavaScript,mid,7,44,45750,yes,Bulgaria,BG
-246,TRUE,OR,Python,mid,9,36,41960,yes,Bulgaria,BG
-265,FALSE,NOT,JavaScript,mid,6,40,54130,yes,Bulgaria,BG
-573,FALSE,AND,HTML/CSS,mid,5,35,50960,no,Belgium,BE
-635,FALSE,NOT,C#,mid,5,36,38310,yes,Cyprus,CY
-642,TRUE,OR,SQL,mid,8,44,46390,yes,Cyprus,CY
-698,FALSE,NOT,SQL,mid,10,44,38600,yes,Luxembourg,LU
-700,FALSE,OR,JavaScript,mid,4,44,36890,yes,UK,UK
-718,FALSE,OR,HTML/CSS,mid,9,35,46250,yes,Malta,MT
-719,FALSE,OR,JavaScript,mid,5,39,42120,yes,Portugal,PT
-721,TRUE,OR,Java,mid,6,36,51080,no,Portugal,PT
-732,FALSE,OR,Python,mid,5,44,36960,yes,Poland,PL
-742,FALSE,NOT,SQL,mid,7,36,47390,no,Netherlands,NL
-745,TRUE,OR,JavaScript,mid,7,37,56880,yes,Malta,MT
-750,TRUE,OR,SQL,mid,4,42,53430,yes,Slovenia,SI
-765,FALSE,OR,SQL,mid,4,39,51760,yes,Slovenia,SI
-783,FALSE,OR,PHP,mid,8,41,41990,yes,Sweden,SE
-784,FALSE,OR,Java,mid,7,39,53900,no,Slovakia,SK
-2,TRUE,OR,C#,junior,3,37,28340,yes,Lithuania,LT
-7,TRUE,NOT,JavaScript,junior,3,36,32030,yes,Hungary,HU
-10,FALSE,AND,JavaScript,junior,1,42,35420,yes,Lithuania,LT
-11,FALSE,OR,PHP,junior,2,36,35320,no,Hungary,HU
-14,FALSE,NOT,Shell,junior,4,38,29220,yes,Luxembourg,LU
-21,TRUE,AND,C++,junior,3,41,30950,no,Malta,MT
-22,FALSE,OR,C#,junior,1,41,35090,yes,Lithuania,LT
-41,FALSE,OR,Java,junior,1,45,33380,no,Greece,EL
-47,TRUE,OR,JavaScript,junior,4,37,33660,no,Lithuania,LT
-77,FALSE,OR,PHP,junior,0,35,29900,yes,Italy,IT
-79,FALSE,OR,SQL,junior,0,40,34210,yes,Lithuania,LT
-81,FALSE,NOT,Python,junior,2,37,30190,yes,Germany,DE
-86,FALSE,NOT,HTML/CSS,junior,3,41,31040,no,Germany,DE
-28,FALSE,OR,HTML/CSS,mid,7,43,38830,no,Ireland,IE
-1,FALSE,NOT,Python,mid,9,43,50030,no,Hungary,HU
-5,FALSE,OR,JavaScript,mid,4,37,52950,no,Latvia,LV
-12,TRUE,NOT,SQL,mid,8,35,58490,yes,Slovenia,SI
-13,FALSE,NOT,C#,mid,5,38,58890,yes,Sweden,SE
-27,TRUE,OR,C++,mid,10,44,48870,yes,Slovakia,SK
-29,FALSE,OR,JavaScript,mid,6,37,55830,yes,Sweden,SE
-32,FALSE,NOT,JavaScript,mid,4,45,36820,no,Greece,EL
-33,TRUE,NOT,HTML/CSS,mid,7,41,49220,yes,Latvia,LV
-35,FALSE,AND,Java,mid,10,36,44440,no,Latvia,LV
-36,TRUE,AND,Java,mid,7,43,40890,no,Latvia,LV
-50,TRUE,AND,C#,mid,8,42,39300,no,Lithuania,LT
-52,TRUE,NOT,JavaScript,mid,5,44,58670,no,UK,UK
-57,FALSE,NOT,C#,mid,9,42,50370,no,Slovakia,SK
-65,TRUE,OR,C#,mid,6,43,44980,no,Slovakia,SK
-83,FALSE,OR,C#,mid,6,37,53600,yes,Lithuania,LT
-90,TRUE,OR,SQL,mid,10,39,42120,no,Hungary,HU
-91,TRUE,AND,C#,mid,6,37,47020,no,Slovenia,SI
-95,FALSE,NOT,C#,mid,6,42,40790,yes,Malta,MT
-96,FALSE,OR,SQL,mid,7,44,44440,yes,Slovenia,SI
-97,FALSE,OR,SQL,mid,5,35,47640,yes,Slovenia,SI
-98,TRUE,AND,SQL,mid,6,41,50770,no,Luxembourg,LU
-53,FALSE,OR,JavaScript,senior,13,37,59380,yes,Ireland,IE
-61,FALSE,OR,C++,senior,23,41,84500,no,Ireland,IE
-25,FALSE,OR,PHP,senior,18,44,69840,yes,Cyprus,CY
-40,FALSE,OR,Shell,senior,20,44,79940,yes,France,FR
-54,FALSE,NOT,Java,senior,23,40,85340,yes,Cyprus,CY
-66,FALSE,NOT,PHP,senior,21,45,61280,yes,Estonia,EE
-92,FALSE,OR,Python,senior,16,40,71650,no,Denmark,DK
-93,TRUE,NOT,JavaScript,senior,15,35,78030,no,Hungary,HU
-8,TRUE,NOT,JavaScript,junior,2,42,31920,no,Poland,PL
-9,FALSE,NOT,JavaScript,junior,1,39,28470,yes,Spain,ES
-15,FALSE,OR,HTML/CSS,junior,0,45,34690,yes,UK,UK
-16,TRUE,OR,JavaScript,junior,2,45,31040,yes,Spain,ES
-19,FALSE,NOT,HTML/CSS,junior,1,39,33100,yes,Poland,PL
-20,TRUE,NOT,JavaScript,junior,2,38,34410,no,Luxembourg,LU
-26,FALSE,NOT,C#,junior,3,36,33820,no,UK,UK
-55,FALSE,OR,PHP,junior,3,39,33150,no,Poland,PL
-58,TRUE,OR,PHP,junior,0,38,33360,no,Poland,PL
-63,FALSE,NOT,PHP,junior,1,44,33720,no,Cyprus,CY
-68,TRUE,OR,Shell,junior,3,38,32060,yes,Latvia,LV
-69,TRUE,NOT,Java,junior,4,37,33040,yes,Portugal,PT
-71,FALSE,NOT,SQL,junior,2,37,34750,no,Poland,PL
-74,TRUE,OR,C#,junior,0,36,34110,no,Romania,RO
-76,TRUE,NOT,SQL,junior,4,35,35800,yes,Cyprus,CY
-78,FALSE,OR,JavaScript,junior,2,41,28690,no,Luxembourg,LU
-80,FALSE,OR,C#,junior,0,38,34800,no,Slovenia,SI
-82,FALSE,AND,JavaScript,junior,1,37,30700,yes,France,FR
-38,TRUE,NOT,PHP,senior,23,37,75530,yes,Poland,PL
-70,FALSE,OR,C#,senior,24,39,85410,yes,Luxembourg,LU
-72,FALSE,OR,Shell,senior,20,36,86780,yes,Cyprus,CY
-73,FALSE,NOT,Python,senior,22,35,81640,no,Spain,ES
-84,TRUE,OR,Python,senior,20,39,87480,no,Spain,ES
-87,FALSE,NOT,Python,junior,2,40,28770,yes,Romania,RO
-88,FALSE,OR,JavaScript,junior,1,38,30550,yes,Romania,RO
-89,FALSE,AND,JavaScript,junior,3,44,29840,no,Latvia,LV
-99,TRUE,OR,HTML/CSS,junior,4,36,35820,yes,Slovenia,SI
-104,FALSE,OR,JavaScript,junior,2,36,31510,yes,France,FR
-107,TRUE,AND,SQL,junior,2,36,32540,yes,Slovakia,SK
-108,TRUE,NOT,JavaScript,junior,1,40,34640,no,Luxembourg,LU
-112,TRUE,AND,Python,junior,0,40,28620,yes,Spain,ES
-113,FALSE,NOT,SQL,junior,0,43,29920,yes,Poland,PL
-115,FALSE,NOT,Java,junior,1,45,28260,yes,Romania,RO
-116,TRUE,OR,HTML/CSS,junior,2,40,34570,yes,Slovakia,SK
-117,TRUE,OR,HTML/CSS,junior,2,41,31860,yes,Netherlands,NL
-124,FALSE,NOT,HTML/CSS,junior,3,45,31050,no,France,FR
-127,TRUE,OR,JavaScript,junior,2,43,30220,yes,Czech Republic,CZ
-130,FALSE,OR,C++,junior,0,45,32070,yes,Bulgaria,BG
-131,FALSE,AND,JavaScript,junior,4,38,29460,yes,UK,UK
-133,TRUE,NOT,SQL,junior,2,38,33000,no,France,FR
-135,TRUE,AND,Python,junior,0,39,28890,no,Cyprus,CY
-136,TRUE,OR,HTML/CSS,junior,0,44,35610,yes,Slovenia,SI
-139,TRUE,NOT,Python,junior,0,39,30540,yes,Slovenia,SI
-141,TRUE,AND,PHP,junior,1,36,33780,no,Romania,RO
-148,FALSE,NOT,JavaScript,junior,2,45,32700,no,Poland,PL
-153,TRUE,OR,SQL,junior,3,37,36000,yes,Denmark,DK
-154,TRUE,OR,HTML/CSS,junior,1,39,29570,yes,Denmark,DK
-249,FALSE,OR,HTML/CSS,mid,7,35,50280,no,Ireland,IE
-254,FALSE,OR,PHP,mid,5,45,39520,yes,Malta,MT
-672,FALSE,AND,HTML/CSS,mid,10,40,51450,no,Hungary,HU
-677,FALSE,OR,JavaScript,mid,7,35,38470,no,Lithuania,LT
-680,TRUE,AND,Java,mid,7,44,37210,no,Finland,FI
-711,FALSE,AND,Java,mid,5,36,45680,yes,Bulgaria,BG
-715,FALSE,AND,JavaScript,mid,8,38,53960,yes,Germany,DE
-725,TRUE,AND,JavaScript,mid,7,40,42930,no,Bulgaria,BG
-737,FALSE,OR,JavaScript,mid,6,38,40390,no,Denmark,DK
-744,FALSE,AND,C#,mid,6,45,56510,yes,Czech Republic,CZ
-774,FALSE,OR,Python,mid,6,43,56680,no,Austria,AT
-94,FALSE,NOT,PHP,mid,6,35,57060,yes,Latvia,LV
-106,FALSE,AND,HTML/CSS,mid,5,43,55800,no,Latvia,LV
-111,FALSE,OR,Python,mid,8,44,56370,yes,France,FR
-122,FALSE,NOT,JavaScript,mid,7,35,46730,yes,Lithuania,LT
-138,TRUE,NOT,C#,mid,4,40,52430,no,Slovakia,SK
-140,FALSE,OR,JavaScript,mid,5,43,56920,no,Spain,ES
-110,TRUE,OR,Java,junior,4,41,29450,no,Czech Republic,CZ
-123,FALSE,NOT,JavaScript,junior,2,45,34480,yes,Denmark,DK
-125,TRUE,AND,SQL,junior,4,35,35420,yes,Czech Republic,CZ
-128,TRUE,NOT,Java,junior,2,36,28980,no,Bulgaria,BG
-103,FALSE,OR,Shell,mid,5,38,36750,yes,Germany,DE
-105,FALSE,AND,PHP,mid,5,40,37670,no,Bulgaria,BG
-119,TRUE,OR,JavaScript,mid,6,43,38610,yes,Czech Republic,CZ
-665,FALSE,AND,SQL,mid,5,45,39780,no,Finland,FI
-156,FALSE,OR,SQL,junior,2,38,34910,no,Finland,FI
-157,FALSE,NOT,Python,junior,4,45,33940,yes,Malta,MT
-102,TRUE,OR,Java,mid,4,39,37150,no,Ireland,IE
-239,FALSE,OR,C#,mid,4,44,52700,no,France,FR
-242,FALSE,NOT,SQL,mid,9,38,48480,no,Estonia,EE
-244,FALSE,OR,C#,mid,5,44,54480,yes,Portugal,PT
-245,FALSE,NOT,JavaScript,mid,7,37,58550,yes,France,FR
-637,FALSE,NOT,HTML/CSS,mid,7,40,36300,yes,Estonia,EE
-109,FALSE,NOT,JavaScript,mid,10,38,58990,no,Slovakia,SK
-118,FALSE,OR,SQL,mid,7,40,43790,no,Sweden,SE
-126,TRUE,OR,JavaScript,mid,6,41,47660,yes,Italy,IT
-129,FALSE,OR,C#,mid,10,37,50560,yes,Portugal,PT
-134,FALSE,AND,HTML/CSS,mid,6,42,57800,no,Italy,IT
-174,FALSE,NOT,JavaScript,mid,7,45,50910,yes,Bulgaria,BG
-297,FALSE,AND,C#,mid,4,38,42820,no,Denmark,DK
-318,FALSE,OR,SQL,mid,5,36,37080,yes,Czech Republic,CZ
-328,FALSE,NOT,C#,mid,5,43,51840,yes,Greece,EL
-342,FALSE,OR,C++,mid,4,38,52230,no,Finland,FI
-355,TRUE,NOT,Python,mid,4,37,54760,yes,Denmark,DK
-358,FALSE,OR,PHP,mid,6,45,58490,yes,Sweden,SE
-368,FALSE,AND,HTML/CSS,mid,9,39,56340,no,Denmark,DK
-377,FALSE,AND,C#,mid,6,43,52070,no,France,FR
-379,FALSE,NOT,Java,mid,10,35,55970,yes,Italy,IT
-396,TRUE,NOT,Java,mid,8,44,54200,yes,Portugal,PT
-401,FALSE,AND,Java,mid,10,37,48670,no,Croatia,HR
-411,TRUE,OR,C#,mid,10,39,53150,yes,Finland,FI
-292,FALSE,AND,JavaScript,senior,13,41,72260,yes,Italy,IT
-298,FALSE,OR,HTML/CSS,senior,8,41,75390,yes,Poland,PL
-302,FALSE,OR,C#,senior,24,43,71310,no,Germany,DE
-314,TRUE,OR,PHP,senior,15,43,80690,yes,Slovenia,SI
-316,TRUE,OR,Java,senior,22,39,78880,no,Austria,AT
-319,FALSE,OR,SQL,senior,9,35,74060,no,Netherlands,NL
-325,FALSE,OR,Shell,senior,19,39,59450,yes,Italy,IT
-334,FALSE,OR,Java,senior,13,38,81180,yes,Romania,RO
-336,FALSE,OR,SQL,senior,23,44,73500,yes,Hungary,HU
-337,FALSE,OR,C,senior,9,38,77750,yes,Slovenia,SI
-346,TRUE,NOT,Shell,senior,16,43,74450,yes,Hungary,HU
-360,FALSE,NOT,JavaScript,senior,21,37,81980,no,Netherlands,NL
-366,FALSE,NOT,SQL,senior,15,42,85940,yes,Czech Republic,CZ
-367,TRUE,OR,C,senior,8,44,72330,no,UK,UK
-370,FALSE,OR,HTML/CSS,senior,20,35,67850,no,Cyprus,CY
-388,FALSE,OR,SQL,senior,14,36,88170,no,Croatia,HR
-391,FALSE,OR,Python,senior,11,38,87600,no,Sweden,SE
-392,FALSE,AND,JavaScript,senior,27,38,59460,no,Germany,DE
-446,TRUE,AND,HTML/CSS,mid,4,42,41740,yes,Croatia,HR
-447,FALSE,AND,JavaScript,mid,6,36,41910,yes,Denmark,DK
-450,FALSE,OR,PHP,mid,5,37,50860,yes,Denmark,DK
-467,FALSE,OR,JavaScript,mid,10,39,42220,no,Estonia,EE
-476,FALSE,AND,SQL,mid,6,42,43310,yes,Estonia,EE
-487,TRUE,OR,PHP,mid,10,41,53200,yes,Germany,DE
-503,TRUE,OR,SQL,mid,7,36,45720,no,Netherlands,NL
-507,FALSE,NOT,Python,mid,4,41,44180,yes,Germany,DE
-515,FALSE,NOT,HTML/CSS,mid,4,40,46700,yes,Germany,DE
-517,TRUE,NOT,C++,mid,6,40,57930,yes,Hungary,HU
-518,FALSE,AND,JavaScript,mid,7,36,39460,no,Spain,ES
-519,TRUE,AND,SQL,mid,10,42,46050,no,Croatia,HR
-536,FALSE,AND,C#,mid,4,38,57950,yes,Croatia,HR
-537,FALSE,OR,JavaScript,mid,4,44,39260,no,Finland,FI
-538,TRUE,NOT,Java,mid,5,44,53570,no,Hungary,HU
-436,FALSE,OR,JavaScript,senior,9,43,88360,yes,Czech Republic,CZ
-448,FALSE,NOT,C#,senior,10,39,82910,yes,Finland,FI
-469,FALSE,AND,PHP,senior,9,35,70100,yes,Estonia,EE
-509,FALSE,NOT,Shell,senior,13,42,79100,yes,Austria,AT
-530,TRUE,AND,SQL,senior,26,43,79050,yes,Croatia,HR
-533,FALSE,AND,SQL,senior,10,36,72190,yes,Czech Republic,CZ
-553,FALSE,OR,C#,senior,25,44,61550,yes,Slovenia,SI
-561,FALSE,NOT,Java,senior,21,43,67880,yes,Slovakia,SK
-563,FALSE,OR,HTML/CSS,senior,12,35,88520,no,Poland,PL
-586,FALSE,OR,Java,senior,16,45,87770,no,Malta,MT
-588,FALSE,OR,C++,senior,15,43,65460,yes,Belgium,BE
-614,FALSE,AND,C#,mid,6,38,46420,no,Malta,MT
-644,TRUE,OR,Shell,mid,4,42,53540,no,Cyprus,CY
-646,TRUE,NOT,HTML/CSS,mid,5,43,52170,no,Cyprus,CY
-647,FALSE,NOT,SQL,mid,8,39,38130,no,UK,UK
-649,FALSE,NOT,C,mid,5,44,37170,no,Estonia,EE
-652,FALSE,NOT,JavaScript,mid,4,35,52980,yes,UK,UK
-659,FALSE,AND,Shell,mid,7,39,53690,yes,Cyprus,CY
-666,TRUE,OR,Python,mid,9,37,53120,no,Slovakia,SK
-673,FALSE,OR,Python,mid,7,37,48540,no,Poland,PL
-678,TRUE,OR,Python,mid,9,42,52980,yes,Poland,PL
-682,FALSE,AND,JavaScript,mid,10,41,50260,yes,Hungary,HU
-690,TRUE,NOT,SQL,mid,5,35,41420,no,Lithuania,LT
-727,TRUE,OR,SQL,mid,5,35,49760,no,Latvia,LV
-740,FALSE,OR,HTML/CSS,mid,9,41,45270,yes,Croatia,HR
-709,FALSE,OR,C++,mid,7,38,53820,yes,Ireland,IE
-717,TRUE,OR,C++,mid,10,39,43710,no,Ireland,IE
-631,TRUE,AND,HTML/CSS,senior,11,35,80960,no,Portugal,PT
-658,TRUE,OR,Java,senior,15,36,86050,yes,Bulgaria,BG
-660,FALSE,NOT,JavaScript,senior,27,39,78520,no,Romania,RO
-696,FALSE,OR,Shell,senior,10,39,67150,yes,Czech Republic,CZ
-703,FALSE,OR,Java,senior,12,39,68170,yes,Hungary,HU
-726,FALSE,NOT,JavaScript,senior,17,44,70010,yes,Lithuania,LT
-733,FALSE,OR,SQL,senior,26,42,86840,yes,Finland,FI
-736,FALSE,NOT,JavaScript,senior,14,44,83030,yes,UK,UK
-739,FALSE,NOT,HTML/CSS,senior,21,35,70270,yes,Slovenia,SI
-650,FALSE,OR,HTML/CSS,senior,10,45,78820,no,Ireland,IE
-729,FALSE,OR,Java,senior,14,42,67330,yes,Ireland,IE
-158,TRUE,OR,SQL,junior,2,37,31420,yes,Latvia,LV
-159,TRUE,OR,Shell,junior,0,39,35420,yes,Denmark,DK
-160,FALSE,NOT,PHP,junior,0,37,36230,no,Luxembourg,LU
-169,TRUE,NOT,SQL,junior,1,38,33010,no,Germany,DE
-170,TRUE,NOT,PHP,junior,1,43,34960,yes,Austria,AT
-173,TRUE,OR,C#,junior,2,45,31460,no,Slovenia,SI
-176,TRUE,OR,HTML/CSS,junior,3,37,29270,yes,Czech Republic,CZ
-178,FALSE,OR,PHP,junior,0,43,33330,yes,Croatia,HR
-179,FALSE,OR,SQL,junior,1,36,31820,no,Romania,RO
-181,FALSE,OR,C#,junior,1,45,30940,yes,Portugal,PT
-190,FALSE,OR,PHP,junior,1,44,33330,no,Poland,PL
-192,FALSE,NOT,JavaScript,junior,4,38,30120,no,UK,UK
-193,TRUE,NOT,JavaScript,junior,0,41,34530,yes,Malta,MT
-195,TRUE,NOT,SQL,junior,4,44,36120,yes,Spain,ES
-290,TRUE,NOT,SQL,junior,3,41,32080,yes,UK,UK
-424,FALSE,NOT,C#,mid,5,43,50730,yes,Bulgaria,BG
-444,FALSE,AND,JavaScript,mid,8,37,36530,no,Bulgaria,BG
-513,FALSE,AND,SQL,mid,4,38,58300,no,Belgium,BE
-529,FALSE,AND,HTML/CSS,mid,6,38,56670,no,Cyprus,CY
-699,FALSE,NOT,JavaScript,mid,7,44,43560,no,Finland,FI
-702,TRUE,OR,SQL,mid,5,44,52290,no,Greece,EL
-704,TRUE,NOT,JavaScript,mid,5,38,43190,yes,Croatia,HR
-707,TRUE,AND,Shell,mid,7,43,51470,no,Denmark,DK
-713,TRUE,OR,PHP,mid,9,38,39800,no,Finland,FI
-144,FALSE,OR,JavaScript,mid,5,45,41910,yes,Slovenia,SI
-155,TRUE,OR,SQL,mid,4,40,54650,yes,Spain,ES
-185,FALSE,NOT,HTML/CSS,mid,7,45,49570,no,Slovakia,SK
-197,FALSE,AND,C,mid,6,40,40670,no,Slovakia,SK
-201,TRUE,NOT,SQL,mid,6,45,57630,yes,Spain,ES
-218,FALSE,OR,Java,mid,5,44,43940,yes,Sweden,SE
-220,FALSE,NOT,HTML/CSS,mid,6,44,50810,yes,Spain,ES
-222,TRUE,AND,C#,mid,9,36,51980,yes,Spain,ES
-225,TRUE,OR,SQL,mid,10,43,36910,yes,UK,UK
-226,FALSE,OR,JavaScript,mid,4,35,52660,yes,Sweden,SE
-231,FALSE,AND,C,mid,5,36,52870,yes,UK,UK
-234,TRUE,NOT,JavaScript,mid,6,39,53620,no,Germany,DE
-235,FALSE,OR,SQL,mid,6,37,47160,yes,UK,UK
-240,TRUE,AND,HTML/CSS,mid,8,39,46790,yes,Slovakia,SK
-241,FALSE,OR,HTML/CSS,mid,6,44,42960,no,Sweden,SE
-275,FALSE,AND,SQL,mid,6,36,40940,yes,Finland,FI
-609,FALSE,NOT,SQL,senior,23,36,88830,yes,Finland,FI
-85,TRUE,AND,JavaScript,senior,16,42,64070,no,Romania,RO
-121,TRUE,NOT,Python,senior,26,44,60120,yes,Portugal,PT
-132,FALSE,NOT,Python,senior,27,37,85570,yes,Romania,RO
-632,FALSE,AND,Python,senior,14,42,77200,yes,Hungary,HU
-162,TRUE,AND,Python,senior,23,43,68770,yes,Croatia,HR
-163,FALSE,AND,JavaScript,senior,22,40,84540,no,Luxembourg,LU
-172,TRUE,NOT,C#,senior,16,39,75610,yes,Croatia,HR
-180,FALSE,NOT,SQL,senior,9,44,69030,yes,Germany,DE
-182,FALSE,NOT,SQL,senior,27,41,83700,no,Estonia,EE
-184,FALSE,OR,PHP,senior,17,36,69320,yes,Czech Republic,CZ
-208,TRUE,OR,C#,senior,11,41,79940,no,Croatia,HR
-209,TRUE,OR,C#,senior,20,39,73600,no,Germany,DE
-219,FALSE,OR,Shell,senior,19,45,89170,yes,Hungary,HU
-224,TRUE,NOT,Shell,senior,15,38,62930,yes,Lithuania,LT
-232,FALSE,OR,SQL,senior,9,38,75960,yes,Romania,RO
-263,TRUE,AND,Java,senior,19,41,67850,yes,Netherlands,NL
-200,FALSE,OR,Python,junior,3,44,30330,no,Slovakia,SK
-203,TRUE,AND,SQL,junior,1,38,29310,yes,Romania,RO
-210,TRUE,AND,HTML/CSS,junior,1,39,28800,yes,Austria,AT
-212,TRUE,OR,HTML/CSS,junior,3,38,30960,no,Luxembourg,LU
-213,FALSE,NOT,HTML/CSS,junior,1,45,28640,no,Croatia,HR
-214,TRUE,NOT,HTML/CSS,junior,0,44,31090,no,Denmark,DK
-216,TRUE,NOT,Java,junior,1,45,28460,yes,Croatia,HR
-217,FALSE,NOT,Python,junior,2,42,33080,no,Lithuania,LT
-221,FALSE,OR,SQL,junior,3,42,30810,yes,Luxembourg,LU
-748,TRUE,OR,Python,mid,7,42,37850,no,Greece,EL
-755,TRUE,NOT,C#,mid,4,42,48100,yes,Italy,IT
-773,FALSE,NOT,JavaScript,mid,7,39,54430,yes,UK,UK
-269,FALSE,OR,HTML/CSS,senior,27,38,62250,yes,Netherlands,NL
-279,TRUE,NOT,JavaScript,senior,16,45,74530,no,Estonia,EE
-394,FALSE,OR,JavaScript,senior,11,38,74120,no,Spain,ES
-402,FALSE,NOT,SQL,senior,12,45,84010,no,Estonia,EE
-429,FALSE,OR,Shell,senior,11,35,71390,yes,Denmark,DK
-747,FALSE,OR,C#,senior,26,38,63440,yes,Romania,RO
-758,FALSE,AND,Shell,senior,17,42,61970,yes,Cyprus,CY
-767,TRUE,NOT,Java,senior,16,37,80360,no,Belgium,BE
-771,FALSE,AND,JavaScript,senior,24,38,74250,yes,UK,UK
-557,TRUE,AND,HTML/CSS,junior,2,38,33620,no,France,FR
-558,TRUE,NOT,JavaScript,junior,2,45,28720,yes,Estonia,EE
-560,FALSE,NOT,PHP,junior,0,42,33240,yes,Slovakia,SK
-743,FALSE,OR,PHP,junior,1,40,33090,yes,Hungary,HU
-746,FALSE,NOT,JavaScript,junior,1,44,31020,no,Latvia,LV
-751,FALSE,OR,HTML/CSS,junior,3,41,29240,yes,Finland,FI
-752,TRUE,AND,SQL,junior,3,35,31470,yes,Italy,IT
-753,FALSE,OR,HTML/CSS,junior,3,41,32940,yes,Malta,MT
-754,FALSE,AND,HTML/CSS,junior,1,41,32250,no,France,FR
-756,FALSE,NOT,PHP,junior,2,36,29310,no,Luxembourg,LU
-757,FALSE,OR,JavaScript,junior,4,40,29400,no,Netherlands,NL
-759,TRUE,OR,Shell,junior,2,40,34790,yes,Italy,IT
-760,FALSE,OR,C++,junior,0,36,28970,yes,Greece,EL
-761,FALSE,NOT,PHP,junior,2,41,33440,no,Belgium,BE
-762,TRUE,OR,C++,junior,3,43,34970,yes,Malta,MT
-763,TRUE,NOT,C,junior,2,45,36180,no,Spain,ES
-764,TRUE,AND,SQL,junior,0,38,34090,no,Luxembourg,LU
-766,TRUE,AND,Python,junior,2,36,35220,no,Greece,EL
-769,TRUE,OR,SQL,junior,3,36,31590,no,Slovenia,SI
-770,TRUE,OR,JavaScript,junior,3,37,33040,yes,Slovakia,SK
-772,TRUE,AND,C#,junior,0,43,30860,no,Poland,PL
-775,FALSE,NOT,SQL,junior,2,43,34580,no,France,FR
-776,TRUE,AND,JavaScript,junior,1,42,31420,yes,Lithuania,LT
-777,TRUE,NOT,SQL,junior,3,42,32990,no,Czech Republic,CZ
-778,TRUE,OR,PHP,junior,3,36,34390,no,Germany,DE
-779,TRUE,OR,PHP,junior,2,38,28540,no,Netherlands,NL
-780,TRUE,NOT,Python,junior,4,41,28640,yes,Finland,FI
-781,TRUE,OR,Java,junior,0,43,34290,no,Portugal,PT
-782,TRUE,OR,SQL,junior,2,44,30490,yes,Hungary,HU
-196,FALSE,OR,JavaScript,junior,0,35,28410,no,Ireland,IE
-206,TRUE,OR,Java,junior,0,41,35070,no,Ireland,IE
-264,TRUE,OR,Java,junior,0,38,32380,yes,Ireland,IE
-267,TRUE,OR,JavaScript,junior,4,41,31190,yes,Ireland,IE
-309,TRUE,OR,Python,junior,1,35,31760,yes,Ireland,IE
-323,TRUE,OR,PHP,junior,4,37,29190,no,Ireland,IE
-361,TRUE,OR,SQL,junior,1,41,33950,no,Ireland,IE
-590,FALSE,OR,SQL,junior,2,36,32740,no,Ireland,IE
-621,TRUE,OR,SQL,junior,1,37,32410,no,Ireland,IE
-629,FALSE,OR,JavaScript,junior,1,39,30610,no,Ireland,IE
-749,FALSE,OR,SQL,mid,8,45,46850,yes,Ireland,IE
-615,FALSE,NOT,C#,senior,27,39,59610,no,Denmark,DK
-624,FALSE,OR,Java,senior,25,38,74190,yes,France,FR
-628,TRUE,OR,Java,senior,21,36,85330,no,Cyprus,CY
-768,FALSE,OR,HTML/CSS,senior,10,42,79230,yes,Ireland,IE
+id,choice,logical_op,discipline,database,level,time_as,hours_per_week,salary,play_games,country,country_code
+369,FALSE,NOT,C,MySQL,junior,2,45,34380,yes,UK,UK
+529,TRUE,OR,C#,PostgreSQL,senior,10,38,88410,yes,UK,UK
+649,TRUE,AND,Python,SQL Server,senior,14,37,68980,yes,UK,UK
+1,FALSE,OR,JavaScript,MongoDB,junior,0,36,30380,no,Portugal,PT
+3,FALSE,OR,JavaScript,Redis,junior,3,33,34900,no,Netherlands,NL
+7,FALSE,OR,SQL,SQL Server,junior,2,30,33020,no,Netherlands,NL
+10,FALSE,AND,C,SQL Server,junior,2,42,32150,no,Portugal,PT
+14,FALSE,OR,SQL,SQL Server,junior,0,45,31960,no,UK,UK
+19,TRUE,AND,SQL,Redis,junior,3,33,31850,yes,Finland,FI
+21,FALSE,NOT,HTML/CSS,SQLite,junior,3,44,32900,no,Poland,PL
+26,TRUE,NOT,JavaScript,SQL Server,junior,1,43,29540,no,Italy,IT
+27,FALSE,OR,C#,MongoDB,junior,0,33,32890,yes,Luxembourg,LU
+2,FALSE,NOT,C,MySQL,junior,4,41,31050,no,Ireland,IE
+58,TRUE,OR,C++,MongoDB,mid,5,43,53950,yes,Austria,AT
+59,FALSE,NOT,SQL,MySQL,mid,6,40,43980,no,Germany,DE
+63,TRUE,OR,C++,SQL Server,mid,4,37,48580,no,Netherlands,NL
+64,TRUE,OR,JavaScript,Oracle,mid,8,33,51720,no,Italy,IT
+71,FALSE,OR,Python,MySQL,mid,4,32,46410,yes,Bulgaria,BG
+75,FALSE,OR,Java,PostgreSQL,mid,8,38,56090,yes,Czech Republic,CZ
+76,FALSE,OR,HTML/CSS,MySQL,mid,8,41,41930,yes,Lithuania,LT
+82,FALSE,OR,C++,SQLite,mid,9,41,58160,no,Lithuania,LT
+84,FALSE,OR,HTML/CSS,PostgreSQL,mid,4,33,55660,no,Lithuania,LT
+89,FALSE,NOT,HTML/CSS,MySQL,mid,5,38,38380,no,Finland,FI
+91,FALSE,AND,HTML/CSS,SQL Server,mid,8,44,52050,yes,Denmark,DK
+94,FALSE,AND,SQL,MySQL,mid,7,36,51020,yes,Slovenia,SI
+98,FALSE,NOT,C#,MongoDB,mid,4,41,41540,no,Lithuania,LT
+101,TRUE,NOT,Java,PostgreSQL,mid,6,35,53510,yes,Hungary,HU
+106,TRUE,NOT,Java,SQL Server,mid,5,36,49140,no,Estonia,EE
+110,TRUE,AND,JavaScript,PostgreSQL,mid,5,30,40900,yes,Sweden,SE
+112,TRUE,OR,C++,MySQL,mid,10,44,55440,yes,Bulgaria,BG
+114,FALSE,OR,C,MySQL,mid,9,36,49510,no,Cyprus,CY
+115,TRUE,AND,PHP,SQL Server,mid,5,32,54240,no,Netherlands,NL
+116,TRUE,NOT,JavaScript,Redis,mid,4,42,56490,yes,UK,UK
+125,TRUE,NOT,JavaScript,MySQL,mid,10,36,58320,yes,Austria,AT
+127,FALSE,OR,PHP,MySQL,mid,6,37,38430,no,Luxembourg,LU
+131,FALSE,NOT,Java,MongoDB,mid,7,41,48970,yes,Czech Republic,CZ
+132,TRUE,OR,JavaScript,PostgreSQL,mid,4,36,44730,no,Luxembourg,LU
+134,FALSE,NOT,JavaScript,MySQL,mid,6,39,50440,yes,Denmark,DK
+140,FALSE,AND,SQL,Oracle,mid,6,30,50250,yes,Denmark,DK
+142,TRUE,NOT,Python,SQL Server,mid,8,34,51520,no,Czech Republic,CZ
+144,FALSE,NOT,Shell,MongoDB,mid,4,42,54200,no,UK,UK
+146,FALSE,NOT,JavaScript,PostgreSQL,mid,9,31,55750,yes,Spain,ES
+147,FALSE,OR,C++,PostgreSQL,mid,4,38,41450,no,Sweden,SE
+148,FALSE,OR,PHP,MySQL,mid,7,43,43360,yes,Italy,IT
+149,TRUE,OR,C,Redis,mid,4,35,50500,yes,Croatia,HR
+52,FALSE,OR,C,SQL Server,senior,20,34,76000,no,Finland,FI
+65,FALSE,NOT,SQL,Redis,senior,25,42,72360,no,France,FR
+66,FALSE,NOT,SQL,SQL Server,senior,10,38,74730,yes,Czech Republic,CZ
+72,FALSE,NOT,Python,MySQL,senior,15,36,87590,no,UK,UK
+79,FALSE,OR,HTML/CSS,PostgreSQL,senior,26,35,74110,yes,Czech Republic,CZ
+81,FALSE,OR,C,SQL Server,senior,20,44,80890,no,France,FR
+86,FALSE,OR,Java,Oracle,senior,19,41,66140,yes,Finland,FI
+92,FALSE,NOT,Java,MySQL,senior,11,41,72970,no,Portugal,PT
+189,FALSE,NOT,SQL,PostgreSQL,mid,7,34,36370,yes,Ireland,IE
+173,FALSE,NOT,C++,Oracle,senior,24,41,76600,no,Finland,FI
+174,FALSE,AND,HTML/CSS,MySQL,senior,10,40,83320,no,Denmark,DK
+190,FALSE,OR,JavaScript,Oracle,senior,19,34,72470,yes,Hungary,HU
+195,TRUE,OR,HTML/CSS,MySQL,senior,12,44,67470,yes,Greece,EL
+200,FALSE,AND,PHP,MySQL,senior,27,36,64010,yes,Greece,EL
+211,FALSE,AND,Shell,SQLite,senior,12,41,78800,yes,Belgium,BE
+219,FALSE,AND,Python,SQL Server,senior,26,33,68500,yes,Finland,FI
+224,FALSE,OR,HTML/CSS,MongoDB,senior,22,33,71920,yes,Portugal,PT
+237,FALSE,AND,HTML/CSS,Oracle,senior,18,32,80210,yes,Hungary,HU
+240,FALSE,NOT,Python,MySQL,senior,13,32,66810,no,Belgium,BE
+243,FALSE,NOT,Python,PostgreSQL,senior,21,41,88190,yes,Sweden,SE
+172,FALSE,AND,C++,MySQL,mid,6,38,49160,no,Hungary,HU
+175,FALSE,AND,C#,PostgreSQL,mid,7,34,55660,no,Greece,EL
+183,TRUE,NOT,C,MongoDB,mid,5,37,43020,yes,Luxembourg,LU
+191,FALSE,NOT,JavaScript,PostgreSQL,mid,7,41,52560,yes,Germany,DE
+196,TRUE,NOT,C#,SQL Server,mid,5,43,48670,yes,Sweden,SE
+197,FALSE,NOT,HTML/CSS,SQLite,mid,5,45,58260,yes,Greece,EL
+199,TRUE,AND,HTML/CSS,MySQL,mid,7,37,49020,no,Netherlands,NL
+201,FALSE,AND,Shell,SQL Server,mid,7,43,50770,no,Spain,ES
+202,FALSE,AND,C#,SQL Server,mid,4,32,51110,no,Luxembourg,LU
+204,TRUE,OR,Python,MongoDB,mid,6,39,40840,yes,Croatia,HR
+205,TRUE,AND,Shell,MySQL,mid,5,42,56040,yes,Portugal,PT
+206,FALSE,NOT,Java,SQLite,mid,8,33,45430,no,Finland,FI
+207,FALSE,OR,SQL,SQL Server,mid,10,30,53700,no,Malta,MT
+216,FALSE,OR,HTML/CSS,SQL Server,mid,7,30,37740,yes,Sweden,SE
+222,TRUE,AND,HTML/CSS,PostgreSQL,mid,6,45,41670,no,Lithuania,LT
+228,FALSE,NOT,C++,MySQL,mid,9,39,44020,yes,UK,UK
+311,FALSE,NOT,C#,MySQL,mid,5,36,52820,no,Ireland,IE
+291,TRUE,OR,SQL,MySQL,mid,5,42,39150,yes,Sweden,SE
+292,TRUE,AND,JavaScript,Redis,mid,7,43,41000,no,France,FR
+295,FALSE,AND,Java,MySQL,mid,8,31,49700,no,Austria,AT
+296,TRUE,OR,JavaScript,SQL Server,mid,4,36,38210,yes,Finland,FI
+297,TRUE,OR,JavaScript,MySQL,mid,7,38,53750,yes,Finland,FI
+298,FALSE,OR,HTML/CSS,MySQL,mid,5,43,41270,no,Greece,EL
+300,FALSE,OR,Java,MySQL,mid,4,35,53040,no,Greece,EL
+302,FALSE,NOT,HTML/CSS,MySQL,mid,5,34,58310,yes,Poland,PL
+306,FALSE,OR,C++,SQL Server,mid,6,43,38120,no,Greece,EL
+308,FALSE,OR,HTML/CSS,Redis,mid,4,30,39270,yes,Estonia,EE
+313,FALSE,NOT,JavaScript,MySQL,mid,5,37,39580,no,Austria,AT
+414,FALSE,OR,JavaScript,MySQL,mid,6,39,40090,yes,Lithuania,LT
+426,FALSE,NOT,PHP,Oracle,mid,4,33,58810,no,Bulgaria,BG
+427,TRUE,OR,SQL,PostgreSQL,mid,6,38,57120,no,Romania,RO
+428,FALSE,NOT,JavaScript,SQL Server,mid,10,32,41930,yes,Poland,PL
+430,FALSE,AND,Python,Oracle,mid,4,38,38880,yes,Malta,MT
+432,FALSE,NOT,Java,SQL Server,mid,8,34,50740,no,Germany,DE
+433,FALSE,AND,SQL,MongoDB,mid,9,33,45230,yes,Netherlands,NL
+434,TRUE,OR,JavaScript,PostgreSQL,mid,4,36,47270,no,UK,UK
+436,FALSE,AND,JavaScript,SQL Server,mid,6,33,52110,yes,Romania,RO
+437,FALSE,OR,Java,Oracle,mid,5,30,45040,yes,Greece,EL
+440,FALSE,OR,JavaScript,MySQL,mid,6,36,58350,no,Italy,IT
+442,TRUE,OR,Python,PostgreSQL,mid,5,45,37420,yes,Spain,ES
+444,TRUE,OR,SQL,SQL Server,mid,10,39,43510,no,Portugal,PT
+447,TRUE,AND,HTML/CSS,PostgreSQL,mid,7,36,38980,yes,Romania,RO
+455,FALSE,AND,C++,MongoDB,mid,6,31,38060,yes,Malta,MT
+456,FALSE,NOT,Java,MySQL,mid,4,45,54790,yes,Germany,DE
+465,TRUE,NOT,Shell,PostgreSQL,mid,9,43,48960,no,Greece,EL
+469,FALSE,OR,JavaScript,Redis,mid,7,44,46340,yes,Malta,MT
+471,FALSE,AND,Python,MySQL,mid,8,34,50970,yes,France,FR
+474,FALSE,AND,PHP,SQLite,mid,7,44,39020,yes,Hungary,HU
+475,FALSE,OR,SQL,MongoDB,mid,5,41,44520,no,Sweden,SE
+485,FALSE,NOT,Python,SQL Server,mid,4,44,39130,yes,France,FR
+487,FALSE,AND,JavaScript,SQLite,mid,5,37,46300,no,Croatia,HR
+494,FALSE,AND,SQL,SQL Server,mid,4,33,45480,no,Slovakia,SK
+497,TRUE,NOT,SQL,MySQL,mid,7,30,38660,no,Greece,EL
+501,FALSE,NOT,C++,SQL Server,mid,5,30,54600,no,Finland,FI
+502,TRUE,AND,HTML/CSS,MongoDB,mid,6,30,49310,no,Cyprus,CY
+505,FALSE,NOT,C#,Redis,mid,5,45,42920,yes,Italy,IT
+506,TRUE,NOT,C,Redis,mid,4,42,53410,no,Denmark,DK
+508,FALSE,AND,HTML/CSS,MySQL,mid,6,40,55070,no,Portugal,PT
+511,FALSE,AND,SQL,Redis,mid,9,37,41730,no,Latvia,LV
+412,FALSE,OR,Python,Redis,senior,8,34,61200,yes,Malta,MT
+416,FALSE,NOT,JavaScript,MongoDB,senior,24,43,77850,yes,Belgium,BE
+418,FALSE,NOT,HTML/CSS,SQL Server,senior,18,37,62510,no,Spain,ES
+421,FALSE,OR,HTML/CSS,Oracle,senior,21,40,70580,no,Greece,EL
+445,FALSE,NOT,HTML/CSS,MySQL,senior,12,39,75270,no,Hungary,HU
+449,FALSE,OR,JavaScript,MySQL,senior,19,33,74160,yes,Malta,MT
+450,FALSE,OR,JavaScript,SQL Server,senior,18,36,69790,no,Netherlands,NL
+459,FALSE,OR,JavaScript,MySQL,senior,25,32,85060,no,Belgium,BE
+470,FALSE,NOT,Python,SQLite,senior,13,37,60970,no,France,FR
+472,TRUE,NOT,SQL,PostgreSQL,senior,12,32,82950,no,Denmark,DK
+563,FALSE,NOT,C++,SQL Server,mid,8,40,47030,no,Ireland,IE
+537,FALSE,NOT,Python,Oracle,mid,6,39,57230,yes,Romania,RO
+542,FALSE,OR,C#,PostgreSQL,mid,4,31,54680,no,Romania,RO
+548,FALSE,AND,PHP,SQLite,mid,8,34,39650,yes,Austria,AT
+550,FALSE,NOT,C,SQL Server,mid,9,32,39960,yes,Cyprus,CY
+552,TRUE,OR,JavaScript,PostgreSQL,mid,10,39,57280,yes,Spain,ES
+556,TRUE,NOT,C++,PostgreSQL,mid,5,37,54120,no,Croatia,HR
+557,FALSE,NOT,SQL,PostgreSQL,mid,5,39,48910,yes,Finland,FI
+559,TRUE,OR,C,MySQL,mid,5,33,45360,yes,Italy,IT
+564,FALSE,NOT,C++,MySQL,mid,8,43,57680,yes,UK,UK
+653,FALSE,OR,Java,PostgreSQL,mid,8,41,44990,no,Austria,AT
+654,TRUE,NOT,Java,MySQL,mid,10,41,53720,no,Luxembourg,LU
+655,FALSE,OR,JavaScript,Redis,mid,7,35,43190,no,Portugal,PT
+656,TRUE,AND,Python,SQLite,mid,4,36,55740,yes,France,FR
+662,FALSE,NOT,Python,SQL Server,mid,6,44,52200,yes,Bulgaria,BG
+663,FALSE,AND,JavaScript,PostgreSQL,mid,8,34,51430,no,Sweden,SE
+664,FALSE,OR,Java,Oracle,mid,7,36,44720,yes,France,FR
+665,FALSE,NOT,C#,Oracle,mid,4,43,57910,yes,Denmark,DK
+666,TRUE,NOT,Java,SQLite,mid,7,43,39450,yes,Estonia,EE
+668,FALSE,OR,HTML/CSS,MySQL,mid,8,34,58400,no,Hungary,HU
+670,FALSE,NOT,C#,Redis,mid,4,37,36300,yes,France,FR
+673,TRUE,NOT,Python,SQL Server,mid,7,30,40150,no,Austria,AT
+674,FALSE,OR,Shell,SQL Server,mid,6,35,36310,no,Czech Republic,CZ
+675,FALSE,OR,C#,MySQL,mid,4,45,52310,no,Denmark,DK
+678,FALSE,OR,Shell,MongoDB,mid,5,45,43610,no,Cyprus,CY
+680,FALSE,OR,HTML/CSS,PostgreSQL,mid,6,31,45390,no,France,FR
+682,TRUE,OR,C#,MySQL,mid,9,37,48250,yes,Luxembourg,LU
+683,FALSE,OR,Python,MySQL,mid,5,39,57080,no,Denmark,DK
+684,FALSE,OR,C#,MongoDB,mid,6,36,40760,yes,Hungary,HU
+686,FALSE,AND,JavaScript,MySQL,mid,7,45,46570,yes,Sweden,SE
+688,FALSE,AND,Python,MySQL,mid,4,36,43040,yes,Hungary,HU
+689,TRUE,OR,HTML/CSS,Oracle,mid,5,40,49160,yes,Czech Republic,CZ
+690,FALSE,OR,Java,SQLite,mid,4,38,51540,no,Denmark,DK
+694,FALSE,NOT,SQL,PostgreSQL,mid,8,39,46130,yes,Croatia,HR
+697,FALSE,NOT,HTML/CSS,MongoDB,mid,7,37,53430,yes,Germany,DE
+699,FALSE,OR,Shell,MySQL,mid,6,39,39040,no,Slovakia,SK
+701,FALSE,NOT,C++,SQLite,mid,10,40,47250,yes,Bulgaria,BG
+704,TRUE,NOT,Python,MySQL,mid,8,40,52830,no,Cyprus,CY
+50,FALSE,AND,JavaScript,MongoDB,junior,0,34,36200,yes,Poland,PL
+51,TRUE,OR,JavaScript,SQL Server,junior,2,35,31190,no,Hungary,HU
+53,FALSE,NOT,C#,MySQL,junior,0,34,36210,no,France,FR
+54,FALSE,OR,C,MySQL,junior,4,35,29660,yes,Sweden,SE
+55,TRUE,OR,Python,MySQL,junior,0,40,28930,no,Hungary,HU
+56,FALSE,AND,SQL,MySQL,junior,0,44,34610,no,Bulgaria,BG
+60,TRUE,NOT,JavaScript,SQL Server,junior,1,40,35170,yes,Denmark,DK
+61,FALSE,AND,Java,Oracle,junior,0,32,31460,no,Italy,IT
+62,FALSE,AND,Python,SQL Server,junior,3,39,30240,no,Italy,IT
+67,TRUE,NOT,Java,SQLite,junior,0,42,29300,no,France,FR
+68,FALSE,AND,SQL,Oracle,junior,2,42,32020,no,Lithuania,LT
+69,TRUE,OR,Shell,MySQL,junior,4,39,33410,no,Denmark,DK
+57,FALSE,NOT,C#,Oracle,junior,3,33,30740,yes,Ireland,IE
+380,TRUE,OR,JavaScript,SQL Server,senior,19,37,66310,yes,Belgium,BE
+33,TRUE,NOT,Java,MySQL,junior,2,31,31670,no,UK,UK
+34,FALSE,AND,Python,MySQL,junior,2,32,36210,yes,Romania,RO
+38,TRUE,OR,C++,MySQL,junior,2,31,35670,no,Bulgaria,BG
+43,FALSE,AND,C++,MySQL,junior,4,42,33790,yes,Czech Republic,CZ
+44,TRUE,OR,C,PostgreSQL,junior,3,31,30980,no,Croatia,HR
+46,TRUE,NOT,Python,MySQL,junior,0,38,34290,yes,Slovakia,SK
+47,FALSE,OR,JavaScript,PostgreSQL,junior,2,31,30530,yes,Hungary,HU
+4,FALSE,NOT,Shell,MySQL,mid,7,33,57930,yes,UK,UK
+5,TRUE,NOT,HTML/CSS,MySQL,mid,7,36,58080,no,Slovenia,SI
+6,TRUE,NOT,Shell,Oracle,mid,4,43,39580,no,Hungary,HU
+8,FALSE,OR,PHP,SQL Server,mid,8,35,50170,yes,Romania,RO
+9,TRUE,OR,C++,MySQL,mid,5,35,43600,no,Finland,FI
+11,FALSE,NOT,SQL,Oracle,mid,7,33,38290,no,Finland,FI
+12,TRUE,NOT,JavaScript,MySQL,mid,9,36,53340,no,Netherlands,NL
+13,FALSE,OR,SQL,PostgreSQL,mid,7,34,42810,no,Germany,DE
+16,FALSE,OR,HTML/CSS,MySQL,mid,7,45,38320,yes,France,FR
+17,FALSE,NOT,Python,SQL Server,mid,8,39,57220,no,Portugal,PT
+18,FALSE,NOT,Python,PostgreSQL,mid,6,43,42850,no,Poland,PL
+24,FALSE,OR,Java,SQLite,mid,5,35,54360,no,Denmark,DK
+25,FALSE,AND,C#,SQLite,mid,6,40,41630,yes,Portugal,PT
+35,FALSE,NOT,JavaScript,MySQL,mid,7,30,51970,no,Hungary,HU
+36,FALSE,OR,HTML/CSS,SQL Server,mid,4,38,43410,no,Slovakia,SK
+37,FALSE,OR,C++,MySQL,mid,5,30,39510,no,Finland,FI
+39,TRUE,NOT,SQL,SQLite,mid,4,43,56450,no,Luxembourg,LU
+40,FALSE,NOT,SQL,MySQL,mid,4,35,53710,no,Italy,IT
+41,FALSE,OR,SQL,PostgreSQL,mid,6,43,46280,no,Romania,RO
+42,FALSE,NOT,JavaScript,PostgreSQL,mid,4,30,46410,yes,Slovenia,SI
+45,FALSE,NOT,JavaScript,SQLite,mid,10,30,46050,yes,Slovenia,SI
+48,FALSE,NOT,C#,SQLite,mid,8,40,56130,no,Lithuania,LT
+49,FALSE,OR,SQL,PostgreSQL,mid,7,36,40640,no,Italy,IT
+15,FALSE,NOT,Shell,PostgreSQL,senior,20,41,81640,yes,Poland,PL
+20,TRUE,OR,SQL,MySQL,senior,16,41,64780,no,Spain,ES
+22,FALSE,NOT,HTML/CSS,Oracle,senior,14,45,75170,yes,Lithuania,LT
+23,FALSE,AND,C,SQL Server,senior,19,45,84220,yes,Italy,IT
+256,TRUE,NOT,C,SQLite,senior,16,40,65800,no,France,FR
+269,FALSE,OR,JavaScript,MongoDB,senior,10,42,62570,no,Czech Republic,CZ
+276,TRUE,NOT,SQL,MongoDB,senior,10,39,78340,no,Luxembourg,LU
+284,TRUE,OR,SQL,SQL Server,senior,27,45,79080,no,Germany,DE
+290,FALSE,AND,Java,SQL Server,senior,10,44,70840,no,Spain,ES
+32,FALSE,NOT,JavaScript,MySQL,junior,2,42,29550,yes,Ireland,IE
+70,TRUE,OR,HTML/CSS,MongoDB,junior,1,39,34870,yes,Spain,ES
+73,FALSE,NOT,HTML/CSS,SQLite,junior,1,40,29980,no,Portugal,PT
+74,TRUE,AND,PHP,MySQL,junior,4,45,34120,no,Denmark,DK
+77,TRUE,NOT,Java,Redis,junior,4,37,31500,yes,Belgium,BE
+78,TRUE,OR,Shell,SQL Server,junior,2,39,31260,no,Lithuania,LT
+80,TRUE,AND,PHP,MongoDB,junior,2,43,30730,yes,Lithuania,LT
+83,TRUE,OR,Python,MySQL,junior,2,31,30140,yes,Romania,RO
+85,TRUE,NOT,Python,Redis,junior,0,31,31440,yes,Italy,IT
+87,FALSE,OR,JavaScript,PostgreSQL,junior,1,31,31260,yes,Malta,MT
+88,FALSE,OR,C,SQL Server,junior,3,34,30460,no,UK,UK
+90,FALSE,OR,C#,PostgreSQL,junior,1,42,31370,no,UK,UK
+93,TRUE,NOT,C++,MySQL,junior,2,35,34200,no,Italy,IT
+95,FALSE,OR,SQL,Redis,junior,0,45,30390,yes,Finland,FI
+96,FALSE,AND,C#,MySQL,junior,3,32,32770,no,Slovakia,SK
+97,FALSE,OR,C,Oracle,junior,2,44,34870,yes,UK,UK
+99,TRUE,OR,Java,PostgreSQL,junior,4,44,28720,yes,Greece,EL
+100,TRUE,AND,JavaScript,PostgreSQL,junior,2,37,35250,yes,Czech Republic,CZ
+103,TRUE,NOT,HTML/CSS,PostgreSQL,junior,0,44,31920,no,Czech Republic,CZ
+104,TRUE,NOT,PHP,MySQL,junior,0,45,29210,yes,Denmark,DK
+105,TRUE,NOT,PHP,MySQL,junior,0,30,34810,no,Netherlands,NL
+107,FALSE,OR,HTML/CSS,MongoDB,junior,0,40,35680,no,Romania,RO
+108,TRUE,NOT,JavaScript,Oracle,junior,0,37,34360,no,Poland,PL
+109,FALSE,NOT,JavaScript,PostgreSQL,junior,1,30,36100,no,Romania,RO
+102,TRUE,NOT,Java,SQL Server,junior,0,31,33770,no,Ireland,IE
+133,TRUE,NOT,Shell,SQL Server,junior,3,37,30210,no,Ireland,IE
+141,FALSE,NOT,C#,SQL Server,junior,1,31,34910,yes,Ireland,IE
+129,TRUE,NOT,Java,MySQL,junior,2,31,28700,yes,Czech Republic,CZ
+130,TRUE,OR,HTML/CSS,Redis,junior,4,36,30830,no,UK,UK
+135,TRUE,NOT,Shell,MongoDB,junior,0,36,31170,no,Romania,RO
+136,FALSE,OR,C#,MySQL,junior,2,37,32710,yes,Czech Republic,CZ
+138,FALSE,AND,JavaScript,SQLite,junior,0,31,33400,no,Lithuania,LT
+139,FALSE,AND,Java,Oracle,junior,1,45,34180,no,Slovenia,SI
+143,TRUE,AND,PHP,PostgreSQL,junior,1,45,28490,yes,Finland,FI
+145,FALSE,OR,Python,Redis,junior,4,41,32100,no,Denmark,DK
+152,FALSE,OR,JavaScript,Oracle,junior,2,35,29020,no,Greece,EL
+153,FALSE,NOT,Java,MySQL,junior,0,39,33010,no,Cyprus,CY
+157,FALSE,OR,Python,SQL Server,junior,2,36,30700,yes,Sweden,SE
+158,TRUE,NOT,C#,Redis,junior,1,32,29490,yes,Portugal,PT
+160,FALSE,OR,Java,Redis,junior,3,37,31980,no,Bulgaria,BG
+161,FALSE,NOT,HTML/CSS,MySQL,junior,2,38,36210,yes,Portugal,PT
+162,FALSE,OR,JavaScript,SQL Server,junior,2,45,33150,yes,Czech Republic,CZ
+163,FALSE,AND,Shell,MySQL,junior,3,44,32940,no,Netherlands,NL
+198,FALSE,NOT,JavaScript,SQL Server,junior,2,36,29030,no,Poland,PL
+203,FALSE,AND,PHP,PostgreSQL,junior,3,44,31540,yes,Slovenia,SI
+208,TRUE,NOT,JavaScript,SQL Server,junior,1,39,34780,no,Slovakia,SK
+209,FALSE,AND,JavaScript,Redis,junior,4,30,29270,yes,Malta,MT
+210,TRUE,OR,SQL,PostgreSQL,junior,2,35,35380,yes,Lithuania,LT
+212,TRUE,OR,HTML/CSS,SQL Server,junior,4,38,35550,no,Spain,ES
+213,FALSE,OR,Java,Oracle,junior,0,32,34020,yes,Luxembourg,LU
+214,TRUE,NOT,C,SQLite,junior,0,33,29800,yes,Malta,MT
+215,TRUE,AND,JavaScript,MySQL,junior,0,39,28760,yes,Finland,FI
+217,FALSE,AND,SQL,Redis,junior,0,35,29720,no,Greece,EL
+218,FALSE,AND,HTML/CSS,Oracle,junior,2,40,29730,no,Poland,PL
+220,TRUE,NOT,JavaScript,PostgreSQL,junior,3,40,33650,yes,Slovenia,SI
+221,TRUE,NOT,C,MySQL,junior,3,44,34400,no,Croatia,HR
+223,TRUE,NOT,SQL,SQLite,junior,1,37,36210,no,Bulgaria,BG
+225,FALSE,OR,SQL,MySQL,junior,4,40,29930,no,Latvia,LV
+226,FALSE,NOT,Shell,PostgreSQL,junior,1,36,29150,no,Hungary,HU
+227,TRUE,OR,Java,MySQL,junior,4,30,34500,yes,Netherlands,NL
+229,TRUE,OR,SQL,SQL Server,junior,1,42,29020,yes,Croatia,HR
+751,FALSE,AND,HTML/CSS,MySQL,junior,0,32,29930,yes,UK,UK
+150,FALSE,OR,Java,SQL Server,mid,6,39,50650,yes,Sweden,SE
+151,FALSE,OR,JavaScript,SQLite,mid,9,38,39060,no,Bulgaria,BG
+154,FALSE,OR,Java,SQLite,mid,8,45,51000,yes,Germany,DE
+155,TRUE,OR,C,PostgreSQL,mid,6,40,52660,yes,Croatia,HR
+159,TRUE,OR,SQL,SQLite,mid,7,33,56130,yes,Belgium,BE
+262,TRUE,NOT,JavaScript,SQL Server,mid,7,34,57540,no,Luxembourg,LU
+263,TRUE,NOT,SQL,Redis,mid,4,34,54710,no,Cyprus,CY
+384,FALSE,OR,PHP,PostgreSQL,mid,7,42,44040,no,UK,UK
+386,FALSE,NOT,Python,MySQL,mid,6,44,57070,no,Slovenia,SI
+387,TRUE,OR,SQL,MySQL,mid,5,35,55440,yes,Finland,FI
+389,FALSE,OR,PHP,SQL Server,mid,9,34,57120,no,Finland,FI
+390,FALSE,AND,C++,PostgreSQL,mid,7,33,42670,no,Italy,IT
+393,FALSE,AND,HTML/CSS,SQL Server,mid,5,39,43590,yes,Denmark,DK
+395,TRUE,AND,Shell,SQLite,mid,4,32,46010,yes,Finland,FI
+392,FALSE,OR,HTML/CSS,PostgreSQL,senior,22,34,84910,no,Croatia,HR
+401,FALSE,NOT,Shell,Redis,senior,8,37,77420,no,Slovenia,SI
+409,FALSE,AND,C,MySQL,senior,21,35,69740,no,Czech Republic,CZ
+499,FALSE,OR,HTML/CSS,SQLite,senior,26,42,85070,no,Romania,RO
+516,FALSE,NOT,PHP,Oracle,senior,23,38,86080,yes,Slovenia,SI
+525,FALSE,AND,SQL,MySQL,senior,12,42,72830,no,Sweden,SE
+533,FALSE,AND,HTML/CSS,Oracle,senior,22,30,62180,no,UK,UK
+534,FALSE,OR,Java,SQLite,senior,26,42,78520,no,Luxembourg,LU
+536,TRUE,OR,PHP,MySQL,senior,9,45,78410,no,Italy,IT
+562,FALSE,NOT,C++,PostgreSQL,senior,21,44,78150,yes,Spain,ES
+572,TRUE,NOT,HTML/CSS,SQLite,senior,21,42,85020,no,Sweden,SE
+581,FALSE,AND,Python,MySQL,senior,18,38,81520,no,France,FR
+583,FALSE,OR,C++,Redis,senior,23,44,62690,yes,Hungary,HU
+567,FALSE,NOT,Shell,Redis,senior,22,43,73540,no,Ireland,IE
+645,FALSE,NOT,JavaScript,Redis,mid,7,44,46940,no,Ireland,IE
+610,FALSE,NOT,C,MySQL,senior,11,35,86650,yes,Ireland,IE
+631,TRUE,OR,JavaScript,PostgreSQL,mid,4,33,50070,yes,Netherlands,NL
+633,FALSE,NOT,SQL,Redis,mid,6,39,57960,yes,Sweden,SE
+634,TRUE,NOT,Shell,MongoDB,mid,7,44,48790,yes,Czech Republic,CZ
+635,FALSE,NOT,Python,MySQL,mid,9,39,41870,no,Finland,FI
+636,FALSE,OR,JavaScript,MySQL,mid,5,45,51430,yes,Luxembourg,LU
+642,FALSE,NOT,HTML/CSS,PostgreSQL,mid,4,38,45720,no,Poland,PL
+644,TRUE,NOT,JavaScript,Redis,mid,10,34,40220,no,Greece,EL
+647,TRUE,NOT,JavaScript,MySQL,mid,4,45,40670,no,Sweden,SE
+648,FALSE,OR,PHP,MySQL,mid,7,45,45130,yes,Poland,PL
+652,FALSE,NOT,PHP,SQL Server,mid,4,38,37610,no,Slovenia,SI
+728,TRUE,NOT,SQL,MySQL,mid,9,43,40980,yes,Poland,PL
+729,TRUE,AND,C,SQLite,mid,5,45,42810,no,Sweden,SE
+733,TRUE,OR,JavaScript,SQL Server,mid,10,43,58330,yes,Slovakia,SK
+735,FALSE,NOT,PHP,MongoDB,mid,10,33,44530,yes,Bulgaria,BG
+737,FALSE,AND,Python,SQL Server,mid,9,39,37740,no,France,FR
+595,TRUE,OR,HTML/CSS,MySQL,senior,16,35,74900,no,Hungary,HU
+600,FALSE,AND,PHP,SQL Server,senior,15,45,63170,no,Latvia,LV
+615,TRUE,OR,HTML/CSS,MySQL,senior,22,39,84380,yes,Cyprus,CY
+622,FALSE,OR,C++,SQLite,senior,14,45,84110,yes,Netherlands,NL
+638,FALSE,NOT,HTML/CSS,Redis,senior,17,42,63320,yes,Bulgaria,BG
+641,FALSE,OR,Python,MongoDB,senior,23,31,84880,yes,Italy,IT
+669,FALSE,OR,C++,SQL Server,senior,18,40,82670,yes,Finland,FI
+671,TRUE,OR,JavaScript,PostgreSQL,senior,18,39,68990,yes,UK,UK
+231,FALSE,NOT,HTML/CSS,MySQL,junior,2,30,31990,no,Germany,DE
+232,TRUE,OR,HTML/CSS,Redis,junior,2,40,28440,no,Belgium,BE
+242,FALSE,OR,Java,MySQL,junior,4,42,31450,no,Italy,IT
+244,FALSE,NOT,JavaScript,PostgreSQL,junior,4,42,34740,no,UK,UK
+245,FALSE,NOT,Python,PostgreSQL,junior,1,45,30460,yes,Croatia,HR
+246,TRUE,OR,Shell,Oracle,junior,2,34,32310,no,Denmark,DK
+249,FALSE,NOT,Shell,PostgreSQL,junior,3,44,28420,yes,Spain,ES
+254,TRUE,OR,PHP,SQLite,junior,1,37,32920,no,Hungary,HU
+255,TRUE,AND,JavaScript,Oracle,junior,3,30,35740,yes,Romania,RO
+257,TRUE,OR,HTML/CSS,SQL Server,junior,0,43,32070,yes,Spain,ES
+111,FALSE,AND,C++,MongoDB,junior,3,35,31070,yes,Finland,FI
+117,TRUE,NOT,PHP,SQL Server,junior,1,32,34290,no,France,FR
+118,TRUE,OR,SQL,Oracle,junior,2,33,35490,no,Finland,FI
+119,FALSE,OR,JavaScript,SQLite,junior,2,30,28580,no,UK,UK
+120,FALSE,OR,HTML/CSS,Oracle,junior,2,41,29000,no,Latvia,LV
+121,FALSE,OR,C#,PostgreSQL,junior,4,45,33510,no,Finland,FI
+122,FALSE,AND,Java,MySQL,junior,2,45,30850,yes,Croatia,HR
+126,TRUE,NOT,Python,PostgreSQL,junior,4,36,35610,yes,Lithuania,LT
+128,FALSE,OR,C,SQL Server,junior,0,34,35230,no,UK,UK
+177,FALSE,OR,JavaScript,SQL Server,junior,2,42,35370,yes,Bulgaria,BG
+178,TRUE,OR,Shell,MongoDB,junior,0,43,29040,yes,Germany,DE
+179,FALSE,NOT,Shell,SQLite,junior,2,34,33770,no,UK,UK
+180,FALSE,OR,HTML/CSS,SQLite,junior,0,32,35700,no,Denmark,DK
+181,FALSE,NOT,PHP,MySQL,junior,2,37,29780,yes,France,FR
+182,FALSE,OR,SQL,PostgreSQL,junior,2,43,31000,yes,Austria,AT
+184,FALSE,OR,PHP,SQLite,junior,2,31,30280,yes,Germany,DE
+185,TRUE,OR,SQL,MySQL,junior,2,43,29120,yes,Germany,DE
+186,FALSE,OR,SQL,SQL Server,junior,3,32,29960,no,Portugal,PT
+187,FALSE,NOT,Shell,Oracle,junior,0,30,30720,no,Hungary,HU
+188,FALSE,AND,Java,Redis,junior,2,33,31690,yes,France,FR
+192,TRUE,OR,C,PostgreSQL,junior,2,43,31910,yes,Denmark,DK
+193,FALSE,NOT,JavaScript,MongoDB,junior,1,34,33630,yes,Luxembourg,LU
+194,FALSE,OR,SQL,MySQL,junior,0,40,36150,no,UK,UK
+277,FALSE,NOT,JavaScript,PostgreSQL,mid,4,37,56880,yes,Germany,DE
+381,FALSE,NOT,Python,PostgreSQL,mid,4,44,54670,yes,Ireland,IE
+522,TRUE,AND,HTML/CSS,SQLite,mid,5,38,45700,yes,Czech Republic,CZ
+379,FALSE,AND,SQL,PostgreSQL,mid,9,40,50900,yes,Sweden,SE
+741,FALSE,OR,HTML/CSS,MySQL,mid,5,32,50650,yes,Greece,EL
+743,FALSE,OR,Shell,MySQL,mid,4,44,58080,yes,Cyprus,CY
+749,FALSE,OR,JavaScript,SQL Server,mid,5,39,42800,no,UK,UK
+752,FALSE,OR,JavaScript,SQL Server,mid,8,44,52730,yes,Italy,IT
+760,TRUE,NOT,C#,Oracle,mid,4,44,45640,no,Greece,EL
+761,FALSE,OR,SQL,MySQL,mid,6,35,52220,yes,Italy,IT
+762,FALSE,OR,JavaScript,SQLite,mid,5,39,44440,no,Spain,ES
+765,FALSE,NOT,JavaScript,PostgreSQL,mid,7,36,41110,yes,Malta,MT
+28,TRUE,NOT,JavaScript,MySQL,junior,1,41,34920,no,France,FR
+29,FALSE,OR,SQL,MySQL,junior,0,36,28440,yes,Portugal,PT
+30,FALSE,OR,JavaScript,SQL Server,junior,3,35,28790,no,Italy,IT
+31,FALSE,OR,SQL,MySQL,junior,1,45,28570,yes,Croatia,HR
+259,FALSE,AND,C++,SQL Server,junior,1,34,30270,yes,Finland,FI
+265,FALSE,OR,SQL,PostgreSQL,junior,2,33,35610,no,Portugal,PT
+266,FALSE,AND,Java,PostgreSQL,junior,0,38,32840,yes,France,FR
+267,TRUE,OR,C,MongoDB,junior,3,41,33550,yes,Greece,EL
+268,TRUE,OR,HTML/CSS,MySQL,junior,4,35,34120,yes,Denmark,DK
+270,TRUE,NOT,C++,Redis,junior,3,42,33850,no,Spain,ES
+273,TRUE,OR,C,PostgreSQL,junior,0,39,32650,yes,Hungary,HU
+275,FALSE,OR,Java,PostgreSQL,junior,2,32,33390,no,Italy,IT
+278,TRUE,OR,JavaScript,MySQL,junior,3,45,31590,yes,Hungary,HU
+279,FALSE,AND,Java,PostgreSQL,junior,3,44,34190,no,Czech Republic,CZ
+280,TRUE,AND,Java,SQL Server,junior,2,36,33880,yes,Finland,FI
+282,FALSE,NOT,JavaScript,SQL Server,junior,3,43,33060,yes,Italy,IT
+285,FALSE,AND,C,SQL Server,junior,4,34,35660,no,UK,UK
+286,TRUE,NOT,PHP,SQL Server,junior,1,33,31260,yes,Bulgaria,BG
+287,TRUE,NOT,JavaScript,SQLite,junior,3,40,31180,no,Netherlands,NL
+123,FALSE,OR,JavaScript,PostgreSQL,senior,17,36,68060,no,France,FR
+230,FALSE,AND,Java,SQL Server,mid,7,38,55700,yes,Germany,DE
+233,TRUE,OR,Java,MySQL,mid,8,40,38960,yes,Sweden,SE
+234,FALSE,OR,PHP,MySQL,mid,8,44,43150,no,Denmark,DK
+235,TRUE,AND,Java,MySQL,mid,5,33,57860,yes,Denmark,DK
+236,FALSE,OR,Java,SQLite,mid,5,37,51660,no,Poland,PL
+238,FALSE,AND,Python,SQL Server,mid,10,34,51600,no,Slovakia,SK
+239,TRUE,OR,Python,SQLite,mid,9,31,49090,yes,Italy,IT
+241,FALSE,OR,HTML/CSS,SQLite,mid,9,39,42720,no,Greece,EL
+247,TRUE,AND,C++,MongoDB,mid,6,42,43920,yes,Sweden,SE
+248,FALSE,OR,HTML/CSS,MongoDB,mid,7,35,44090,yes,Latvia,LV
+250,FALSE,NOT,Java,MySQL,mid,5,30,39270,yes,Denmark,DK
+251,FALSE,AND,JavaScript,MongoDB,mid,6,45,49090,no,Greece,EL
+252,FALSE,OR,JavaScript,MySQL,mid,9,43,51180,yes,Belgium,BE
+253,FALSE,NOT,PHP,Redis,mid,7,30,53490,no,Portugal,PT
+258,FALSE,OR,SQL,Oracle,mid,4,31,39050,no,Hungary,HU
+260,FALSE,OR,PHP,MySQL,mid,7,39,47650,yes,Belgium,BE
+261,FALSE,OR,Python,MySQL,mid,10,39,37310,no,Romania,RO
+314,FALSE,OR,Java,SQL Server,mid,10,39,44670,yes,Portugal,PT
+315,FALSE,OR,Shell,Oracle,mid,5,41,37640,yes,Romania,RO
+321,FALSE,AND,SQL,Oracle,mid,6,34,59010,no,Germany,DE
+323,FALSE,NOT,SQL,SQL Server,mid,4,45,47360,no,Netherlands,NL
+328,FALSE,NOT,Java,MongoDB,mid,4,34,44510,no,Austria,AT
+331,FALSE,AND,SQL,MySQL,mid,7,39,57660,yes,Greece,EL
+337,FALSE,OR,HTML/CSS,MySQL,mid,7,31,39820,no,Poland,PL
+338,TRUE,NOT,C,PostgreSQL,mid,5,36,36910,yes,Hungary,HU
+339,FALSE,OR,SQL,MySQL,mid,7,37,47560,yes,Finland,FI
+340,TRUE,AND,Java,SQL Server,mid,8,44,46260,yes,Italy,IT
+342,FALSE,AND,JavaScript,MySQL,mid,5,44,44560,no,Portugal,PT
+343,FALSE,AND,C#,Oracle,mid,5,40,55380,yes,Sweden,SE
+350,TRUE,OR,PHP,MySQL,mid,6,32,57380,no,Portugal,PT
+113,FALSE,NOT,C#,SQLite,senior,19,41,61690,yes,Ireland,IE
+345,FALSE,NOT,C#,Redis,mid,5,38,49260,no,Ireland,IE
+566,FALSE,NOT,JavaScript,MySQL,mid,4,41,48180,yes,Czech Republic,CZ
+571,FALSE,NOT,HTML/CSS,PostgreSQL,mid,5,42,41990,yes,Sweden,SE
+573,TRUE,NOT,Shell,SQL Server,mid,10,39,47210,yes,Italy,IT
+574,FALSE,OR,Python,MySQL,mid,7,42,49960,yes,UK,UK
+575,FALSE,NOT,JavaScript,Redis,mid,6,42,37590,no,Netherlands,NL
+576,TRUE,AND,C#,PostgreSQL,mid,8,44,36980,no,Netherlands,NL
+579,TRUE,OR,HTML/CSS,SQL Server,mid,5,32,37110,no,Poland,PL
+584,FALSE,OR,C,MySQL,mid,4,32,52280,yes,Italy,IT
+585,FALSE,OR,JavaScript,MySQL,mid,10,38,39730,yes,Netherlands,NL
+588,FALSE,NOT,Java,MySQL,mid,8,31,45360,yes,Sweden,SE
+594,TRUE,AND,PHP,SQL Server,mid,8,42,49750,no,Netherlands,NL
+596,FALSE,OR,Python,MySQL,mid,4,37,54560,no,Italy,IT
+597,FALSE,OR,HTML/CSS,MySQL,mid,8,38,57520,yes,Romania,RO
+601,FALSE,AND,C,MySQL,mid,9,40,45150,no,Malta,MT
+294,FALSE,NOT,Python,Oracle,senior,12,30,83150,yes,UK,UK
+303,FALSE,OR,C++,MongoDB,senior,12,41,68680,yes,Spain,ES
+317,TRUE,OR,HTML/CSS,Oracle,senior,22,43,80140,yes,Slovakia,SK
+165,FALSE,OR,JavaScript,SQLite,junior,3,39,34740,yes,Germany,DE
+170,TRUE,NOT,HTML/CSS,MongoDB,junior,2,37,32560,no,Denmark,DK
+171,TRUE,OR,Java,PostgreSQL,junior,3,40,31020,no,Sweden,SE
+176,TRUE,NOT,HTML/CSS,SQL Server,junior,0,36,34560,no,Hungary,HU
+168,FALSE,OR,JavaScript,PostgreSQL,mid,6,39,48810,yes,Portugal,PT
+169,FALSE,OR,HTML/CSS,MongoDB,mid,6,36,44190,yes,UK,UK
+523,FALSE,OR,PHP,MySQL,mid,7,45,57540,yes,Latvia,LV
+524,TRUE,AND,Java,PostgreSQL,mid,6,33,42450,no,Cyprus,CY
+526,TRUE,AND,SQL,PostgreSQL,mid,7,44,37050,yes,Belgium,BE
+717,FALSE,OR,JavaScript,PostgreSQL,mid,8,44,49350,no,Poland,PL
+720,FALSE,OR,C#,SQLite,mid,7,38,44790,no,Romania,RO
+723,FALSE,AND,SQL,Oracle,mid,8,45,47350,yes,France,FR
+724,TRUE,AND,HTML/CSS,Redis,mid,7,42,48090,no,Romania,RO
+726,FALSE,OR,Python,MongoDB,mid,4,42,43680,yes,Croatia,HR
+167,FALSE,OR,C,SQL Server,senior,17,38,59700,yes,Germany,DE
+264,FALSE,AND,JavaScript,SQL Server,mid,4,33,54150,no,Poland,PL
+271,FALSE,NOT,C#,MySQL,mid,10,38,41190,no,Estonia,EE
+272,TRUE,NOT,C#,MySQL,mid,8,36,49870,yes,Italy,IT
+274,FALSE,OR,Java,MySQL,mid,9,33,36580,yes,Denmark,DK
+687,FALSE,AND,Shell,Redis,senior,22,43,87390,no,Romania,RO
+693,FALSE,OR,C#,MongoDB,senior,14,37,69880,no,Finland,FI
+695,FALSE,OR,PHP,Oracle,senior,11,43,77970,no,Slovakia,SK
+698,FALSE,NOT,HTML/CSS,SQL Server,senior,12,32,71270,no,Portugal,PT
+703,FALSE,OR,Python,MySQL,senior,14,43,73160,yes,Greece,EL
+718,FALSE,OR,SQL,SQLite,senior,18,42,71910,yes,Germany,DE
+281,FALSE,NOT,HTML/CSS,PostgreSQL,mid,5,45,57000,no,Malta,MT
+283,TRUE,OR,C,SQLite,mid,4,33,39820,no,France,FR
+512,FALSE,AND,JavaScript,MySQL,mid,6,38,54130,yes,Germany,DE
+513,FALSE,OR,C++,MongoDB,mid,6,40,51510,yes,Italy,IT
+515,FALSE,OR,C#,MySQL,mid,5,45,49820,no,Czech Republic,CZ
+517,FALSE,AND,HTML/CSS,SQL Server,mid,6,45,41340,no,Slovenia,SI
+519,FALSE,NOT,JavaScript,SQL Server,mid,6,38,38360,yes,Latvia,LV
+520,TRUE,NOT,C,SQL Server,mid,4,36,46760,no,Poland,PL
+773,FALSE,OR,Python,MySQL,mid,4,31,42320,yes,Slovakia,SK
+774,FALSE,AND,Python,SQL Server,mid,6,34,37360,yes,UK,UK
+777,FALSE,NOT,SQL,Redis,mid,9,32,57900,yes,Malta,MT
+780,TRUE,AND,SQL,MySQL,mid,7,41,48710,yes,Luxembourg,LU
+785,FALSE,NOT,Shell,Oracle,mid,10,43,44670,no,Portugal,PT
+786,FALSE,NOT,PHP,SQL Server,mid,7,33,44710,no,Hungary,HU
+790,TRUE,AND,C,SQLite,mid,6,32,39580,yes,Romania,RO
+795,FALSE,AND,JavaScript,MySQL,mid,7,38,43440,no,Poland,PL
+797,FALSE,OR,JavaScript,SQL Server,mid,6,42,57230,yes,Germany,DE
+798,TRUE,NOT,SQL,MySQL,mid,7,33,45180,yes,Romania,RO
+156,FALSE,NOT,SQL,MySQL,senior,16,45,87750,yes,Cyprus,CY
+164,FALSE,OR,SQL,PostgreSQL,senior,8,30,64860,no,Denmark,DK
+166,TRUE,AND,JavaScript,MongoDB,senior,13,35,61700,yes,Hungary,HU
+333,FALSE,NOT,JavaScript,MongoDB,senior,19,45,76410,yes,Denmark,DK
+334,FALSE,NOT,JavaScript,SQL Server,senior,13,34,68180,no,France,FR
+335,FALSE,OR,Shell,Oracle,senior,20,40,73080,yes,Czech Republic,CZ
+352,FALSE,AND,PHP,PostgreSQL,senior,24,30,62480,yes,Italy,IT
+363,FALSE,NOT,HTML/CSS,SQL Server,senior,19,45,83140,no,Greece,EL
+376,FALSE,OR,SQL,MySQL,senior,27,34,83670,no,Netherlands,NL
+378,FALSE,AND,SQL,PostgreSQL,senior,15,41,88340,yes,Portugal,PT
+725,FALSE,NOT,C,MySQL,senior,8,36,65740,yes,Germany,DE
+750,FALSE,NOT,Python,MySQL,senior,23,39,72300,no,France,FR
+766,FALSE,OR,PHP,PostgreSQL,senior,21,40,67620,no,Greece,EL
+771,FALSE,OR,PHP,SQL Server,senior,18,36,83970,yes,Spain,ES
+776,FALSE,OR,Java,PostgreSQL,senior,8,43,82850,yes,France,FR
+779,FALSE,NOT,Python,MongoDB,senior,18,38,63500,yes,Hungary,HU
+789,FALSE,OR,HTML/CSS,MongoDB,senior,11,44,80860,yes,Spain,ES
+288,FALSE,NOT,PHP,SQL Server,junior,3,32,35590,yes,Spain,ES
+289,FALSE,AND,SQL,MySQL,junior,2,34,32920,yes,Italy,IT
+293,TRUE,OR,Python,Oracle,junior,3,33,32070,no,Italy,IT
+299,TRUE,OR,Python,MySQL,junior,0,42,33810,no,Hungary,HU
+301,TRUE,AND,C,MySQL,junior,2,39,33690,no,France,FR
+304,FALSE,OR,PHP,SQL Server,junior,4,32,33740,no,Portugal,PT
+305,FALSE,OR,C#,MySQL,junior,2,38,29530,yes,Slovenia,SI
+307,TRUE,NOT,JavaScript,MySQL,junior,0,41,33870,yes,Germany,DE
+309,TRUE,NOT,Python,PostgreSQL,junior,3,42,28920,no,Slovakia,SK
+312,FALSE,NOT,Java,PostgreSQL,junior,1,42,36070,yes,Hungary,HU
+316,TRUE,OR,JavaScript,PostgreSQL,junior,2,42,32970,no,UK,UK
+319,TRUE,NOT,Python,MySQL,junior,1,44,36170,no,Slovenia,SI
+320,FALSE,OR,Shell,MySQL,junior,3,31,32710,yes,Germany,DE
+322,FALSE,OR,HTML/CSS,SQL Server,junior,0,40,32430,no,Portugal,PT
+324,TRUE,NOT,C#,MongoDB,junior,2,37,31970,yes,Slovakia,SK
+325,FALSE,OR,Python,PostgreSQL,junior,0,41,34730,no,Portugal,PT
+326,TRUE,AND,Java,Oracle,junior,2,31,31760,no,Netherlands,NL
+327,FALSE,AND,SQL,MySQL,junior,2,43,28540,no,Cyprus,CY
+329,TRUE,NOT,SQL,SQL Server,junior,4,44,32000,yes,Bulgaria,BG
+330,FALSE,OR,PHP,MySQL,junior,2,40,29600,yes,Italy,IT
+332,TRUE,NOT,HTML/CSS,MySQL,junior,1,37,34130,no,Greece,EL
+336,FALSE,OR,SQL,Redis,junior,0,37,28380,no,Belgium,BE
+341,FALSE,NOT,Python,SQLite,junior,0,30,34730,no,Sweden,SE
+344,TRUE,AND,SQL,SQL Server,junior,0,37,29450,yes,Sweden,SE
+346,FALSE,OR,JavaScript,SQL Server,junior,3,36,34310,no,Portugal,PT
+347,FALSE,NOT,HTML/CSS,MySQL,junior,3,34,32340,no,Sweden,SE
+353,FALSE,NOT,Python,MySQL,mid,10,43,47360,no,Italy,IT
+356,FALSE,OR,Python,Oracle,mid,8,39,43550,no,Finland,FI
+357,TRUE,NOT,JavaScript,PostgreSQL,mid,7,38,37230,yes,Sweden,SE
+359,FALSE,OR,C#,SQLite,mid,4,43,58730,no,Finland,FI
+362,TRUE,OR,Python,MongoDB,mid,7,36,44580,no,Poland,PL
+366,FALSE,NOT,SQL,SQLite,mid,10,39,40100,no,Italy,IT
+368,TRUE,NOT,C++,PostgreSQL,mid,8,42,40530,no,Netherlands,NL
+372,FALSE,NOT,JavaScript,SQLite,mid,6,30,58010,no,Spain,ES
+373,FALSE,NOT,SQL,MySQL,mid,4,42,42040,no,Croatia,HR
+374,FALSE,OR,PHP,MongoDB,mid,6,34,58010,yes,Czech Republic,CZ
+611,FALSE,AND,SQL,SQL Server,mid,6,37,44670,no,Germany,DE
+612,TRUE,NOT,Shell,PostgreSQL,mid,5,36,41240,yes,Luxembourg,LU
+614,TRUE,AND,PHP,SQL Server,mid,10,35,39370,no,Romania,RO
+616,FALSE,AND,JavaScript,MongoDB,mid,5,41,40550,yes,Italy,IT
+617,FALSE,OR,C,MySQL,mid,4,30,46690,no,Denmark,DK
+619,FALSE,OR,SQL,SQL Server,mid,6,42,37400,yes,Hungary,HU
+623,FALSE,NOT,PHP,SQL Server,mid,6,32,58950,no,Denmark,DK
+628,FALSE,NOT,PHP,MySQL,mid,9,34,50070,yes,Czech Republic,CZ
+629,FALSE,NOT,SQL,SQLite,mid,5,40,41080,yes,Latvia,LV
+630,TRUE,NOT,JavaScript,SQLite,mid,6,31,57030,no,Denmark,DK
+708,FALSE,OR,JavaScript,SQLite,mid,4,32,51010,yes,France,FR
+711,TRUE,NOT,HTML/CSS,PostgreSQL,mid,6,34,38620,no,Malta,MT
+348,FALSE,NOT,SQL,PostgreSQL,junior,4,35,34250,no,France,FR
+349,TRUE,AND,JavaScript,SQLite,junior,3,42,33690,no,Croatia,HR
+351,FALSE,OR,JavaScript,PostgreSQL,junior,4,37,35330,no,Netherlands,NL
+354,TRUE,OR,Shell,SQL Server,junior,2,37,29160,yes,France,FR
+355,TRUE,OR,PHP,MySQL,junior,2,37,33010,no,France,FR
+358,FALSE,NOT,Python,MongoDB,junior,2,35,31980,no,Greece,EL
+360,TRUE,OR,JavaScript,SQL Server,junior,1,37,32970,no,Austria,AT
+361,FALSE,NOT,Python,MySQL,junior,2,45,30550,yes,Sweden,SE
+364,TRUE,NOT,SQL,Redis,junior,0,44,29390,no,Czech Republic,CZ
+365,TRUE,OR,C,MongoDB,junior,0,40,30440,yes,UK,UK
+367,TRUE,OR,HTML/CSS,PostgreSQL,junior,0,36,31820,yes,Denmark,DK
+370,TRUE,OR,Shell,Redis,junior,1,44,35010,no,Hungary,HU
+371,FALSE,NOT,Python,MySQL,junior,0,40,31090,yes,Denmark,DK
+375,FALSE,NOT,HTML/CSS,MySQL,junior,2,37,31560,no,Slovakia,SK
+377,FALSE,OR,HTML/CSS,SQL Server,junior,2,40,34800,no,Spain,ES
+382,FALSE,NOT,Java,MongoDB,junior,2,31,35800,yes,Luxembourg,LU
+383,TRUE,NOT,Java,PostgreSQL,junior,4,37,31460,yes,Italy,IT
+385,FALSE,OR,PHP,MySQL,junior,2,39,31240,yes,Spain,ES
+388,TRUE,AND,Python,MySQL,junior,3,31,31960,yes,Slovakia,SK
+391,TRUE,NOT,SQL,SQL Server,junior,2,39,35170,no,Slovenia,SI
+394,FALSE,AND,C,MySQL,junior,2,38,29690,no,Finland,FI
+396,TRUE,OR,HTML/CSS,MongoDB,junior,1,34,35460,yes,Denmark,DK
+397,FALSE,NOT,HTML/CSS,MySQL,junior,0,31,35440,yes,Portugal,PT
+398,FALSE,OR,JavaScript,SQL Server,junior,2,39,33440,yes,Hungary,HU
+399,TRUE,NOT,HTML/CSS,PostgreSQL,junior,3,30,28790,yes,Slovenia,SI
+400,FALSE,NOT,SQL,SQLite,junior,1,31,33300,yes,Poland,PL
+402,FALSE,OR,HTML/CSS,SQLite,junior,2,40,33560,no,Belgium,BE
+403,FALSE,NOT,PHP,SQL Server,junior,4,31,35260,yes,Luxembourg,LU
+404,TRUE,OR,Java,MySQL,junior,2,34,34490,no,Austria,AT
+405,TRUE,NOT,Java,Oracle,junior,2,45,31590,no,Croatia,HR
+406,TRUE,NOT,SQL,MySQL,junior,2,39,31320,no,Greece,EL
+407,FALSE,OR,Java,Oracle,junior,1,38,32470,yes,Netherlands,NL
+408,TRUE,NOT,C,PostgreSQL,junior,1,40,29010,no,Belgium,BE
+410,TRUE,NOT,HTML/CSS,MySQL,junior,2,32,30380,no,Lithuania,LT
+411,TRUE,NOT,JavaScript,SQLite,junior,4,31,33360,no,Bulgaria,BG
+413,FALSE,OR,HTML/CSS,PostgreSQL,junior,3,34,33760,yes,Denmark,DK
+415,FALSE,NOT,C++,Redis,junior,0,31,34110,yes,Malta,MT
+417,TRUE,OR,PHP,MySQL,junior,1,38,30060,yes,Greece,EL
+419,TRUE,OR,HTML/CSS,MySQL,junior,1,45,36050,yes,Spain,ES
+420,FALSE,NOT,C#,Oracle,junior,1,42,35240,yes,Netherlands,NL
+422,TRUE,OR,SQL,SQL Server,junior,2,38,32230,yes,Poland,PL
+423,FALSE,NOT,Shell,SQL Server,junior,2,30,31600,no,Romania,RO
+424,FALSE,OR,HTML/CSS,MySQL,junior,2,34,33970,no,Luxembourg,LU
+425,FALSE,OR,HTML/CSS,Redis,junior,2,30,35070,no,UK,UK
+429,TRUE,OR,SQL,SQLite,junior,0,43,34900,yes,Italy,IT
+431,FALSE,NOT,C#,SQL Server,junior,1,34,32500,no,Greece,EL
+435,FALSE,AND,Python,SQL Server,junior,0,38,34600,yes,Germany,DE
+438,TRUE,OR,Java,MySQL,junior,0,31,30080,yes,Austria,AT
+439,FALSE,AND,C#,PostgreSQL,junior,3,44,35480,no,Slovakia,SK
+441,FALSE,OR,JavaScript,MySQL,junior,3,34,30280,no,Luxembourg,LU
+443,TRUE,AND,PHP,SQLite,junior,2,40,28970,no,Croatia,HR
+446,TRUE,AND,C,SQLite,junior,1,41,28900,no,Portugal,PT
+448,TRUE,NOT,JavaScript,PostgreSQL,junior,0,31,29460,no,Spain,ES
+451,TRUE,AND,JavaScript,MySQL,junior,3,43,36160,yes,Italy,IT
+452,TRUE,NOT,SQL,PostgreSQL,junior,3,43,34080,no,Austria,AT
+453,TRUE,OR,Java,SQL Server,junior,0,44,29990,yes,Greece,EL
+454,TRUE,NOT,SQL,Oracle,junior,0,44,33180,yes,France,FR
+457,FALSE,OR,HTML/CSS,Oracle,junior,1,32,31360,no,Greece,EL
+458,TRUE,OR,SQL,PostgreSQL,junior,4,39,28980,yes,Greece,EL
+460,TRUE,OR,JavaScript,Oracle,junior,2,45,31400,no,Spain,ES
+461,FALSE,AND,Shell,MySQL,junior,4,32,34690,yes,Austria,AT
+462,TRUE,NOT,JavaScript,PostgreSQL,junior,2,37,32040,yes,Hungary,HU
+463,TRUE,OR,JavaScript,PostgreSQL,junior,4,33,35610,yes,Finland,FI
+464,TRUE,AND,Python,SQL Server,junior,1,36,35440,no,Netherlands,NL
+466,FALSE,NOT,HTML/CSS,PostgreSQL,junior,0,42,34160,no,Luxembourg,LU
+467,TRUE,OR,HTML/CSS,MySQL,junior,4,39,32690,no,Hungary,HU
+468,FALSE,OR,C++,SQLite,junior,0,43,32920,yes,Romania,RO
+473,TRUE,NOT,JavaScript,PostgreSQL,junior,1,37,31990,yes,Denmark,DK
+476,FALSE,OR,JavaScript,SQL Server,junior,0,30,34490,yes,Malta,MT
+477,FALSE,NOT,JavaScript,Oracle,junior,1,40,32700,yes,Denmark,DK
+478,TRUE,OR,PHP,PostgreSQL,junior,3,32,30960,no,Portugal,PT
+479,TRUE,AND,SQL,Redis,junior,2,31,30450,no,Italy,IT
+480,TRUE,OR,Shell,MySQL,junior,4,43,36040,no,Slovakia,SK
+482,TRUE,NOT,HTML/CSS,PostgreSQL,junior,1,45,28650,yes,Austria,AT
+483,TRUE,OR,Java,SQLite,junior,0,41,29240,yes,Slovenia,SI
+486,FALSE,AND,JavaScript,MySQL,junior,0,42,34670,yes,Hungary,HU
+488,FALSE,OR,C,MySQL,junior,2,30,32890,yes,Poland,PL
+490,FALSE,OR,JavaScript,MySQL,junior,1,40,35580,yes,Denmark,DK
+491,TRUE,OR,Java,MySQL,junior,1,45,28480,yes,Lithuania,LT
+492,TRUE,OR,Java,PostgreSQL,junior,1,39,32100,no,Slovenia,SI
+493,FALSE,AND,JavaScript,MySQL,junior,0,31,29580,no,Malta,MT
+495,FALSE,OR,Python,Redis,junior,4,45,29190,yes,Italy,IT
+498,FALSE,NOT,Java,SQL Server,junior,2,39,32740,no,Sweden,SE
+500,FALSE,NOT,Java,MySQL,junior,0,44,30780,no,Belgium,BE
+503,TRUE,NOT,JavaScript,Redis,junior,3,31,29070,no,Estonia,EE
+504,FALSE,OR,PHP,MySQL,junior,1,38,30540,no,Greece,EL
+507,TRUE,AND,JavaScript,MySQL,junior,0,39,32510,no,Belgium,BE
+509,TRUE,OR,HTML/CSS,SQLite,junior,3,45,33990,no,Sweden,SE
+510,FALSE,NOT,HTML/CSS,MongoDB,junior,3,41,33640,yes,Italy,IT
+514,TRUE,OR,JavaScript,MySQL,junior,0,33,33230,no,Greece,EL
+518,FALSE,NOT,SQL,MySQL,junior,1,37,29120,no,France,FR
+527,TRUE,OR,Java,Redis,junior,2,32,28990,no,Czech Republic,CZ
+528,TRUE,OR,HTML/CSS,SQLite,junior,1,42,28450,no,Germany,DE
+530,TRUE,NOT,HTML/CSS,MySQL,junior,0,45,31210,yes,Spain,ES
+531,TRUE,OR,C++,SQL Server,junior,3,41,34900,no,Greece,EL
+532,FALSE,NOT,SQL,MySQL,junior,1,38,32880,no,Estonia,EE
+535,TRUE,OR,C#,MySQL,junior,0,31,35880,yes,Malta,MT
+538,FALSE,OR,PHP,SQL Server,junior,0,40,30620,no,Netherlands,NL
+539,FALSE,AND,SQL,Redis,junior,1,39,31090,no,Finland,FI
+540,FALSE,NOT,PHP,MySQL,junior,2,38,32310,no,Poland,PL
+541,FALSE,NOT,PHP,PostgreSQL,junior,3,35,33320,yes,Denmark,DK
+543,FALSE,OR,Python,Oracle,junior,0,30,33280,yes,Austria,AT
+544,TRUE,OR,Python,SQL Server,junior,2,30,32070,no,Poland,PL
+545,FALSE,NOT,Java,MySQL,junior,0,34,33710,no,Denmark,DK
+546,TRUE,NOT,Java,MySQL,junior,0,30,34270,no,Croatia,HR
+547,TRUE,OR,JavaScript,MySQL,junior,3,39,30470,no,Latvia,LV
+549,FALSE,OR,HTML/CSS,SQL Server,junior,3,37,30330,no,Hungary,HU
+551,FALSE,OR,C,Oracle,junior,1,40,33570,yes,Poland,PL
+553,TRUE,NOT,C#,SQL Server,junior,0,40,30690,yes,Estonia,EE
+554,TRUE,NOT,SQL,MySQL,junior,0,40,34170,no,Finland,FI
+555,TRUE,OR,PHP,MySQL,junior,2,42,34890,yes,UK,UK
+558,TRUE,OR,C#,PostgreSQL,junior,0,44,31620,no,Cyprus,CY
+560,TRUE,OR,Java,Oracle,junior,3,31,30630,yes,Finland,FI
+561,TRUE,AND,HTML/CSS,SQLite,junior,2,43,29400,no,UK,UK
+568,TRUE,AND,Shell,Oracle,junior,3,34,32430,yes,Finland,FI
+569,TRUE,AND,PHP,MySQL,junior,0,36,32910,no,Portugal,PT
+570,TRUE,OR,JavaScript,MySQL,junior,3,37,33650,yes,Poland,PL
+577,FALSE,NOT,HTML/CSS,Oracle,junior,2,42,30150,yes,Czech Republic,CZ
+578,FALSE,NOT,HTML/CSS,MySQL,junior,4,35,30270,yes,Denmark,DK
+580,TRUE,NOT,JavaScript,MySQL,junior,4,34,30610,no,Latvia,LV
+582,TRUE,OR,Python,MySQL,junior,0,43,31000,no,Greece,EL
+586,TRUE,NOT,HTML/CSS,SQL Server,junior,3,41,34060,no,Hungary,HU
+587,FALSE,AND,SQL,MySQL,junior,2,39,31340,no,Netherlands,NL
+589,FALSE,AND,C#,SQL Server,junior,1,39,31190,no,Italy,IT
+590,FALSE,NOT,Java,MySQL,junior,3,43,29000,no,Croatia,HR
+591,FALSE,OR,SQL,SQL Server,junior,1,32,29960,yes,Denmark,DK
+593,FALSE,NOT,Java,SQLite,junior,2,42,35810,yes,Belgium,BE
+598,FALSE,AND,PHP,MongoDB,junior,4,33,28600,yes,Sweden,SE
+599,TRUE,NOT,HTML/CSS,Redis,junior,1,42,32320,yes,Romania,RO
+602,TRUE,NOT,JavaScript,Redis,junior,0,38,30630,yes,Poland,PL
+604,TRUE,OR,PHP,SQL Server,junior,0,34,29360,yes,Czech Republic,CZ
+605,TRUE,AND,C#,MySQL,junior,0,35,35660,yes,Netherlands,NL
+606,TRUE,OR,JavaScript,SQL Server,junior,0,38,28450,yes,Czech Republic,CZ
+607,FALSE,OR,C#,SQL Server,junior,0,32,34820,yes,Romania,RO
+608,TRUE,NOT,Shell,MongoDB,junior,1,32,33650,yes,Romania,RO
+609,TRUE,NOT,Java,SQL Server,junior,3,44,30660,no,France,FR
+613,FALSE,OR,Python,MySQL,junior,4,33,28870,yes,Spain,ES
+618,TRUE,AND,Shell,MySQL,junior,3,33,30950,yes,Portugal,PT
+620,FALSE,OR,SQL,SQL Server,junior,4,40,33080,yes,Poland,PL
+621,TRUE,OR,HTML/CSS,SQL Server,junior,0,30,34780,no,Spain,ES
+624,TRUE,OR,Java,SQL Server,junior,0,43,29560,yes,Sweden,SE
+625,FALSE,NOT,Shell,SQL Server,junior,0,41,28430,yes,France,FR
+626,TRUE,NOT,C,Redis,junior,3,37,29140,yes,Netherlands,NL
+627,FALSE,OR,JavaScript,PostgreSQL,junior,3,35,30700,no,Hungary,HU
+632,FALSE,AND,C#,SQLite,junior,3,35,32590,no,Croatia,HR
+637,FALSE,AND,C,MySQL,junior,4,37,33790,yes,Finland,FI
+639,FALSE,NOT,HTML/CSS,MySQL,junior,2,31,36090,no,Greece,EL
+640,TRUE,NOT,PHP,MongoDB,junior,1,35,34480,no,Latvia,LV
+643,TRUE,AND,PHP,PostgreSQL,junior,4,41,35800,no,Croatia,HR
+646,FALSE,NOT,Java,SQLite,junior,2,34,30420,no,Finland,FI
+650,FALSE,OR,SQL,SQL Server,junior,2,41,29210,no,Germany,DE
+651,FALSE,NOT,C++,PostgreSQL,junior,3,39,33590,yes,Greece,EL
+657,TRUE,NOT,C#,PostgreSQL,junior,0,33,33510,yes,Finland,FI
+658,FALSE,OR,JavaScript,Redis,junior,3,40,32140,no,Denmark,DK
+659,TRUE,OR,SQL,SQL Server,junior,2,41,34330,yes,Greece,EL
+660,TRUE,OR,HTML/CSS,Oracle,junior,2,44,35210,no,Romania,RO
+661,TRUE,AND,SQL,MySQL,junior,2,42,31680,yes,Greece,EL
+667,TRUE,NOT,HTML/CSS,MySQL,junior,2,35,34670,yes,Sweden,SE
+672,TRUE,NOT,HTML/CSS,MySQL,junior,4,41,31260,no,Romania,RO
+676,FALSE,NOT,JavaScript,Redis,junior,2,44,34060,yes,Italy,IT
+677,TRUE,NOT,JavaScript,MySQL,junior,0,40,31050,no,Germany,DE
+679,TRUE,OR,JavaScript,SQLite,junior,0,43,32360,yes,Denmark,DK
+681,FALSE,AND,Python,MongoDB,junior,2,41,33440,no,Hungary,HU
+685,TRUE,AND,C#,SQLite,junior,0,33,31230,no,Denmark,DK
+691,TRUE,NOT,Shell,SQLite,junior,0,35,30910,yes,Estonia,EE
+692,TRUE,NOT,Java,Redis,junior,4,36,30810,no,Italy,IT
+696,FALSE,NOT,Shell,PostgreSQL,junior,0,34,33630,no,Greece,EL
+700,TRUE,OR,JavaScript,PostgreSQL,junior,0,31,31520,no,Malta,MT
+706,TRUE,AND,SQL,MySQL,junior,2,43,33500,no,Lithuania,LT
+707,TRUE,OR,HTML/CSS,PostgreSQL,junior,4,38,30440,no,Luxembourg,LU
+709,FALSE,OR,HTML/CSS,Redis,junior,0,42,30030,yes,Netherlands,NL
+710,FALSE,NOT,Shell,PostgreSQL,junior,3,36,34800,yes,Romania,RO
+712,TRUE,OR,JavaScript,SQLite,junior,4,38,30610,yes,Czech Republic,CZ
+714,FALSE,OR,Python,MySQL,junior,4,44,30910,no,Romania,RO
+715,TRUE,OR,SQL,MySQL,junior,2,44,29230,no,Lithuania,LT
+716,FALSE,OR,JavaScript,MySQL,junior,3,30,34940,no,Latvia,LV
+719,FALSE,OR,Python,Oracle,junior,4,37,28420,yes,UK,UK
+721,FALSE,OR,Python,SQL Server,junior,1,34,29050,yes,Italy,IT
+722,TRUE,AND,Python,SQLite,junior,0,42,33150,no,Denmark,DK
+727,FALSE,NOT,C#,PostgreSQL,junior,3,31,35970,no,Denmark,DK
+730,FALSE,NOT,JavaScript,MongoDB,junior,3,40,31210,no,Austria,AT
+731,TRUE,OR,SQL,Oracle,junior,2,45,34100,no,Germany,DE
+732,FALSE,OR,JavaScript,Redis,junior,2,39,33280,no,UK,UK
+734,TRUE,NOT,PHP,MongoDB,junior,2,42,28440,yes,Portugal,PT
+736,TRUE,NOT,Java,SQL Server,junior,4,36,29970,yes,Portugal,PT
+738,TRUE,OR,Java,PostgreSQL,junior,2,42,31340,yes,Netherlands,NL
+739,TRUE,AND,Python,Oracle,junior,0,39,35390,no,Bulgaria,BG
+740,TRUE,NOT,SQL,SQL Server,junior,1,36,33390,yes,UK,UK
+742,TRUE,NOT,C#,SQL Server,junior,4,43,29730,no,Poland,PL
+744,FALSE,AND,C#,MySQL,junior,2,30,30370,no,Romania,RO
+746,FALSE,OR,C++,PostgreSQL,junior,2,43,32520,yes,Netherlands,NL
+747,TRUE,OR,C,Oracle,junior,3,31,34480,no,Germany,DE
+748,TRUE,AND,C++,MySQL,junior,1,40,28330,yes,Denmark,DK
+753,FALSE,OR,C++,Oracle,junior,3,36,35500,no,Italy,IT
+754,FALSE,OR,C++,MySQL,junior,2,32,29110,yes,France,FR
+755,TRUE,NOT,Python,SQLite,junior,0,40,30890,yes,France,FR
+756,FALSE,OR,SQL,SQLite,junior,3,42,32850,yes,Slovenia,SI
+757,FALSE,NOT,C++,MySQL,junior,3,44,32370,no,Hungary,HU
+759,FALSE,NOT,C#,Redis,junior,3,40,35030,yes,Latvia,LV
+763,TRUE,OR,C,SQLite,junior,4,37,34140,yes,Germany,DE
+764,TRUE,NOT,Python,PostgreSQL,junior,2,33,34650,yes,France,FR
+767,FALSE,NOT,HTML/CSS,SQLite,junior,3,40,29370,no,Cyprus,CY
+768,TRUE,NOT,Python,Redis,junior,3,30,28770,yes,Sweden,SE
+769,TRUE,OR,Python,Oracle,junior,0,37,35620,no,Bulgaria,BG
+770,FALSE,OR,C#,SQLite,junior,2,33,36050,yes,Croatia,HR
+775,FALSE,OR,Python,MySQL,junior,3,40,28930,yes,Finland,FI
+778,TRUE,OR,Python,MySQL,junior,1,42,28390,yes,Lithuania,LT
+781,TRUE,OR,C,MySQL,junior,3,35,32920,yes,Spain,ES
+782,FALSE,OR,C#,Redis,junior,2,40,28630,yes,Hungary,HU
+783,FALSE,OR,SQL,PostgreSQL,junior,0,39,31340,yes,Czech Republic,CZ
+784,TRUE,NOT,C++,MySQL,junior,1,41,30750,no,Greece,EL
+787,TRUE,NOT,HTML/CSS,Oracle,junior,0,38,33650,yes,Estonia,EE
+788,FALSE,OR,SQL,MySQL,junior,0,41,31520,yes,Estonia,EE
+791,TRUE,OR,HTML/CSS,MySQL,junior,3,40,32460,no,Luxembourg,LU
+792,TRUE,AND,Java,SQLite,junior,1,34,28710,yes,Greece,EL
+793,TRUE,OR,JavaScript,PostgreSQL,junior,2,42,30640,yes,Netherlands,NL
+794,FALSE,OR,HTML/CSS,Oracle,junior,2,31,29570,yes,Sweden,SE
+796,FALSE,AND,JavaScript,MySQL,junior,3,33,30180,no,France,FR
+799,FALSE,OR,Java,Oracle,junior,3,33,32750,no,Denmark,DK
+800,TRUE,OR,Shell,SQL Server,junior,0,33,32490,no,Hungary,HU
+702,FALSE,NOT,JavaScript,Oracle,mid,5,33,53180,yes,Romania,RO
+705,TRUE,AND,HTML/CSS,PostgreSQL,mid,6,38,52060,yes,Sweden,SE
+713,TRUE,OR,PHP,Redis,mid,6,43,46570,yes,Germany,DE
+124,FALSE,OR,HTML/CSS,PostgreSQL,senior,18,35,61780,yes,Portugal,PT
+137,TRUE,OR,JavaScript,PostgreSQL,senior,21,30,60220,yes,Greece,EL
+481,FALSE,OR,C++,PostgreSQL,senior,9,38,70590,yes,Greece,EL
+484,FALSE,NOT,JavaScript,Oracle,senior,14,37,59360,no,Romania,RO
+489,TRUE,OR,SQL,Redis,senior,18,36,67860,no,Slovenia,SI
+496,TRUE,OR,Python,MySQL,senior,9,44,62290,yes,Austria,AT
+318,FALSE,OR,PHP,MySQL,senior,24,35,65870,no,Hungary,HU
+565,FALSE,NOT,JavaScript,PostgreSQL,mid,6,41,44510,no,Ireland,IE
+592,FALSE,NOT,JavaScript,MySQL,mid,7,37,55140,no,Ireland,IE
+772,FALSE,NOT,C#,Oracle,mid,7,39,37060,no,Ireland,IE
+310,TRUE,NOT,PHP,MongoDB,junior,2,39,36010,no,Ireland,IE
+521,TRUE,NOT,JavaScript,PostgreSQL,junior,3,31,32050,yes,Ireland,IE
+603,FALSE,NOT,Java,MySQL,junior,2,41,32650,yes,Ireland,IE
+745,TRUE,NOT,HTML/CSS,PostgreSQL,junior,1,42,31170,no,Ireland,IE
+758,TRUE,NOT,SQL,SQL Server,junior,2,41,36130,yes,Ireland,IE

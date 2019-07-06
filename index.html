@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css">
     <link rel="stylesheet" href="static/css/style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,300i,400,400i|Cutive+Mono&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,300i,400,400i|Cutive+Mono&display=swap"
+        rel="stylesheet">
     <script type="text/javascript" src="static/js/d3.min.js"></script>
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="static/js/graph.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
 
@@ -32,17 +35,19 @@
         <div class="row lo_numbers">
             <div class="table number-para text-center">
                 <ul id="horizontal-list">
-                    <li class="col-12 col-md-2 clickers info"><a href="#" id='button1' class="info_button">Information</a></li>
-                    <li class="col-12 col-md-2"><span class="text-span">AND:&nbsp;</span><span class="number-box"
+                    <li class="col-12 col-lg-2 clickers info"><a href="#" id='button1'
+                            class="info_button">Information</a></li>
+                    <li class="col-12 col-lg-2"><span class="text-span">AND:&nbsp;</span><span class="number-box"
                             id="percent-of-and"></span>
                     </li>
-                    <li class="col-12 col-md-2"><span class="text-span">OR:&nbsp;</span><span class="number-box"
+                    <li class="col-12 col-lg-2"><span class="text-span">OR:&nbsp;</span><span class="number-box"
                             id="percent-of-or"></span>
                     </li>
-                    <li class="col-12 col-md-2"><span class="text-span">NOT:&nbsp;</span><span class="number-box"
+                    <li class="col-12 col-lg-2"><span class="text-span">NOT:&nbsp;</span><span class="number-box"
                             id="percent-of-not"></span>
                     </li>
-                    <li class="col-12 col-md-2 clickers reset"><a href="javascript:dc.filterAll(); dc.renderAll();">Reset
+                    <li class="col-12 col-lg-2 clickers reset"><a
+                            href="javascript:dc.filterAll(); dc.renderAll();">Reset
                             Charts</a></li>
                 </ul>
             </div>
@@ -52,16 +57,14 @@
         <div class="row">
             <div class="col-12">
                 <p class="info_para text-justify" id='para1'>
-                    In order to build a picture of the state of employment in web and software development across
-                    the EU 28, we have surveyed 784 developers, 28 from each country.
-                    In the charts presented here, for each country, you can look at the average salaries for
-                    engineers across the 10 most popular programming languages and see that ... . You can see that that
-                    while
-                    at junior level we have an almost even split in the gender of our survey group, this does not follow
-                    through to senior levels. You will see that, on average, developer saleries are relativly simiilar
-                    across all 10 of our programming languages.<br>
-                    Also, for a bit of fun, we decided to ask developers what their favourute Logical Operator is. Can
-                    you see if there are any outliers in this particular dataset!
+                    Presented here are the results of a survay of 800 professional developers from across the 28
+                    countries of the European Union.
+                    For each of the countries surveyed, you will see what the most popular
+                    programming languages are and if there a correlation with average saleries, what the most preferred database
+                    systems in use are and how, while trends seem to changing, there remains a gender divide at the most senior levels.
+                    To debunk some myths we also asked about pastimes, and gaming in particular. 
+                    Also, for a bit of fun, we decided to ask developers what their favourite Logical Operator is, this can be tracked
+                    in the number display above (can you spot any outliers!).
                 </p>
             </div>
         </div>
@@ -70,22 +73,23 @@
 
     <div class="container allgraphs">
         <div class="row">
-            <div class="col-12 col-md-4 text-left" id="stacked-choice">
+            <div class="col-12 col-sm-6 col-lg-4 text-left" id="stacked-choice">
                 <p>Gender Across Employment Grades</p>
             </div>
-            <div class="col-12 col-md-4 text-left" id="country-chart">
-                <p>Select to Compare the Data Across the EU 28</p>
-            </div>
-            <div class="col-12 col-md-4 text-left" id="discipline-bar">
+            <div class="col-12 col-sm-6 col-lg-4 text-left" id="discipline-bar">
                 <p>Average Salary - Top 10 Programming Languages</p>
             </div>
-        </div>
-        <div class="container time_series">
-            <div class="row">
-                <div class="col-12">
-                    <div class="text-center" id="composite-chart">
-                        <p>Does Being a Gamer Correlate with Hours Worked in a Week?</p>
-                    </div>
+            <div class="col-6 col-lg-4 order-lg-first text-left" id="country-chart">
+                <p>Select to Compare the Data Across the EU 28</p>
+            </div>
+            <div class="col-12 col-md-8 order-md-last text-left">
+                <div class="text-center" id="composite-chart">
+                    <p>Does Being a Gamer Correlate with Hours Worked in a Week?</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 text-left">
+                <div class="text-center" id="database-pie">
+                    <p>Top 4 Most Popular Database Systems</p>
                 </div>
             </div>
         </div>

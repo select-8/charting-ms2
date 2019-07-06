@@ -21,13 +21,15 @@ For this project, my first charting data in this way, I decided to construct my 
 I constructed the dataset using SQL and building a table in a postgreSQL database. This allowed me to easily add new fields and to created weigthed random data which reflects real world data such as the Stack Overflow developers survey 2018.
 
 ### User Stories
+
+This project is aimed at devs
 ##### As a user... 
  - I want to quickly understand what, in general, I am being presented with.
  - I want to easily understand what each chart is showing me
  - I want access to some relevent metadata to give basic context to the charts
  - I want to have a visually pleasing experience
  - I want to learn something I couldn't from looking at the data in a spreadsheet
- - I want .....
+ - I want a bit of light hearted, "insider" content to contrast the the more "serious" content
 
 ### UX
 #### Wireframe
@@ -47,6 +49,7 @@ I used three fonts in this project:
 ##### The Charts
 
 The page consists of four charts which use the Crossfilter JavaScript library to give a multidimentional experience for the user. Each elements of the charts can be clicked to filter data in the other charts. With the way I have structred the visualisations you can, for example, see how popular C++ is across the EU, or equally you can see what the most popualar programming language is in Germany. You can see if any of the EU 28 bucks the trend in having less female developers in senior roles.
+Filters out empty Bins!!!!
 
 ##### The Numbers
 Percentage logical Operator

@@ -18,23 +18,13 @@ function makeGraphs(error, opData) {
         d.hours_per_week = parseInt(d.hours_per_week);
     })
 
-    // ndx.add(opData.map(function (d) {
-    //     return {
-    //         age: d.hours_per_week,
-    //         male: d.choice === 'FALSE',
-    //         female: d.choice === 'TRUE' 
-    //     }}))
-
-
-
-
-
     //Functions are declared 
     show_percentage_logical(ndx, "AND", "#percent-of-and");
     show_percentage_logical(ndx, "OR", "#percent-of-or");
     show_percentage_logical(ndx, "NOT", "#percent-of-not");
     country_rowchart(ndx);
-    discipline_bargraph(ndx);
+    discipline_pie(ndx);
+    discipline_salary_bargraph(ndx);
     show_count_of_choices_by_level(ndx);
     show_languages_over_time(ndx);
     remove_empty_bins();
@@ -55,11 +45,11 @@ function makeGraphs(error, opData) {
 
     function show_percentage_logical(ndx, logical, element) {
 
-        let dim = ndx.dimension(function (d) {
+        let lgop_dim = ndx.dimension(function (d) {
             return d.logical_op;
         });
 
-        let lgop_group = ndx.groupAll().reduce(
+        let lgop_group = lgop_dim.groupAll().reduce(
             function (p, v) {
                 if (v.logical_op === logical)
                     p.count++;
@@ -84,23 +74,23 @@ function makeGraphs(error, opData) {
                 if (p.count == 0) {
                     return 0;
                 } else {
-                    let totalCount = dim.groupAll().value();
+                    let totalCount = lgop_dim.groupAll().value();
                     return (p.count / totalCount);
                 }
             })
-            .dimension(dim)
+            .dimension(lgop_dim)
             .group(lgop_group);
     }
 
     function country_rowchart(ndx) {
-        let dim = ndx.dimension(dc.pluck('country'));
-        let country_group = dim.group();
+        let country_dim = ndx.dimension(dc.pluck('country'));
+        let country_group = country_dim.group();
         let filtered_group = remove_empty_bins(country_group);
 
         let rowchart = dc.rowChart('#country-chart')
         rowchart
             .height(520)
-            .width(300)
+            .width(350)
             .margins({
                 top: 20,
                 left: 5,
@@ -108,17 +98,41 @@ function makeGraphs(error, opData) {
                 bottom: 20
             })
             .elasticX(true)
-            .dimension(dim)
+            .dimension(country_dim)
             .group(filtered_group)
             .colors(d3.scale.category20())
-            .xAxis().ticks(13);
+            .xAxis().ticks(10);
     }
 
-    function discipline_bargraph(ndx) {
+    function discipline_pie(ndx) {
+        let dis_dim = ndx.dimension(dc.pluck('database'));
+        let dis_group = dis_dim.group().reduceCount();
+        let dis_first_bargraph = dc.pieChart("#database-pie");
+        dis_first_bargraph
+            .height(330)
+            .radius(140)
+            .transitionDuration(1500)
+            .dimension(dis_dim)
+            .group(dis_group)
+            .colors(d3.scale.ordinal().range(
+                [ '#1f78b4', '#b2df8a', '#cab2d6', '#bc80bd']))
+            .data(function (group) {
+                return dis_group.top(4);
+            })
+            .legend(dc.legend().x(0).y(0).itemHeight(10).gap(5))
+            .on('pretransition', function (chart) {
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                });
+            });
+    };
 
-        let dis_dim = ndx.dimension(dc.pluck('discipline'));
 
-        let salary_group = dis_dim.group().reduce(
+    function discipline_salary_bargraph(ndx) {
+
+        let dis_sal_dim = ndx.dimension(dc.pluck('discipline'));
+
+        let salary_group = dis_sal_dim.group().reduce(
 
             function (p, v) {
                 p.count++;
@@ -149,14 +163,14 @@ function makeGraphs(error, opData) {
         let dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
             .width(310)
-            .height(520)
+            .height(530)
             .margins({
                 top: 50,
                 right: 10,
                 bottom: 50,
-                left: 60
+                left: 50
             })
-            .dimension(dis_dim)
+            .dimension(dis_sal_dim)
             .group(salary_group)
             .valueAccessor(function (d) {
                 return d.value.average;
@@ -215,20 +229,20 @@ function makeGraphs(error, opData) {
             .dimension(level_dim)
             .group(groupByFalse, "Male")
             .stack(groupByTrue, "Female")
-            .width(200)
-            .height(520)
+            .width(300)
+            .height(530)
             .margins({
                 top: 50,
-                right: 0,
+                right: 60,
                 bottom: 50,
-                left: 40
+                left: 35
             })
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .yAxisLabel('Total Respondants')
-            .xAxisLabel('Employment Level')
+            .xAxisLabel('Employment Grade')
             .elasticY(true)
-            .legend(dc.legend().x(0).y(10).itemHeight(10).gap(5))
+            .legend(dc.legend().x(140).y(55).itemHeight(10).gap(5))
     }
 
     function show_languages_over_time(ndx) {
@@ -280,28 +294,28 @@ function makeGraphs(error, opData) {
             })
             .dimension(hours_per_dim)
             .x(d3.scale.linear().domain([minHrs, maxHrs]))
-            .yAxisLabel("Plays Computer Games")
+            .yAxisLabel("Number Who Play Computer Games")
             .xAxisLabel("Average Hours Worked Per Week")
             .legend(dc.legend().x(130).y(30).itemHeight(13).gap(5))
             .compose([
                 dc.lineChart(compositeChart)
                 .colors('blue')
-                .dashStyle([2,2])
+                .dashStyle([2, 2])
                 .group(gameHs, 'HTML/CSS'),
 
                 dc.lineChart(compositeChart)
                 .colors('green')
-                .dashStyle([2,2])
+                .dashStyle([2, 2])
                 .group(gameJs, 'JavaScript'),
 
                 dc.lineChart(compositeChart)
                 .colors('red')
-                .dashStyle([2,2])
+                .dashStyle([2, 2])
                 .group(gamePy, 'Python'),
 
                 dc.lineChart(compositeChart)
                 .colors('orange')
-                .dashStyle([2,2])
+                .dashStyle([2, 2])
                 .group(gameSq, 'SQL')
             ])
             .transitionDuration(500)
@@ -309,7 +323,7 @@ function makeGraphs(error, opData) {
             .brushOn(false);
 
 
-        }        
+    }
 
 
 }

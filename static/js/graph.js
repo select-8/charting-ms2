@@ -19,15 +19,15 @@ function makeGraphs(error, opData) {
     })
 
     //Functions are declared 
+    remove_empty_bins();
     show_percentage_logical(ndx, "AND", "#percent-of-and");
     show_percentage_logical(ndx, "OR", "#percent-of-or");
     show_percentage_logical(ndx, "NOT", "#percent-of-not");
-    country_rowchart(ndx);
-    discipline_pie(ndx);
-    discipline_salary_bargraph(ndx);
-    show_count_of_choices_by_level(ndx);
-    show_languages_over_time(ndx);
-    remove_empty_bins();
+    show_countries(ndx);
+    show_db_pop(ndx);
+    show_discipline_and_salary(ndx);
+    show_gender_at_level(ndx);
+    show_languages_v_leisure_per_week(ndx);
 
     dc.renderAll();
 
@@ -43,12 +43,14 @@ function makeGraphs(error, opData) {
         };
     };
 
-    function show_percentage_logical(ndx, logical, element) {
+    //
+    // Number Display
+    //
 
+    function show_percentage_logical(ndx, logical, element) {
         let lgop_dim = ndx.dimension(function (d) {
             return d.logical_op;
         });
-
         let lgop_group = lgop_dim.groupAll().reduce(
             function (p, v) {
                 if (v.logical_op === logical)
@@ -66,12 +68,12 @@ function makeGraphs(error, opData) {
                 };
             }
         );
-
+        // numbers should be avg within clicked item, not total
         let numDis = dc.numberDisplay(element);
         numDis
             .formatNumber(d3.format(".2%"))
-            .valueAccessor(function (p, d) {
-                if (p.count == 0) {
+            .valueAccessor(function (p) {
+                if (p.count === 0) {
                     return 0;
                 } else {
                     let totalCount = lgop_dim.groupAll().value();
@@ -82,17 +84,22 @@ function makeGraphs(error, opData) {
             .group(lgop_group);
     }
 
-    function country_rowchart(ndx) {
+    //
+    // Countries Row Chart
+    //
+
+    function show_countries(ndx) {
         let country_dim = ndx.dimension(dc.pluck('country'));
         let country_group = country_dim.group();
+        //
+        // crossfilter should remove null groups from chart
         let filtered_group = remove_empty_bins(country_group);
-
         let rowchart = dc.rowChart('#country-chart')
         rowchart
             .height(520)
             .width(350)
             .margins({
-                top: 20,
+                top: 0,
                 left: 5,
                 right: 10,
                 bottom: 20
@@ -104,20 +111,24 @@ function makeGraphs(error, opData) {
             .xAxis().ticks(10);
     }
 
-    function discipline_pie(ndx) {
-        let dis_dim = ndx.dimension(dc.pluck('database'));
-        let dis_group = dis_dim.group().reduceCount();
-        let dis_first_bargraph = dc.pieChart("#database-pie");
-        dis_first_bargraph
+    //
+    // Database PieChart
+    //
+
+    function show_db_pop(ndx) {
+        let db_dim = ndx.dimension(dc.pluck('database'));
+        let db_group = db_dim.group().reduceCount();
+        let db_pie = dc.pieChart("#database-pie");
+        db_pie
             .height(330)
             .radius(140)
             .transitionDuration(1500)
-            .dimension(dis_dim)
-            .group(dis_group)
+            .dimension(db_dim)
+            .group(db_group)
             .colors(d3.scale.ordinal().range(
-                [ '#9a6324', '#f58231', '#800000', '#469990', '#808000', '#000075', '#808000', '#911eb4' ]))
+                ['#9a6324', '#f58231', '#800000', '#469990', '#808000', '#000075', '#808000', '#911eb4']))
             .data(function (group) {
-                return dis_group.top(4);
+                return db_group.top(4);
             })
             .legend(dc.legend().x(0).y(0).itemHeight(10).gap(5))
             .on('pretransition', function (chart) {
@@ -127,38 +138,41 @@ function makeGraphs(error, opData) {
             });
     };
 
+    //
+    // Discipline/Salary Bargraph
+    //
 
-    function discipline_salary_bargraph(ndx) {
-
+    function show_discipline_and_salary(ndx) {
         let dis_sal_dim = ndx.dimension(dc.pluck('discipline'));
 
-        let salary_group = dis_sal_dim.group().reduce(
+        function reduceAdd(p, v) {
+            p.count++;
+            p.total += v.salary;
+            p.average = p.total / p.count;
+            return p;
+        }
 
-            function (p, v) {
-                p.count++;
-                p.total += v.salary;
+        function reduceRemove(p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            } else {
+                p.total -= v.salary;
                 p.average = p.total / p.count;
-                return p;
-            },
-            function (p, v) {
-                p.count--;
-                if (p.count == 0) {
-                    p.total = 0;
-                    p.average = 0;
-                } else {
-                    p.total -= v.salary;
-                    p.average = p.total / p.count;
-                }
-                return p;
-            },
-            function () {
-                return {
-                    count: 0,
-                    total: 0,
-                    average: 0
-                };
             }
-        );
+            return p;
+        }
+
+        function reduceInitial() {
+            return {
+                count: 0,
+                total: 0,
+                average: 0
+            };
+        };
+
+        let salary_group = dis_sal_dim.group().reduce(reduceAdd, reduceRemove, reduceInitial);
 
         let dis_bargraph = dc.barChart("#discipline-bar");
         dis_bargraph
@@ -184,42 +198,45 @@ function makeGraphs(error, opData) {
             .yAxis().ticks(10);
     }
 
-    function show_count_of_choices_by_level(ndx) {
+    //
+    // Gender / Level Stacked Barchart
+    //
+
+    function show_gender_at_level(ndx) {
         let level_dim = ndx.dimension(function (d) {
             return d.level;
         });
-
         let groupByFalse = level_dim.group().reduce(
-            function reduceAdd(p, v) {
+            function (p, v) {
                 if (v.choice === "FALSE") {
                     p++
                 }
                 return p;
             },
-            function reduceRemove(p, v) {
+            function (p, v) {
                 if (v.choice === "FALSE") {
                     p--
                 }
                 return p;
             },
-            function reduceInitial() {
+            function () {
                 return 0;
             }
         );
         let groupByTrue = level_dim.group().reduce(
-            function reduceAdd(p, v) {
+            function (p, v) {
                 if (v.choice === "TRUE") {
                     p++
                 }
                 return p;
             },
-            function reduceRemove(p, v) {
+            function (p, v) {
                 if (v.choice === "TRUE") {
                     p--
                 }
                 return p;
             },
-            function reduceInitial() {
+            function () {
                 return 0;
             }
         );
@@ -245,7 +262,11 @@ function makeGraphs(error, opData) {
             .legend(dc.legend().x(140).y(55).itemHeight(10).gap(5))
     }
 
-    function show_languages_over_time(ndx) {
+    //
+    // Lesuire / Discipline @ Hours Per Week
+    //
+
+    function show_languages_v_leisure_per_week(ndx) {
         let hours_per_dim = ndx.dimension(dc.pluck('hours_per_week'));
         let minHrs = hours_per_dim.bottom(1)[0].hours_per_week;
         let maxHrs = hours_per_dim.top(1)[0].hours_per_week;
@@ -257,7 +278,6 @@ function makeGraphs(error, opData) {
                 return 0;
             }
         });
-
         let gameJs = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'JavaScript' && d.play_games === 'yes') {
                 return 1
@@ -265,7 +285,6 @@ function makeGraphs(error, opData) {
                 return 0;
             }
         });
-
         let gamePy = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'Python' && d.play_games === 'yes') {
                 return 1
@@ -273,7 +292,6 @@ function makeGraphs(error, opData) {
                 return 0;
             }
         });
-
         let gameSq = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'SQL' && d.play_games === 'yes') {
                 return 1
@@ -302,17 +320,14 @@ function makeGraphs(error, opData) {
                 .colors('blue')
                 .dashStyle([2, 2])
                 .group(gameHs, 'HTML/CSS'),
-
                 dc.lineChart(compositeChart)
                 .colors('green')
                 .dashStyle([2, 2])
                 .group(gameJs, 'JavaScript'),
-
                 dc.lineChart(compositeChart)
                 .colors('red')
                 .dashStyle([2, 2])
                 .group(gamePy, 'Python'),
-
                 dc.lineChart(compositeChart)
                 .colors('orange')
                 .dashStyle([2, 2])
@@ -321,9 +336,5 @@ function makeGraphs(error, opData) {
             .transitionDuration(500)
             .elasticY(true)
             .brushOn(false);
-
-
     }
-
-
 }

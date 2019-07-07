@@ -15,7 +15,7 @@ function makeGraphs(error, opData) {
         d.salary = parseInt(d.salary);
         d.time_as = parseInt(d.time_as);
         d.hours_per_week = parseInt(d.hours_per_week);
-    })
+    });
 
     //Functions are declared 
     remove_empty_bins();
@@ -30,8 +30,6 @@ function makeGraphs(error, opData) {
 
     dc.renderAll();
 
-    //https://github.com/dc-js/dc.js/wiki/FAQ#remove-empty-bins
-
     function remove_empty_bins(source_group) {
         return {
             all: function () {
@@ -40,7 +38,7 @@ function makeGraphs(error, opData) {
                 });
             }
         };
-    };
+    }
 
     //
     // Number Display
@@ -93,7 +91,7 @@ function makeGraphs(error, opData) {
         //
         // crossfilter should remove null groups from chart
         let filtered_group = remove_empty_bins(country_group);
-        let rowchart = dc.rowChart('#country-chart')
+        let rowchart = dc.rowChart('#country-chart');
         rowchart
             .height(520)
             .width(350)
@@ -135,7 +133,7 @@ function makeGraphs(error, opData) {
                     return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
                 });
             });
-    };
+    }
 
     //
     // Discipline/Salary Bargraph
@@ -169,7 +167,7 @@ function makeGraphs(error, opData) {
                 total: 0,
                 average: 0
             };
-        };
+        }
 
         let salary_group = dis_sal_dim.group().reduce(reduceAdd, reduceRemove, reduceInitial);
 
@@ -208,13 +206,13 @@ function makeGraphs(error, opData) {
         let groupByFalse = level_dim.group().reduce(
             function (p, v) {
                 if (v.choice === "FALSE") {
-                    p++
+                    p++;
                 }
                 return p;
             },
             function (p, v) {
                 if (v.choice === "FALSE") {
-                    p--
+                    p--;
                 }
                 return p;
             },
@@ -225,13 +223,13 @@ function makeGraphs(error, opData) {
         let groupByTrue = level_dim.group().reduce(
             function (p, v) {
                 if (v.choice === "TRUE") {
-                    p++
+                    p++;
                 }
                 return p;
             },
             function (p, v) {
                 if (v.choice === "TRUE") {
-                    p--
+                    p--;
                 }
                 return p;
             },
@@ -258,7 +256,7 @@ function makeGraphs(error, opData) {
             .yAxisLabel('Total Respondants')
             .xAxisLabel('Employment Grade')
             .elasticY(true)
-            .legend(dc.legend().x(140).y(55).itemHeight(10).gap(5))
+            .legend(dc.legend().x(140).y(55).itemHeight(10).gap(5));
     }
 
     //
@@ -272,21 +270,21 @@ function makeGraphs(error, opData) {
 
         let gameHs = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'HTML/CSS' && d.play_games === 'yes') {
-                return 1
+                return 1;
             } else {
                 return 0;
             }
         });
         let gameJs = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'JavaScript' && d.play_games === 'yes') {
-                return 1
+                return 1;
             } else {
                 return 0;
             }
         });
         let gamePy = hours_per_dim.group().reduceSum(function (d) {
             if (d.discipline === 'Python' && d.play_games === 'yes') {
-                return 1
+                return 1;
             } else {
                 return 0;
             }

@@ -3,6 +3,6 @@ $(document).ready(function () {
     const p = $('#para1');
     p.hide();
     $("#drop-down").click(function () {
-        p.slideToggle("slow")
+        p.slideToggle("slow");
     });
 });

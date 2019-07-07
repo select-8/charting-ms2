@@ -4,11 +4,11 @@
 
 ## Project Overview
 
-The project presented [here](https://select-8.github.io/charting-ms2/#) consists of a series of interactive graphs and charts. They are rendered in SVG by D3.js, charted using the DC.js charting library and made multidimentially intercative by the crossfilter.js JavaScript library. 
+The project presented [here](https://select-8.github.io/charting-ms2/#) consists of a series of interactive graphs and charts. They are rendered in SVG by D3.js, charted using the DC.js charting library and made multidimentially interactive by the crossfilter.js JavaScript library. 
 
 The goals of this project are to:
 
- - design a single webpage project, which through the use of charts and graphs, communicates something useful about the underlying data to the user of the site.
+ - design a single webpage project, which through the use of charts and graphs, communicates something useful about the underlying data to the users of the site. In this case, to show something about the similarities and differences across the European Union.
  - to use JavaScript to accomplish this, and in so doing, to begin to learn something about how I as a developer can use JavaScript in my professional career.
  - to firm up and build upon the knowledge of HTML and CSS I gathered from the first milestone project, and to understand how JavaScript can be used to enhance those languages.
 - to understand how I can begin to use data to drive interactive visualisations.
@@ -18,12 +18,13 @@ The goals of this project are to:
 
 ### The Data
 
-For this project, my first charting data in this way, I decided to construct my own dataset. My reasoning for this stemmed from spending a few days testing with data from sources such as [Kaggle](kaggle.com) and realising that whatever data I would choose, would invariably have some element blocking me from moving forward with the JavaScript. I made the decision that it would be helpful to the learning process if I had overall control of the data. In hindsight I'm very glad I did this, as in building the data I learned a lot about what makes data chartable. If now I was presented with a real world dataset I feel I am better placed to approach visualising in charts and graphs.
-I constructed the dataset using SQL to build a table in a postgres database and copying directly out to the CSV read by D3. This allowed me to easily add new content of random data, weigthed to reflect real world data such as the Stack Overflow developers survey 2018.
-I have submitted my SQL script, it can be found [here]()
+For this project, my first charting data in this way, I decided to construct my own dataset. My reasoning here stems from spending a few days testing with data from sources such as [Kaggle](kaggle.com) and realising that with whichever data I would choose, there would invariably have some element blocking me from moving forward with the JavaScript. I made the decision that it would be helpful to the learning process if I had overall control of the data. In hindsight I'm very glad I did this, as in building the data I learned a lot about what to look for in data structures to assess if it is chartable or not. If now I was presented with a real world dataset I feel I am better placed to approach visualising in charts and graphs.
+I constructed the dataset using SQL to build a table in a postgres database and copying directly out to the CSV read by D3. This allowed me to easily add new content of random data, weighted to reflect real world data such as the [Stack Overflow developers survey 2018](https://insights.stackoverflow.com/survey/2018).
+I have submitted my SQL script, it can be found [here](assets/sql/randomData.sql).
+
 ### User Stories
 
-This project is aimed primarily at developers and people generally interested in technology. However, it should also be easily discernible by a general audience.
+This project is aimed primarily at developers and people generally interested in technology. However, it should also be easily discernible by a lay audience.
 ##### As a user... 
  - I want to quickly understand what I am being presented with.
  - I want to easily understand what each individual chart is showing me.
@@ -44,8 +45,6 @@ I used three fonts in this project:
  - **Cutive**, a monospace which provides natural spacing to the chart labels
  - **Lato**, a more round edged sans serif for the number display
 
-#### Colour
-
 ### Features
 ##### The Charts
 
@@ -58,16 +57,16 @@ The page consists of five charts which use the Crossfilter JavaScript library to
 
 
 ##### The Numbers
-In the top bar we have percentage calculation for logical operator preference. This calculates the percentage within each value item chosen.
+In the top bar we have percentage calculation for logical operator preference. This calculates the percentage within each value item chosen. Initially I had planned to focus the whole site around this element. My early commit comments refer to a _reorder divs function_ and an _intro page_. In the end, and after some sage feedback, I decided to completely remove these features. While I spent a considerable amount of time getting them to work, and in doing so I learned most of the JavaScript I now know, in the end they distracted from the purpose of the site, only succeeding in confusing the user.
 
 ##### Information dropdown
-If the user requires more contextual information about the data presented they have a simple, non intrusive, dropdown which explains the visualisation further and gives some background to the general purpose of the site. This is presented with vertical scroll on small screens so as not to push the charts out of view.
+If the user requires more contextual information about the data presented they have a simple, non intrusive, dropdown which explains the visualisations further and gives some background to the general purpose of the site. This is presented with vertical scroll on small screens so as not to push the charts out of view.
 
 ##### Reset
 A reset button to clear all filters and restore the data to its original form.
 
 ##### Responsive
-The site is responsive across most screen sizes. As D3 itself is not a responsive framework it proved difficult to make the site work 100% on all devices. To combat this I used BootStrap grid to reorder troublesome charts and achieve a balance at all screen sizes.
+The site is responsive across most screen sizes. As D3 itself is not a responsive framework, it proved difficult to make the site work 100% on all devices. To combat this I used BootStrap grid to reorder troublesome charts and achieve a balance at all screen sizes.
 In graph.js there is variable _width_ which when used as the width property in the composite line graph, allows it to take up the max width of its container (on refresh).
 
 #### Left to Implement
@@ -81,7 +80,7 @@ I will add a query so that the information drop down content will also scroll in
 As most of the interactive elements of the site are preformed under the hood by crossfilter I have not scoped any automated testing. To this end testing has been conducted manually.
 
 ##### Users
-In order to assess the sites usability I had shared it for testing with with both developers and non developers. In both cases I am satisfied that the site meets the users needs. In the case of one non developer the number display was confusing as they did not know what it was referring to even after reading the information display. However, given the main target audience for this site is the developer community and I found here that it had the desired intention of conveying a bit of lightness, I decided to keep it in.
+In order to assess the sites usability I have shared it for testing with both developers and non developers. In both cases I am satisfied that the site meets the users needs. In the case of one non developer the number display was confusing as they did not know what it was referring to, even after reading the information display. However, given the main target audience for this site is the developer community and I found here that it had the desired intention of conveying a bit of lightness, I decided to keep it in.
 
 ##### Responsiveness
 The site as vigorously tested in Chrome Developer Tools in responsive mode and at all screen sizes on a variety of device brands. This involved selecting _inspect_ and the _toggle device toolbar_ options. Then selecting through common devices (Galaxy S5, Google Pixel devices, iPhones of various sizes, iPad, iPad Pro) in order to see if my Bootstrap Grid set up allowed the text and charts to flow and flex without any visual or technical issues.
@@ -91,7 +90,7 @@ The site was also physically tested on a Samsung Galaxy Tab, an iPhone 6, a Wind
 The site was tested in Chrome, FireFox, Safari and Opera.
 
 ##### Chart Interactions
-Given this was my first foray into JavaScript and charting, throughout building the site I used my knowledge of SQL to test that I was getting the expected results from my functions.
+Given this was my first foray into JavaScript and charting, throughout building the site I used SQL to test I was getting the expected results from my functions.
 Each data value, be it a single bar or pie slice have been tested in this way against the data in PostgreSQL using SQL queries. 
 
 For example to check if the percentage calculations are correct when discipline 'C' is selected in the _Average Salary_ barchart, I can run:
@@ -134,7 +133,7 @@ Resulting in:
     48.98 | C          | OR
     28.57 | C          | NOT
  
- This can then check these results against the results displayed on the site.
+ I would then check these results against whats returned from the functions in the console.
 
 ### Validation
 
@@ -145,8 +144,6 @@ HTML : https://validator.w3.org/
 CSS : https://jigsaw.w3.org/css-validator/
 
 JavaScript files were tested at : https://jshint.com/
-
-## Assessing the Project Goals
 
 ## Deployment
 

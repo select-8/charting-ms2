@@ -18,10 +18,9 @@ The goals of this project are to:
 
 ### The Data
 
-For this project, my first charting data in this way, I decided to construct my own dataset. My reasoning for this stemmed from spending a few days testing with data from sources such as kaggle.com and realising that whatever data I would choose would invariably have some element blocking me from moving forward with the JavaScript. So I made the decision it would be more useful if I had control over the data. In hindsight I'm very glad I did this, as in building the data I learned a lot about what makes data chartable. If now I was presented with a real world dataset I feel I am much better placed in approaching visualising it in charts and graphs.
-I constructed the dataset using SQL and building a table in a PostgreSQL database. This allowed me to easily add new fields and to created weighted random data which reflects real world data such as the Stack Overflow developers survey 2018.
-
-
+For this project, my first charting data in this way, I decided to construct my own dataset. My reasoning for this stemmed from spending a few days testing with data from sources such as [Kaggle](kaggle.com) and realising that whatever data I would choose, would invariably have some element blocking me from moving forward with the JavaScript. I made the decision that it would be helpful to the learning process if I had overall control of the data. In hindsight I'm very glad I did this, as in building the data I learned a lot about what makes data chartable. If now I was presented with a real world dataset I feel I am better placed to approach visualising in charts and graphs.
+I constructed the dataset using SQL to build a table in a postgres database and copying directly out to the CSV read by D3. This allowed me to easily add new content of random data, weigthed to reflect real world data such as the Stack Overflow developers survey 2018.
+I have submitted my SQL script, it can be found [here]()
 ### User Stories
 
 This project is aimed primarily at developers and people generally interested in technology. However, it should also be easily discernible by a general audience.
@@ -36,7 +35,7 @@ This project is aimed primarily at developers and people generally interested in
 ### UX
 #### Wireframe
 
-Wireframe can be seen [here](assets/wireframe.jpg).
+Wireframe can be seen [here](assets/sql/randomData.sql).
 
 #### Typography
 
@@ -50,7 +49,12 @@ I used three fonts in this project:
 ### Features
 ##### The Charts
 
-The page consists of four charts which use the Crossfilter JavaScript library to give a multidimensional experience for the user. Each elements of the charts can be clicked to filter data in the other charts. With the way I have structured the visualisations you can, for example, see how popular C++ is across the EU, or equally you can see what the most popular programming language is in Germany. You can see if any of the EU 28 bucks the trend in having less female developers in senior roles.
+The page consists of five charts which use the Crossfilter JavaScript library to give a multidimensional experience for the user. Each elements of the charts can be clicked to filter data in the other charts. With the way I have structured the visualisations you can, for example, see how popular C++ is across the EU, or equally you can see what the most popular programming language is in Germany. You can see if any of the EU 28 bucks the trend in having less female developers in senior roles.
+ 1. Country Chart: Simple count of respondents from each county. This data is slightly weighted over two tiers in terms of population but is randomly assigned otherwise. This chart is mainly informative when filtered by, or used to filter, the other charts. The chart title should reflect this usage.
+ 2. Average Salary - Top 10 Languages: Here we can see salary levels in relation to main language practised. The salary data is totally random in relation to programming language. This reflects real world data. A custom reduction is used to calculate the averages.
+ 3. Gender Across Employment Grades: This data is weighted for gender at the senior level in order to reflect real world data. As with the salary data it is most tells the best story when filtered from the country chart. The values read from the data as "TRUE" and "FALSE".
+ 4. Top 4 Most Popular Database Systems: Reflects data from the Stack Overflow developers survey. The dataset consists of the top 10, it is filtered here to show the top 4 (for any crossfilter) at any one time.
+ 5. Does Being a Gamer Correlate with Hours Worked in a Week?: I found this the most difficult graph to create random fake data for. In the end I think it just about works in conveying something to the site users.
 
 
 ##### The Numbers
@@ -140,6 +144,7 @@ HTML : https://validator.w3.org/
 
 CSS : https://jigsaw.w3.org/css-validator/
 
+JavaScript files were tested at : https://jshint.com/
 
 ## Assessing the Project Goals
 

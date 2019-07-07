@@ -68,7 +68,7 @@ ul#horizontal-list li {
 .info-dd {
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    height: 100px;
+    height: 80px;
     overflow: scroll;
 }
 
@@ -81,7 +81,7 @@ ul#horizontal-list li {
 /* ------------------------------------------ CHARTS */
 .allgraphs {
     text-decoration-line: underline;
-    padding-top: 32px;
+    padding-top: 20px;
 }
 
 .allgraphs svg {

@@ -5,7 +5,6 @@ queue()
 var width;
 $(window).on('load', function () {
     width = $(window).width();
-    console.log(width);
 });
 
 

@@ -24,78 +24,88 @@
 </head>
 
 <body>
+
     <div class="container heading-text">
         <div class="row">
             <div class="col-12 text-center">
-                <h3>Visualising Aspects of Professional Developer Community in the EU</h3>
+                <h3>Visualising Data from the Developer Community of the EU</h3>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row lo_numbers">
-            <div class="table number-para text-center">
-                <ul id="horizontal-list">
-                    <li class="col-12 col-lg-2 clickers info"><a href="#" id='button1'
-                            class="info_button">Information</a></li>
-                    <li class="col-12 col-lg-2"><span class="text-span">AND:&nbsp;</span><span class="number-box"
-                            id="percent-of-and"></span>
-                    </li>
-                    <li class="col-12 col-lg-2"><span class="text-span">OR:&nbsp;</span><span class="number-box"
-                            id="percent-of-or"></span>
-                    </li>
-                    <li class="col-12 col-lg-2"><span class="text-span">NOT:&nbsp;</span><span class="number-box"
-                            id="percent-of-not"></span>
-                    </li>
-                    <li class="col-12 col-lg-2 clickers reset"><a
-                            href="javascript:dc.filterAll(); dc.renderAll();">Reset
-                            Charts</a></li>
-                </ul>
-            </div>
+
+    <div class="container heading-list">
+        <div class="table text-center">
+            <ul id="horizontal-list">
+                <li class="clickers">
+                    <a href="#" id='drop-down' class="info_button">Information</a>
+                </li>
+                <li class="text-span">
+                    <span>AND:&nbsp;</span>
+                    <span class="number-box" id="percent-of-and"></span>
+                </li>
+                <li class="text-span">
+                    <span>OR:&nbsp;</span>
+                    <span class="number-box" id="percent-of-or"></span>
+                </li>
+                <li class="text-span">
+                    <span>NOT:&nbsp;</span>
+                    <span class="number-box" id="percent-of-not"></span>
+                </li>
+                <li class="clickers">
+                    <a href="javascript:dc.filterAll(); dc.renderAll();">Reset Charts</a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="container info_dd">
+
+    <div class="container info-dd">
         <div class="row">
             <div class="col-12">
-                <p class="info_para text-justify" id='para1'>
+                <p class="info-para text-justify" id='para1'>
                     Presented here are the results of a survay of 800 professional developers from across the 28
                     countries of the European Union.
                     For each of the countries surveyed, you will see what the most popular
-                    programming languages are and if there a correlation with average saleries, what the most preferred database
-                    systems in use are and how, while trends seem to changing, there remains a gender divide at the most senior levels.
-                    To debunk some myths we also asked about pastimes, and gaming in particular. 
-                    Also, for a bit of fun, we decided to ask developers what their favourite Logical Operator is, this can be tracked
+                    programming languages are and if there a correlation with average saleries, what the most preferred
+                    database
+                    systems in use are and how, while trends seem to changing, there remains a gender divide at the most
+                    senior levels.
+                    To debunk some myths we also asked about pastimes, and gaming in particular.
+                    Also, for a bit of fun, we decided to ask developers what their favourite Logical Operator is, this
+                    can be tracked
                     in the number display above (can you spot any outliers!).
                 </p>
             </div>
         </div>
     </div>
-    </div>
 
     <div class="container allgraphs">
         <div class="row">
-            <div class="col-12 col-sm-6 col-lg-4 text-left" id="stacked-choice">
+            <div class="col-12 col-sm-6 col-lg-4 text-center" id="stacked-choice">
                 <p>Gender Across Employment Grades</p>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4 text-left" id="discipline-bar">
-                <p>Average Salary - Top 10 Programming Languages</p>
+            <div class="col-12 col-sm-6 col-lg-4 text-center" id="discipline-bar">
+                <p>Average Salary - Top 10 Languages</p>
             </div>
-            <div class="col-6 col-lg-4 order-lg-first text-left" id="country-chart">
+            <div class="col-12 col-md-6 col-lg-4 order-lg-first text-left" id="country-chart">
                 <p>Select to Compare the Data Across the EU 28</p>
+            </div>
+            <div class="col-12 col-md-4 text-left">
+                <div class="text-center" id="database-pie">
+                    <p>Top 4 Most Popular Database Systems</p>
+                </div>
             </div>
             <div class="col-12 col-md-8 order-md-last text-left">
                 <div class="text-center" id="composite-chart">
                     <p>Does Being a Gamer Correlate with Hours Worked in a Week?</p>
                 </div>
             </div>
-            <div class="col-6 col-md-4 text-left">
-                <div class="text-center" id="database-pie">
-                    <p>Top 4 Most Popular Database Systems</p>
-                </div>
-            </div>
         </div>
     </div>
-
+    <footer>
+        <div class="container footer-text text-center">
+            <p>This Webite was designed and built by Liam O'Connor for The Code Institute's Interactive Front End Milestone Project</p>
+        </div>
+    </footer>
 </body>
-
 
 </html>

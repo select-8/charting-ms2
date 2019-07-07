@@ -115,7 +115,7 @@ function makeGraphs(error, opData) {
             .dimension(dis_dim)
             .group(dis_group)
             .colors(d3.scale.ordinal().range(
-                [ '#1f78b4', '#b2df8a', '#cab2d6', '#bc80bd']))
+                [ '#9a6324', '#f58231', '#800000', '#469990', '#808000', '#000075', '#808000', '#911eb4' ]))
             .data(function (group) {
                 return dis_group.top(4);
             })

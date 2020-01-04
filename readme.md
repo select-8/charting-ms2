@@ -1,15 +1,11 @@
-# INTERACTIVE FRONT END MILESTONE PROJECT
-
-## Charting Data From an EU Developer Survey
 
 ## Project Overview
 
 The project presented [here](https://select-8.github.io/charting-ms2/#) consists of a series of interactive graphs and charts. They are rendered in SVG by D3.js, charted using the DC.js charting library and made multidimentially interactive by the crossfilter.js JavaScript library.
 
-
 ### The Data
 
-For this project I decided to construct my own dataset based on the results of the [Stack Overflow developers survey 2018](https://insights.stackoverflow.com/survey/2018).
+is made up but based on the results of the [Stack Overflow developers survey 2018](https://insights.stackoverflow.com/survey/2018).
 
 #### Typography
 
